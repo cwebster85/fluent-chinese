@@ -62,6 +62,5 @@ ActiveRecord::Schema.define(version: 2022_02_19_163656) do
   add_foreign_key "exercises", "challenges"
   add_foreign_key "sessions", "challenges"
   add_foreign_key "sessions", "users"
-
 end
 end
