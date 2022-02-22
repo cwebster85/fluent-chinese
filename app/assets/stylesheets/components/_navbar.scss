@@ -8,5 +8,21 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
+}
+
+.navbar-home {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  .nav-link {
+    color: white;
+    font-weight: bold;
+    text-emphasis-color: white;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
 }
