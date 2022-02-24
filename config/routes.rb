@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :challenges, only: [:index, :show] do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
     resources :exercises, only: [:show]
-    resources :sessions, only: [:create]
   end
+
+  resources :sessions, only: [:create]
 end
