@@ -1,7 +1,3 @@
-<h1>Challenges</h1>
-
-<%# <%= render "form-start", challenge: @challenge, session: @session %>
-
 <%= simple_form_for [ @challenge, @session ] do |f| %>
   <%= f.submit "Start challenge", class: "btn btn-primary" %>
 <% end %>
