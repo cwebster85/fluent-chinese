@@ -1,7 +1,11 @@
-<h1>Challenges</h1>
+<h1><%= @challenge.name %> </h1>
 
-<%# <%= render "form-start", challenge: @challenge, session: @session %>
+<%= link_to "Start challenge", sessions_path(challenge_id: @challenge.id), method: :post %>
 
-<%= simple_form_for [ @challenge, @session ] do |f| %>
-  <%= f.submit "Start challenge", class: "btn btn-primary" %>
-<% end %>
+<h2>Exercises</h2>
+
+<ul>
+  <% @exercises.each do |exercise|%>
+    <li><%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %></li>
+  <% end %>
+</ul>

@@ -1,9 +1,10 @@
 class ChallengesController < ApplicationController
   def show
     @challenge = Challenge.find(params[:id])
-    @session = @challenge.session
+    @exercises = @challenge.exercises
   end
 
   def index
+    @challenges = Challenge.all
   end
 end
