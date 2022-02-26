@@ -1,0 +1,18 @@
+<div class="container">
+
+  <h1>Welcome, <%= current_user.first_name %>!</h1>
+
+  <div>
+  <h2>Training for today</h2>
+  </div>
+
+  <div>
+  <h3><%= Date.today.strftime("%B, %Y") %></h3>
+  <ul>
+    <% @challenges.each do |challenge|%>
+      <li><%= link_to challenge.name, challenge_path(challenge) %></li>
+    <% end %>
+  </ul>
+  </div>
+
+</div>
