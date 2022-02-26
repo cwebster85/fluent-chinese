@@ -1,29 +1,40 @@
-<div class="container">
+<div class="d-flex main-container">
 
-  <h1>Welcome, <%= current_user.first_name %>!</h1>
+  <%= render "shared/sidebar" %>
 
-  <div>
-  <h2>Training for today</h2>
+  <div class="card-container">
+    <div class="d-flex title">
+          <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
+    </div>
+    <div class="info">
+      <div class="challenge-of-day">
+        <div class="d-flex text">
+          <h2>Training for <span class="white-text">today</span></h2>
+          <h3><%= Date.today.strftime("%B, %Y") %></h3>
+          <%= image_tag "clock_image.png" %>
+        </div>
+        <div class="progress-bar">
+        </div>
+      </div>
+
+      <div>
+        <%= link_to "View all", challenges_path %>
+        <ul>
+          <% @challenges.each do |challenge|%>
+            <li><%= link_to challenge.date.strftime("%A %d"), challenge_path(challenge) %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Teaching assistants</h2>
+        <ul>
+          <li>Teacher</li>
+          <li>Teacher</li>
+          <li>Teacher</li>
+          <li>Teacher</li>
+        </ul>
+      </div>
+    </div>
   </div>
-
-  <div>
-  <h3><%= Date.today.strftime("%B, %Y") %></h3>
-  <%= link_to "View all", challenges_path %>
-  <ul>
-    <% @challenges.each do |challenge|%>
-      <li><%= link_to challenge.date.strftime("%A %d"), challenge_path(challenge) %></li>
-    <% end %>
-  </ul>
-  </div>
-
-  <div>
-    <h2>Teaching assistants</h2>
-    <ul>
-      <li>Teacher</li>
-      <li>Teacher</li>
-      <li>Teacher</li>
-      <li>Teacher</li>
-    </ul>
-  </div>
-
 </div>

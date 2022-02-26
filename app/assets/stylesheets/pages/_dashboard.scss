@@ -1,0 +1,50 @@
+/* Main Body */
+
+.main-container {
+  flex-grow: 1;
+}
+
+.card-container {
+  margin: 50px 50px 50px 100px;
+}
+
+.info {
+  flex-grow: 1;
+  padding-bottom: 16px;
+  overflow: scroll;
+}
+ /* Text */
+
+.white-text {
+  color: white;
+}
+
+.red-user {
+  color: $red;
+}
+
+h1 {
+  font-family: $headers-font;
+  font-size: 48px;
+}
+
+/* First card */
+
+.challenge-of-day {
+  background-color: $red;
+  padding: 20px 20px 60px 20px;
+}
+
+
+@media only screen and(min-width: 768px) {
+  .main-container {
+    width: 900px;
+  }
+}
+
+@media only screen and(min-width: 1200px) {
+  .main-container {
+    width: 1200px;
+  }
+
+}
