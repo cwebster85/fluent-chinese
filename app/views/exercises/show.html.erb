@@ -2,4 +2,8 @@
 
   <h1><%= @exercise.name %></h1>
 
+  <%= link_to "Start exercise", completed_exercises_path(id: @exercise.id), method: :post %>
+
+  <%= link_to "Complete exercise", completed_exercise_path(id: @exercise.id), method: :patch %>
+
 </div>
