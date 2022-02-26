@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_24_195525) do
+ActiveRecord::Schema.define(version: 2022_02_25_230104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,8 +37,6 @@ ActiveRecord::Schema.define(version: 2022_02_24_195525) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-ActiveRecord::Schema.define(version: 2022_02_22_205713) do
-
   create_table "active_storage_variant_records", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
@@ -51,6 +49,16 @@ ActiveRecord::Schema.define(version: 2022_02_22_205713) do
     t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "completed_exercises", force: :cascade do |t|
+    t.bigint "session_id", null: false
+    t.bigint "exercise_id", null: false
+    t.boolean "completed"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exercise_id"], name: "index_completed_exercises_on_exercise_id"
+    t.index ["session_id"], name: "index_completed_exercises_on_session_id"
   end
 
   create_table "exercises", force: :cascade do |t|
@@ -69,7 +77,6 @@ ActiveRecord::Schema.define(version: 2022_02_22_205713) do
     t.bigint "challenge_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "progress"
     t.index ["challenge_id"], name: "index_sessions_on_challenge_id"
     t.index ["user_id"], name: "index_sessions_on_user_id"
   end
@@ -91,6 +98,8 @@ ActiveRecord::Schema.define(version: 2022_02_22_205713) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "completed_exercises", "exercises"
+  add_foreign_key "completed_exercises", "sessions"
   add_foreign_key "exercises", "challenges"
   add_foreign_key "sessions", "challenges"
   add_foreign_key "sessions", "users"
