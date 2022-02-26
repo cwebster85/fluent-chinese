@@ -5,6 +5,12 @@
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up"%>
+  </div>
+  
+  <% end %>
+
     <div class="form-inputs">
       <%= f.input :first_name,
                   required: true,
@@ -29,6 +35,7 @@
                   hint: "Upload your profile picture",
                   required: false %>
     </div>
+
 
     <div class="form-actions">
       <%= f.button :submit, "Sign up" %>
