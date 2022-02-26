@@ -7,5 +7,8 @@ Rails.application.routes.draw do
     resources :exercises, only: [:show]
   end
 
+  resources :sessions, only: [:create]
+
   resources :users
+
 end
