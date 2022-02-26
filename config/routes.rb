@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :challenges, only: [:index, :show] do
-    resources :sessions, only: [:update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
     resources :exercises, only: [:show]
   end
