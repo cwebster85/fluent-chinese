@@ -3,7 +3,12 @@
   <h1>Welcome, <%= current_user.first_name %>!</h1>
 
   <div>
-  <h2>Training for today</h2>
+  <h2>Training for today: <%= @current_challenge.name %></h2>
+    <% if current_user.challenges.include?(@current_challenge) %>
+      <%= link_to "Go back to challenge", challenge_path(id: @current_challenge.id) %>
+    <% else %>
+      <%= link_to "Start challenge", sessions_path(id: @current_challenge.id), method: :post %>
+    <% end %>
   </div>
 
   <div>

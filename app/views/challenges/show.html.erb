@@ -2,14 +2,12 @@
 
   <h1><%= @challenge.name %> </h1>
 
-  <%= link_to "Start challenge", sessions_path(challenge_id: @challenge.id), method: :post %>
+    <h2>Exercises</h2>
 
-  <h2>Exercises</h2>
-
-  <ul>
-    <% @exercises.each do |exercise|%>
-      <li><%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %></li>
-    <% end %>
-  </ul>
+    <ul>
+      <% @exercises.each do |exercise|%>
+        <li><%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %></li>
+      <% end %>
+    </ul>
 
 </div>
