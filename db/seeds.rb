@@ -56,7 +56,7 @@ challenge_1 = Challenge.create(
   - Words for siblings
 
   ",
-  date: Time.now
+  date: Date.today
 )
 puts "Challenge #{challenge_1.id} is created"
 
@@ -71,7 +71,7 @@ challenge_2 = Challenge.create(
   - Two nationalities
 
   ",
-  date: Time.now
+  date: Date.today + 1
 )
 puts "Challenge #{challenge_2.id} is created"
 
@@ -88,7 +88,7 @@ challenge_3 = Challenge.create(
   - Numbers 0-100
 
   ",
-  date: Time.now
+  date: Date.today + 2
 )
 puts "Challenge #{challenge_3.id} is created"
 

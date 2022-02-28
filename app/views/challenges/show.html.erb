@@ -6,7 +6,12 @@
 
     <ul>
       <% @exercises.each do |exercise|%>
-        <li><%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %></li>
+        <li>
+          <%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %>
+          <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
+            <i class="fa fa-solid fa-check"></i>
+          <% end %>
+        </li>
       <% end %>
     </ul>
 
