@@ -1,0 +1,25 @@
+<div class="container">
+
+  <h1>My Profile</h1>
+
+    <h2>My details</h2>
+      <div class="card-profile" >
+        <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar-square-large" %>
+          <% else %>
+            <%= image_tag "https://www.kindpng.com/picc/m/114-1140943_computer-icons-person-login-transparent-silhouette-icon-png.png", class: "avatar-square-large" %>
+          <% end %>
+        <div class="card-profile-details">
+          <p>First name: <%= current_user.first_name %></p>
+          <p>Last name: <%= current_user.last_name %></p>
+        </div>
+      </div>
+
+    <h2>Topics completed</h2>
+
+      <% @completed_challenges.each do |completed_challenge|%>
+        <p><%= completed_challenge.name %></p>
+        <p><%= completed_challenge.description %></p>
+      <% end %>
+
+</div>
