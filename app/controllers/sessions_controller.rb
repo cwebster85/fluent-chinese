@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if @session.save!
       redirect_to challenge_path(@challenge)
     else
-      render "challenges/show"
+      render "pages/dashboard"
     end
   end
 end

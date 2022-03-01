@@ -4,16 +4,21 @@
 
   <div>
   <h2>Training for today: <%= @current_challenge.name %></h2>
+  <% if @number_of_current_challenge_completed_exercises %>
+    <p><%= @number_of_current_challenge_completed_exercises %>/5 exercises completed</p>
+  <% else %>
+    <p>You haven't completed any exercise yet!</p>
+  <% end %>
     <% if current_user.challenges.include?(@current_challenge) %>
-      <%= link_to "Go back to challenge", challenge_path(id: @current_challenge.id) %>
+      <%= link_to "Go back to challenge", challenge_path(id: @current_challenge.id), class: "btn btn-primary" %>
     <% else %>
-      <%= link_to "Start challenge", sessions_path(id: @current_challenge.id), method: :post %>
+      <%= link_to "Start challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
     <% end %>
   </div>
 
   <div>
   <h3><%= Date.today.strftime("%B, %Y") %></h3>
-  <%= link_to "View all", challenges_path %>
+  <%= link_to "View all", challenges_path, class: "btn btn-primary" %>
   <ul>
     <% @challenges.each do |challenge|%>
       <li><%= challenge.date.strftime("%A %d") %></li>
