@@ -6,9 +6,11 @@
       <div class="card-profile" >
         <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar-square-large" %>
-          <% else %>
-            <%= image_tag "https://www.kindpng.com/picc/m/114-1140943_computer-icons-person-login-transparent-silhouette-icon-png.png", class: "avatar-square-large" %>
-          <% end %>
+        <% elsif current_user.photo_url.present? %>
+            <%= image_tag current_user.photo_url, class: "avatar-square-large" %>
+        <% else %>
+          <%= image_tag "https://www.kindpng.com/picc/m/114-1140943_computer-icons-person-login-transparent-silhouette-icon-png.png", class: "avatar-square-large" %>
+        <% end %>
         <div class="card-profile-details">
           <p>First name: <%= current_user.first_name %></p>
           <p>Last name: <%= current_user.last_name %></p>
