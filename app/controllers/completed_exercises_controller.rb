@@ -15,6 +15,6 @@ class CompletedExercisesController < ApplicationController
     @completed_exercise = CompletedExercise.find(params[:id])
     @completed_exercise.update(completed: true)
     flash[:notice] = "You have completed #{@completed_exercise.exercise.name}"
-    redirect_to challenge_path(@exercise.challenge)
+    redirect_to challenge_path(@completed_exercise.exercise.challenge)
   end
 end
