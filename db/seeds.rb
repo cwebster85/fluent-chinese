@@ -139,7 +139,7 @@ exercise_5 = Exercise.create(
     content_type: "Writing",
     content_url: "www",
     name: "Writing",
-    description: "Wrtiting"
+    description: "Writing"
   )
 puts "Exercise #{exercise_5.id} is created"
 

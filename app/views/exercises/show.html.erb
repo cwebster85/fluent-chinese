@@ -4,6 +4,13 @@
 
   <%= link_to "Start exercise", completed_exercises_path(id: @exercise.id), method: :post, class: "btn btn-primary" %>
 
+  <% if @exercise.content_type == "Writing" %>
+    <%= simple_form_for current_user do |f| %>
+    <%# <%= f.input :text %>
+    <%= f.button :submit %>
+    <% end %>
+  <% end %>
+
   <%= link_to "Complete exercise", completed_exercise_path(id: @exercise.id), method: :patch, class: "btn btn-primary" %>
 
 </div>
