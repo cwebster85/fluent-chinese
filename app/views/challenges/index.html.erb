@@ -4,7 +4,10 @@
 
   <ul>
     <% @challenges.each do |challenge|%>
-      <li><%= challenge.name %></li>
+      <li>
+      <p><%= challenge.name %></p>
+      <p><%= challenge.description %></p>
+      </li>
     <% end %>
   </ul>
 
