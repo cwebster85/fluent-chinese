@@ -1,8 +1,8 @@
 class CompletedExercisesController < ApplicationController
   def create
-    @exercise = Exercise.find(params[:id])
-    @session = Session.find_by(challenge_id: @exercise.challenge_id, user_id: current_user.id)
-    @completed_exercise = CompletedExercise.new(exercise_id: @exercise.id, session_id: @session.id)
+    @exercise = Exercise.find(params[:exercise_id])
+    @session = Session.find_by(challenge: @exercise.challenge, user: current_user)
+    @completed_exercise = CompletedExercise.new(exercise: @exercise, session: @session)
     if @completed_exercise.save!
       redirect_to challenge_exercise_path(id: @exercise.id, challenge_id: @exercise.challenge_id)
       flash[:notice] = "You have started #{@exercise.name}"
@@ -12,10 +12,9 @@ class CompletedExercisesController < ApplicationController
   end
 
   def update
-    @exercise = Exercise.find(params[:id])
-    @completed_exercise = CompletedExercise.find_by(exercise_id: params[:id])
+    @completed_exercise = CompletedExercise.find(params[:id])
     @completed_exercise.update(completed: true)
-    redirect_to challenge_path(id: @exercise.challenge_id)
-    flash[:notice] = "You have completed #{@exercise.name}"
+    flash[:notice] = "You have completed #{@completed_exercise.exercise.name}"
+    redirect_to challenge_path(@exercise.challenge)
   end
 end
