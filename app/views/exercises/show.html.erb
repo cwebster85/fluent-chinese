@@ -2,15 +2,27 @@
 
   <h1><%= @exercise.name %></h1>
 
+<%# <div class="start-exercise-button">
   <%= link_to "Start exercise", completed_exercises_path(id: @exercise.id), method: :post, class: "btn btn-primary" %>
+<%# </div> %>
+<p></p>
+<p>Now write your own text in the box below. You can use the following text as a model:</p>
+<p>我叫Chris。我三十六岁。我是英国人。我姐姐叫Emma，她三十八岁。</p>
+<p></p>
 
-  <% if @exercise.content_type == "Writing" %>
-    <%= simple_form_for current_user do |f| %>
-    <%# <%= f.input :text %>
-    <%= f.button :submit %>
+  <div class="writing-form">
+    <% if @exercise.content_type == "Writing" %>
+      <%= form_with do |f| %>
+      <% f.text_area :text, size:"70x5", position:"center" %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 
+<%# <div class="form-actions">
+  <%= f.button :submit %>
+<%# </div> %>
+
+<div class="complete-exercise-button">
   <%= link_to "Complete exercise", completed_exercise_path(id: @exercise.id), method: :patch, class: "btn btn-primary" %>
-
+</div>
 </div>
