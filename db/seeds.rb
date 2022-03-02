@@ -125,25 +125,25 @@ exercise_3 = Exercise.create(
   )
 puts "Exercise #{exercise_3.id} is created"
 
-# exercise_4 = Exercise.create(
-#     challenge_id: challenge_1.id,
-#     content_type: "Speaking",
-#     content_url: "www",
-#     name: "Speaking",
-#     description: "Speaking"
-#   )
-# puts "Exercise #{exercise_4.id} is created"
-
 exercise_4 = Exercise.create(
+    challenge_id: challenge_1.id,
+    content_type: "Speaking",
+    content_url: "www",
+    name: "Speaking",
+    description: "Speaking"
+  )
+puts "Exercise #{exercise_4.id} is created"
+
+exercise_5 = Exercise.create(
     challenge_id: challenge_1.id,
     content_type: "Writing",
     content_url: "www",
     name: "Writing",
     description: "Wrtiting"
   )
-puts "Exercise #{exercise_4.id} is created"
+puts "Exercise #{exercise_5.id} is created"
 
-puts "All 4 exercises created for challenge 1!"
+puts "All 5 exercises created for challenge 1!"
 
 exercise_1 = Exercise.create(
     challenge_id: challenge_2.id,
@@ -172,25 +172,25 @@ exercise_3 = Exercise.create(
   )
 puts "Exercise #{exercise_3.id} is created"
 
-# exercise_4 = Exercise.create(
-#     challenge_id: challenge_2.id,
-#     content_type: "Speaking",
-#     content_url: "www",
-#     name: "Speaking",
-#     description: "Speaking"
-#   )
-# puts "Exercise #{exercise_4.id} is created"
-
 exercise_4 = Exercise.create(
+    challenge_id: challenge_2.id,
+    content_type: "Speaking",
+    content_url: "www",
+    name: "Speaking",
+    description: "Speaking"
+  )
+puts "Exercise #{exercise_4.id} is created"
+
+exercise_5 = Exercise.create(
     challenge_id: challenge_2.id,
     content_type: "Writing",
     content_url: "www",
     name: "Writing",
     description: "Wrtiting"
   )
-puts "Exercise #{exercise_4.id} is created"
+puts "Exercise #{exercise_5.id} is created"
 
-puts "All 4 exercises created for challenge 2!"
+puts "All 5 exercises created for challenge 2!"
 
 exercise_1 = Exercise.create(
     challenge_id: challenge_3.id,
@@ -219,25 +219,25 @@ exercise_3 = Exercise.create(
   )
 puts "Exercise #{exercise_3.id} is created"
 
-# exercise_4 = Exercise.create(
-#     challenge_id: challenge_3.id,
-#     content_type: "Speaking",
-#     content_url: "www",
-#     name: "Speaking",
-#     description: "Speaking"
-#   )
-# puts "Exercise #{exercise_4.id} is created"
-
 exercise_4 = Exercise.create(
+    challenge_id: challenge_3.id,
+    content_type: "Speaking",
+    content_url: "www",
+    name: "Speaking",
+    description: "Speaking"
+  )
+puts "Exercise #{exercise_4.id} is created"
+
+exercise_5 = Exercise.create(
     challenge_id: challenge_3.id,
     content_type: "Writing",
     content_url: "www",
     name: "Writing",
-    description: "Wrtiting"
+    description: "Writing"
   )
-puts "Exercise #{exercise_4.id} is created"
+puts "Exercise #{exercise_5.id} is created"
 
-puts "All 4 exercises created for challenge 3!"
+puts "All 5 exercises created for challenge 3!"
 
 puts "#{User.count} users have been created"
 puts "#{Challenge.count} challenges have been created"
