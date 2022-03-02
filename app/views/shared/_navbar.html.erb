@@ -1,6 +1,12 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-fluent-chinese <%= yield(:navbar_class) %>">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <% if user_signed_in? %>
+    <%= link_to dashboard_path, class: "navbar-brand" do %>
+      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <% end %>
+  <% else %>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <% end %>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +21,7 @@
           <%= link_to "Dashboard", dashboard_path, class: "nav-link  #{controller.controller_name == 'pages' && controller.action_name == 'dashboard' ? 'active' : ''}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Topics", challenges_path, class: "nav-link  #{controller.controller_name == 'challenges' && controller.action_name == 'index' ? 'active' : ''}" %>
+          <%= link_to "Challenges", challenges_path, class: "nav-link  #{controller.controller_name == 'challenges' && controller.action_name == 'index' ? 'active' : ''}" %>
         </li>
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
