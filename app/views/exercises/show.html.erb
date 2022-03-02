@@ -2,25 +2,26 @@
 
   <h1><%= @exercise.name %></h1>
 
-<%# <div class="start-exercise-button">
-  <%= link_to "Start exercise", completed_exercises_path(id: @exercise.id), method: :post, class: "btn btn-primary" %>
-<%# </div> %>
-<p></p>
-<%# <p>Now write your own text in the box below. You can use the following text as a model:</p>
-<p>我叫Chris。我三十六岁。我是英国人。我姐姐叫Emma，她三十八岁。</p> %>
-<p></p>
+    <%# <div class="start-exercise-button">
+      <%= link_to "Start exercise", exercise_completed_exercises_path(exercise_id: @exercise.id), method: :post, class: "btn btn-primary" %>
+    <%# </div> %>
+  
+    <p></p>
+    <%# <p>Now write your own text in the box below. You can use the following text as a model:</p>
+    <p>我叫Chris。我三十六岁。我是英国人。我姐姐叫Emma，她三十八岁。</p> %>
+    <p></p>
 
- <div class="video">
+    <div class="video">
     <% if @exercise.content_type == "video" %>
       <iframe width="1000" height="500" src="https://www.youtube.com/embed/iWi-9LJ4dg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <% end %>
-  </div>
+    </div>
 
-   <div class="vocab">
-    <% if @exercise.content_type == "vocabulary" %>
-    <iframe src="https://quizlet.com/590946874/flashcards/embed?i=8jnqv&x=1jj1" height="750" width="100%" style="border:0"></iframe>
-    <% end %>
-  </div>
+     <div class="vocab">
+      <% if @exercise.content_type == "vocabulary" %>
+      <iframe src="https://quizlet.com/590946874/flashcards/embed?i=8jnqv&x=1jj1" height="750" width="100%" style="border:0"></iframe>
+      <% end %>
+    </div>
 
   <%# <div class="speaking-form">
     <% if @exercise.content_type == "Speaking" %>
@@ -61,7 +62,9 @@
   <%= f.button :submit %>
 <%# </div> %>
 
-<div class="complete-exercise-button">
-  <%= link_to "Exercise Complete!", completed_exercise_path(id: @exercise.id), method: :patch, class: "btn btn-primary" %>
-</div>
+<% if @completed_exercise %>
+  <div class="complete-exercise-button">
+    <%= link_to "Complete exercise", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-primary" %>
+  </div>
+<% end %>
 </div>
