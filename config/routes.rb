@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create]
 
-  resources :completed_exercises, only: [:create, :update]
+  resources :exercises, except: [:show] do
+    resources :completed_exercises, only: [:create, :update]
+  end
 
   resources :users
 end
