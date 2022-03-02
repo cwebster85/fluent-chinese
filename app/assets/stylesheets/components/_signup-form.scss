@@ -1,7 +1,7 @@
-.form-login {
+.form-signup {
   background: fluent;
   padding: 10px 20px;
-  margin-top: 80px;
+  margin-top: 0px;
   border-radius: 3px;
 
 
@@ -36,5 +36,11 @@
   .btn {
     width: 100%;
     margin-bottom: 20px
+  }
+
+  .form-actions {
+    justify-content: left;
+    margin-bottom: 10%;
+
   }
 }
