@@ -20,4 +20,7 @@ class PagesController < ApplicationController
       completed_session.challenge
     end
   end
+
+  def about
+  end
 end
