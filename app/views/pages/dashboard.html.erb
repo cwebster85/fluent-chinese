@@ -21,7 +21,7 @@
   <%= link_to "View all", challenges_path, class: "btn btn-primary" %>
   <ul>
     <% @challenges.each do |challenge|%>
-      <li><%= challenge.date.strftime("%A %d") %></li>
+      <li><%= link_to challenge.date.strftime("%A %d"), challenge_path(id: challenge.id)  %></li>
     <% end %>
   </ul>
   </div>
