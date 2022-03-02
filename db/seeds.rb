@@ -63,13 +63,14 @@ puts "Challenge #{challenge_1.id} is created"
 challenge_2 = Challenge.create(
   name: "Unit 2: Saying when your birthday is",
   description: "In this unit you will learn:
-  - How to say where you and another person (e.g. a friend) are from
+  #{"
+  "}
+  #{"- How to say where you and another person (e.g. a friend) are from
   - When your birthday is
   - Months
   - I am/he is/she is
   - Names of Chinese speaking locations
-  - Two nationalities
-
+  - Two nationalities"}
   ",
   date: Date.today + 1
 )

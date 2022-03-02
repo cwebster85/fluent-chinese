@@ -1,14 +1,14 @@
 <div class="container">
 
-  <h1>Challenges</h1>
+  <div class="page-title">
+    <h1>Challenges</h1>
+  </div>
 
-  <ul>
+ <div class="page-index">
     <% @challenges.each do |challenge|%>
-      <li>
-      <p><%= challenge.name %></p>
+      <p style="font-weight: bold"><%= challenge.name %></p>
       <p><%= challenge.description %></p>
-      </li>
     <% end %>
-  </ul>
+</div>
 
 </div>
