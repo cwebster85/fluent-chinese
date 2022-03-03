@@ -127,10 +127,10 @@ puts "Exercise #{exercise_3.id} is created"
 
 exercise_4 = Exercise.create(
     challenge_id: challenge_1.id,
-    content_type: "Speaking",
+    content_type: "Listening",
     content_url: "www",
-    name: "Speaking",
-    description: "Speaking"
+    name: "Listening",
+    description: "Listening"
   )
 puts "Exercise #{exercise_4.id} is created"
 
@@ -174,10 +174,10 @@ puts "Exercise #{exercise_3.id} is created"
 
 exercise_4 = Exercise.create(
     challenge_id: challenge_2.id,
-    content_type: "Speaking",
+    content_type: "Listening",
     content_url: "www",
-    name: "Speaking",
-    description: "Speaking"
+    name: "Listening",
+    description: "Listening"
   )
 puts "Exercise #{exercise_4.id} is created"
 
@@ -221,10 +221,10 @@ puts "Exercise #{exercise_3.id} is created"
 
 exercise_4 = Exercise.create(
     challenge_id: challenge_3.id,
-    content_type: "Speaking",
+    content_type: "Listening",
     content_url: "www",
-    name: "Speaking",
-    description: "Speaking"
+    name: "Listening",
+    description: "Listening"
   )
 puts "Exercise #{exercise_4.id} is created"
 

@@ -48,15 +48,21 @@
 
     <div class="reading">
       <% if @exercise.content_type == "Reading" %>
-          <embed src="https://mychinesereading.com/introducing-yourself/" style="width: 1000px; height: 500px;">
+          <embed src="https://hskreading.com/me-and-my-friend/" style="width: 1000px; height: 500px;">
           <h2>Now record yourself reading out the text from the reading exercise in Chinese. Save the link to your recording on your profile page.</h2>
           <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px">
       <% end %>
     </div>
 
+    <div class="listening">
+      <% if @exercise.content_type == "Listening" %>
+      <iframe width="1000" height="500" src="https://edpuzzle.com/embed/media/62210fd7bf75bb42ca4e77aa" frameborder="0" allowfullscreen></iframe>
+      <% end %>
+    </div>
+
     <div class="writing-form">
       <% if @exercise.content_type == "Writing" %>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPugJ2afuSxyblACZokweJa7PUfANNhGrxmsXE5M_8JVxLg/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPugJ2afuSxyblACZokweJa7PUfANNhGrxmsXE5M_8JVxLg/viewform?embedded=true" width="1000" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       <% end %>
     </div>
     <%# <div class="form-actions">
