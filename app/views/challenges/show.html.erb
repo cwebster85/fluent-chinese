@@ -1,15 +1,20 @@
 <div class="container">
 
   <h1><%= @challenge.name %> </h1>
+  <p><%= @challenge.description %></p>
 
     <h2>Exercises</h2>
 
     <ul>
       <% @exercises.each do |exercise|%>
         <li>
-          <%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %>
-          <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
-            <i class="fa fa-solid fa-check"></i>
+          <% if @session %>
+            <%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %>
+            <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
+              <i class="fa fa-solid fa-check"></i>
+            <% end %>
+          <% else %>
+            <%= exercise.name %>
           <% end %>
         </li>
       <% end %>
