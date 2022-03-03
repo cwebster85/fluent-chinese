@@ -1,10 +1,10 @@
 <div class="container">
 
   <h1><%= @exercise.name %></h1>
-  <%= link_to "Go back to list of exercises", challenge_path(id: @challenge.id), class: "btn btn-primary mb-3" %>
+  <%= link_to "Return to Challenge", challenge_path(id: @challenge.id), class: "btn btn-primary mb-3" %>
 
     <div class="start-exercise-button">
-      <%= link_to "Start exercise", exercise_completed_exercises_path(exercise_id: @exercise.id), method: :post, class: "btn btn-primary #{@completed_exercise ? 'disabled' : ''}" %>
+      <%= link_to "Start Exercise", exercise_completed_exercises_path(exercise_id: @exercise.id), method: :post, class: "btn btn-primary #{@completed_exercise ? 'disabled' : ''}" %>
     </div>
 
     <p></p>
@@ -65,7 +65,7 @@
 
      <% if @completed_exercise %>
       <div class="complete-exercise-button">
-        <%= link_to "Complete exercise", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-primary #{@completed_exercise.completed ? 'disabled' : ''}" %>
+        <%= link_to "Exercise Complete", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-primary #{@completed_exercise.completed ? 'disabled' : ''}" %>
       </div>
     <% end %>
 
