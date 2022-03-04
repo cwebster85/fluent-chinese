@@ -28,21 +28,6 @@
       <% if @exercise.content_type == "Speaking" %>
       <%# <p>Record yourself reading out the text from the reading exercise in Chinese.</p>
     <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px;">  %>
-
-    <%# <meta charset="UTF-8">
-    <title>Simple Recorder.js demo with record, stop and pause</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div id="controls">
-        <button id="recordButton">Record</button>
-        <button id="pauseButton" disabled>Pause</button>
-        <button id="stopButton" disabled>Stop</button>
-    </div>
-    <h3>Recordings</h3>
-    <ol id="recordingsList"></ol>
-    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
-    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
-    <script src="js/app.js"></script> %>
-
     <%# <% end %>
     <%# </div> %>
 
@@ -58,7 +43,7 @@
 
     <div class="writing-form">
       <% if @exercise.content_type == "Writing" %>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPugJ2afuSxyblACZokweJa7PUfANNhGrxmsXE5M_8JVxLg/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPugJ2afuSxyblACZokweJa7PUfANNhGrxmsXE5M_8JVxLg/viewform?embedded=true" width="1000" height="500" frameborder="5"  marginheight="0" marginwidth="0">Loading…</iframe>
       <% end %>
     </div>
     <%# <div class="form-actions">
