@@ -1,11 +1,7 @@
 <div class="container">
 
   <h1><%= @exercise.name %></h1>
-  <%= link_to "Return to Challenge", challenge_path(id: @challenge.id), class: "btn btn-primary mb-3" %>
-
-    <div class="start-exercise-button">
-      <%= link_to "Start Exercise", exercise_completed_exercises_path(exercise_id: @exercise.id), method: :post, class: "btn btn-primary #{@completed_exercise ? 'disabled' : ''}" %>
-    </div>
+  <%= link_to "Back to Challenge", challenge_path(id: @challenge.id), class: "btn btn-primary mb-3" %>
 
     <p></p>
       <%# <p>Now write your own text in the box below. You can use the following text as a model:</p>
@@ -20,7 +16,7 @@
 
      <div class="vocab">
       <% if @exercise.content_type == "vocabulary" %>
-      <iframe src="https://quizlet.com/590946874/flashcards/embed?i=8jnqv&x=1jj1" height="750" width="100%" style="border:0"></iframe>
+        <iframe src="https://quizlet.com/590946874/flashcards/embed?i=8jnqv&x=1jj1" height="750" width="100%" style="border:0"></iframe>
       <% end %>
     </div>
 
@@ -48,15 +44,15 @@
 
     <div class="reading">
       <% if @exercise.content_type == "Reading" %>
-          <embed src="https://hskreading.com/me-and-my-friend/" style="width: 1000px; height: 500px;">
-          <h2>Now record yourself reading out the text from the reading exercise in Chinese. Save the link to your recording on your profile page.</h2>
-          <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px">
+        <embed src="https://hskreading.com/me-and-my-friend/" style="width: 1000px; height: 500px;">
+        <h2>Now record yourself reading out the text from the reading exercise in Chinese. Save the link to your recording on your profile page.</h2>
+        <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px">
       <% end %>
     </div>
 
     <div class="listening">
       <% if @exercise.content_type == "Listening" %>
-      <iframe width="1000" height="500" src="https://edpuzzle.com/embed/media/62210fd7bf75bb42ca4e77aa" frameborder="0" allowfullscreen></iframe>
+        <iframe width="1000" height="500" src="https://edpuzzle.com/embed/media/62210fd7bf75bb42ca4e77aa" frameborder="0" allowfullscreen></iframe>
       <% end %>
     </div>
 
