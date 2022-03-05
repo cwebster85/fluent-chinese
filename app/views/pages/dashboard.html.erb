@@ -10,9 +10,9 @@
     <p>You haven't completed any exercise yet!</p>
   <% end %>
     <% if current_user.challenges.include?(@current_challenge) %>
-      <%= link_to "Go back to challenge", challenge_path(id: @current_challenge.id), class: "btn btn-primary" %>
+      <%= link_to "Back to Challenge", challenge_path(id: @current_challenge.id), class: "btn btn-primary" %>
     <% else %>
-      <%= link_to "Start challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
+      <%= link_to "Start Challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
     <% end %>
   </div>
 

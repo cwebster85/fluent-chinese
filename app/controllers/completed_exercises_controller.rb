@@ -7,7 +7,7 @@ class CompletedExercisesController < ApplicationController
       redirect_to challenge_exercise_path(id: @exercise.id, challenge_id: @exercise.challenge_id)
       flash[:notice] = "You have started #{@exercise.name}"
     else
-      render "exercises/show"
+      render "challenges/show"
     end
   end
 
