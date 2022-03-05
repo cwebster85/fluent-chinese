@@ -1,3 +1,7 @@
+.exercise-title {
+  font-family: "Raleway";
+}
+
 .writing-form {
   justify-content: center;
   align-items: center;
@@ -8,4 +12,12 @@
 .complete-exercise-button {
   margin-top: 1%;
   margin-bottom: 10%;
+}
+
+.reading {
+  p {
+  font-family: "Ma Shan Zheng";
+  font-size: 75px;
+  border: black;
+  }
 }

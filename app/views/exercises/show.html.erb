@@ -1,8 +1,8 @@
 <div class="container">
-
+  <div class="exercise-title">
   <h1><%= @exercise.name %></h1>
   <%= link_to "Back to Challenge", challenge_path(id: @challenge.id), class: "btn btn-primary mb-3" %>
-
+  </div>
     <p></p>
       <%# <p>Now write your own text in the box below. You can use the following text as a model:</p>
       <p>我叫Chris。我三十六岁。我是英国人。我姐姐叫Emma，她三十八岁。</p> %>
@@ -45,17 +45,14 @@
     <div class="reading">
       <% if @exercise.content_type == "Reading" %>
 
-          <embed src="https://hskreading.com/me-and-my-friend/" style="width: 1000px; height: 500px;">
-          <h2>Now record yourself reading out the text from the reading exercise in Chinese. Save the link to your recording on your profile page.</h2>
-          <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px">
-          <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
-          <script>mandarinspot.annotate();</script>
-
-        <embed src="https://hskreading.com/me-and-my-friend/" style="width: 1000px; height: 500px;">
-        <h2>Now record yourself reading out the text from the reading exercise in Chinese. Save the link to your recording on your profile page.</h2>
-        <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px">
-
+          <p>我叫Chris。我三十六岁。我是英国人。我有一个姐姐，她叫Emma。她三十八岁。</p>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeeQKbYvKifsPSkhUHcdDHFGFVYuS5iDnEuNdQV9ZjsN_MTA/viewform?embedded=true" width="1100" height="500" frameborder="5" marginheight="0" marginwidth="0">Loading…</iframe>
+          <h2>Now record yourself reading out the text from the reading exercise in Chinese and upload.</h2>
+          <input type="file" accept="audio/*" capture id="recorder">
+          <audio id="player" controls></audio>
       <% end %>
+        <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
+        <script>mandarinspot.annotate();</script>
     </div>
 
     <div class="listening">
