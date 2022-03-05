@@ -44,7 +44,7 @@ puts "#{User.count} users have been created"
 
 # Challenges
 
-puts "Creating 3 challenges"
+puts "Creating 6 challenges"
 
 challenge_1 = Challenge.create(
   name: "Unit 1: Saying One's Name and Age",
@@ -91,6 +91,24 @@ challenge_3 = Challenge.create(
   date: Date.today.beginning_of_week + 5
 )
 puts "Challenge #{challenge_3.id} is created"
+
+challenge_4 = Challenge.create(
+  name: "Unit 4",
+  description: "In this unit you will learn:
+  -
+  -
+  -
+
+  You will also revisit:
+
+  -
+  -
+
+  ",
+  date: Date.today.beginning_of_week.advance(weeks: 1) + 5
+)
+puts "Challenge #{challenge_4.id} is created"
+
 
 puts "All 3 challenges created!"
 
