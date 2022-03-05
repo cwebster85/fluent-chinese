@@ -44,13 +44,13 @@
 
   <div class="listening">
     <% if @exercise.content_type == "Listening" %>
-      <iframe width="1000" height="500" src="https://edpuzzle.com/embed/media/62210fd7bf75bb42ca4e77aa" frameborder="0" allowfullscreen></iframe>
+      <iframe width="1000" height="500" src=<%= @exercise.content_url %> frameborder="0" allowfullscreen></iframe>
     <% end %>
   </div>
 
   <div class="writing-form">
     <% if @exercise.content_type == "Writing" %>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPugJ2afuSxyblACZokweJa7PUfANNhGrxmsXE5M_8JVxLg/viewform?embedded=true" width="1000" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe src=<%= @exercise.content_url %> width="1000" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     <% end %>
   </div>
 
