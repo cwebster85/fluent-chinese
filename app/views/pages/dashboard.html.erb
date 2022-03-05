@@ -1,40 +1,137 @@
-<div class="d-flex main-container">
-
-  <%= render "shared/sidebar" %>
-
-  <div class="card-container">
-    <div class="d-flex title">
-          <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
-    </div>
-    <div class="info">
-      <div class="challenge-of-day">
-        <div class="d-flex text">
-          <h2>Training for <span class="white-text">today</span></h2>
-          <h3><%= Date.today.strftime("%B, %Y") %></h3>
-          <%= image_tag "clock_image.png" %>
-        </div>
-        <div class="progress-bar">
-        </div>
-      </div>
-
-      <div>
-        <%= link_to "View all", challenges_path %>
-        <ul>
-          <% @challenges.each do |challenge|%>
-            <li><%= link_to challenge.date.strftime("%A %d"), challenge_path(challenge) %></li>
+<div class="dashboard">
+  <div class="dashboard-sidenav">
+    <%= link_to "FluentChinese", dashboard_path, class: "logo" %>
+    <ul class="nav-icon-list">
+        <li class="nav-icon-list nav-item">
+          <%= link_to dashboard_path, class: "d-flex" do %>
+            <%= image_tag "dashboard.svg", class: "icon first", size: "30" %>
+            <%# <p class="px-1">Dashboard</p> %>
+            <%# <i class="fa-solid fa-display icon" width="20" height="20"></i> %>
           <% end %>
-        </ul>
+        </li>
+        <li class="nav-icon-list nav-item">
+          <%= link_to dashboard_path, class: "d-flex" do %>
+            <%= image_tag "challenge.svg", class: "icon", size: "30" %>
+            <%# <p class="px-1">Challenges</p> %>
+          <% end %>
+        </li>
+        <li class="nav-icon-list nav-item">
+          <%= link_to dashboard_path, class: "d-flex" do %>
+            <%= image_tag "student.svg", class: "icon", size: "30" %>
+            <%# <p class="px-1">Students</p> %>
+          <% end %>
+        </li>
+        <li class="nav-icon-list nav-item">
+          <%= link_to dashboard_path do %>
+            <%= image_tag "game.svg", class: "icon", size: "30" %>
+            <%# <p class="px-1">Games</p> %>
+          <% end %>
+        </li>
+    </ul>
+    <%= link_to dashboard_path, class: "logout" do %>
+      <%= image_tag "logout.svg", class: "icon", size: "30" %>
+    <% end %>
+  </div>
+  <div class="dashboard-content">
+    <header class="welcome-banner">
+        <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure dignissimos asperiores.</p>
+    </header>
+    <div class="section">
+      <div class="section-titles">
+        <div class="section-title">
+          <%= "Mar 22-28" %>
+          <div class="btn-group nav-btns">
+            <button class="btn btn-red btn-round-left">
+              <%= image_tag "left_arrow.svg", class: "arrow-left-icon first-box", size: "30" %>
+            </button>
+            <button class="btn btn-red btn-round-right">
+              <%= image_tag "right_arrow.svg", class: "arrow-right-icon last-box", size: "30" %>
+            </button>
+          </div>
+        </div>
+        <div class="section-subtitle">
+            <button class="btn btn-pink btn-round month">
+            <%= image_tag "calendar.svg", class: "calendar-icon", size: "14" %>
+                Month
+            </button>
+        </div>
       </div>
-
-      <div>
-        <h2>Teaching assistants</h2>
-        <ul>
-          <li>Teacher</li>
-          <li>Teacher</li>
-          <li>Teacher</li>
-          <li>Teacher</li>
-        </ul>
-      </div>
+      <ul class="time-list">
+        <li class="time-list__time-item">
+          <div class="day day-non-active">Mon</div>
+          <div class="day-number">22</div>
+        </li>
+        <li class="time-list__time-item">
+          <div class="day day-non-active">Tue</div>
+          <div class="day-number">23</div>
+        </li>
+        <li class="time-list__time-item">
+          <div class="day day-non-active">Wed</div>
+          <div class="day-number">24</div>
+        </li>
+        <li class="time-list__time-item active">
+          <div class="day day-active">Thu</div>
+          <div class="day-number">25</div>
+        </li>
+        <li class="time-list__time-item">
+          <div class="day day-non-active">Fri</div>
+          <div class="day-number">26</div>
+        </li>
+        <li class="time-list__time-item">
+          <div class="day day-non-active">Sat</div>
+          <div class="day-number">27</div>
+        </li>
+        <li class="time-list__time-item">
+          <div class="day day-non-active">Sun</div>
+          <div class="day-number">28</div>
+        </li>
+      </ul>
     </div>
+    <div class="section">
+      <div class="section-titles">
+        <div class="section-title">Teaching Assistants</div>
+      </div>
+      <div class="justify-content-around teacher-list">
+        <div class="d-flex align-items-center px-3 teacher-list-item">
+          <%= image_tag "https://res.cloudinary.com/dab0abars/image/upload/v1644071971/rachel-mcdermott-0fN7Fxv1eWA-unsplash_v24j81.jpg",
+          class: "teacher-face", width: 150, crop: :thumb, gravity: :face %>
+          <div class="teacher-list-info">
+            <h3>Jane Doe</h3>
+            <span>Hi guys, lets do this!</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center px-3 teacher-list-item">
+          <%= image_tag "https://res.cloudinary.com/dab0abars/image/upload/v1646344506/ben-den-engelsen-YUu9UAcOKZ4-unsplash_zlt0dw.jpg",
+          class: "teacher-face", width: 150, crop: :thumb, gravity: :face %>
+          <div class="teacher-list-info">
+            <h3>Harry Jones</h3>
+            <span>Looking forward to today!</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center px-3 teacher-list-item">
+          <%= image_tag "https://res.cloudinary.com/dab0abars/image/upload/v1646344578/christina-wocintechchat-com-c-mgSuxqpzA-unsplash_dgibzk.jpg",
+          class: "teacher-face", width: 150, crop: :thumb, gravity: :face %>
+          <div class="teacher-list-info">
+            <h3>Lisa Moon</h3>
+            <span>Time to learn!</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center px-3 teacher-list-item">
+          <%= image_tag "https://res.cloudinary.com/dab0abars/image/upload/v1646344548/ayo-ogunseinde-sibVwORYqs0-unsplash_lpk8so.jpg",
+          class: "teacher-face", width: 150, crop: :thumb, gravity: :face %>
+          <div class="teacher-list-info">
+            <h3>Scott Wayne</h3>
+            <span>You can do it!</span>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div class="dashboard-others">
+    <div class="section">
+        <div class="section-titles">
+            <div class="section-title"></div>
+        </div>
   </div>
 </div>
