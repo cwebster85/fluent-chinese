@@ -10,8 +10,8 @@
 # Cleaning database
 
 puts "Cleaning up database"
+CompletedExercise.destroy_all
 Session.destroy_all
-
 Exercise.destroy_all
 User.destroy_all
 Challenge.destroy_all
@@ -56,7 +56,7 @@ challenge_1 = Challenge.create(
   - Words for siblings
 
   ",
-  date: Time.now
+  date: Date.today
 )
 puts "Challenge #{challenge_1.id} is created"
 
@@ -71,7 +71,7 @@ challenge_2 = Challenge.create(
   - Two nationalities
 
   ",
-  date: Time.now
+  date: Date.today + 1
 )
 puts "Challenge #{challenge_2.id} is created"
 
@@ -88,7 +88,7 @@ challenge_3 = Challenge.create(
   - Numbers 0-100
 
   ",
-  date: Time.now
+  date: Date.today + 2
 )
 puts "Challenge #{challenge_3.id} is created"
 
@@ -127,10 +127,10 @@ puts "Exercise #{exercise_3.id} is created"
 
 exercise_4 = Exercise.create(
     challenge_id: challenge_1.id,
-    content_type: "Speaking",
+    content_type: "Listening",
     content_url: "www",
-    name: "Speaking",
-    description: "Speaking"
+    name: "Listening",
+    description: "Listening"
   )
 puts "Exercise #{exercise_4.id} is created"
 
@@ -174,10 +174,10 @@ puts "Exercise #{exercise_3.id} is created"
 
 exercise_4 = Exercise.create(
     challenge_id: challenge_2.id,
-    content_type: "Speaking",
+    content_type: "Listening",
     content_url: "www",
-    name: "Speaking",
-    description: "Speaking"
+    name: "Listening",
+    description: "Listening"
   )
 puts "Exercise #{exercise_4.id} is created"
 
@@ -188,7 +188,7 @@ exercise_5 = Exercise.create(
     name: "Writing",
     description: "Wrtiting"
   )
-puts "Exercise #{exercise_2.id} is created"
+puts "Exercise #{exercise_5.id} is created"
 
 puts "All 5 exercises created for challenge 2!"
 
@@ -221,10 +221,10 @@ puts "Exercise #{exercise_3.id} is created"
 
 exercise_4 = Exercise.create(
     challenge_id: challenge_3.id,
-    content_type: "Speaking",
+    content_type: "Listening",
     content_url: "www",
-    name: "Speaking",
-    description: "Speaking"
+    name: "Listening",
+    description: "Listening"
   )
 puts "Exercise #{exercise_4.id} is created"
 
@@ -233,7 +233,7 @@ exercise_5 = Exercise.create(
     content_type: "Writing",
     content_url: "www",
     name: "Writing",
-    description: "Wrtiting"
+    description: "Writing"
   )
 puts "Exercise #{exercise_5.id} is created"
 

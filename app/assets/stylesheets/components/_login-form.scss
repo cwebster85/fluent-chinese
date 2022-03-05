@@ -1,0 +1,40 @@
+.form-login {
+  background: fluent;
+  padding: 10px 20px;
+  margin-top: 80px;
+  border-radius: 3px;
+
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family:'Raleway';
+    color: $fluent-chinese-red
+  }
+
+  h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: $headers-font;
+  }
+
+  h4 {
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .form-inputs {
+    background-color: white;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 20px
+  }
+}
