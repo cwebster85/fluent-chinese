@@ -153,10 +153,10 @@ puts "Creating 5 exercises for challenge 1"
 challenge_1_exercise_1 = Exercise.create(
   challenge_id: challenge_1.id,
   content_type: "video",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Video Lecture",
   description: "Introduction and Resources"
-  )
+)
 puts "Exercise #{challenge_1_exercise_1.id} is created"
 
 challenge_1_exercise_2 = Exercise.create(
@@ -165,34 +165,34 @@ challenge_1_exercise_2 = Exercise.create(
   content_url: "www.sentencebuilders.com",
   name: "Vocabulary Building",
   description: "Vocabulary Building"
-  )
+)
 puts "Exercise #{challenge_1_exercise_2.id} is created"
 
 challenge_1_exercise_3 = Exercise.create(
   challenge_id: challenge_1.id,
   content_type: "Reading",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Reading",
   description: "Reading"
-  )
+)
 puts "Exercise #{challenge_1_exercise_3.id} is created"
 
 challenge_1_exercise_4 = Exercise.create(
   challenge_id: challenge_1.id,
   content_type: "Listening",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Listening",
   description: "Listening"
-  )
+)
 puts "Exercise #{challenge_1_exercise_4.id} is created"
 
 challenge_1_exercise_5 = Exercise.create(
   challenge_id: challenge_1.id,
   content_type: "Writing",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Writing",
   description: "Writing"
-  )
+)
 puts "Exercise #{challenge_1_exercise_5.id} is created"
 
 puts "All 5 exercises created for challenge 1!"
@@ -204,10 +204,10 @@ puts "Creating 5 exercises for challenge 2"
 challenge_2_exercise_1 = Exercise.create(
   challenge_id: challenge_2.id,
   content_type: "video",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Video Lecture",
   description: "Introduction and Resources"
-  )
+)
 puts "Exercise #{challenge_2_exercise_1.id} is created"
 
 challenge_2_exercise_2 = Exercise.create(
@@ -216,34 +216,34 @@ challenge_2_exercise_2 = Exercise.create(
   content_url: "www.sentencebuilders.com",
   name: "Vocabulary Building",
   description: "Vocabulary Building"
-  )
+)
 puts "Exercise #{challenge_2_exercise_2.id} is created"
 
 challenge_2_exercise_3 = Exercise.create(
   challenge_id: challenge_2.id,
   content_type: "Reading",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Reading",
   description: "Reading"
-  )
+)
 puts "Exercise #{challenge_2_exercise_3.id} is created"
 
 challenge_2_exercise_4 = Exercise.create(
   challenge_id: challenge_2.id,
   content_type: "Listening",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Listening",
   description: "Listening"
-  )
+)
 puts "Exercise #{challenge_2_exercise_4.id} is created"
 
 challenge_2_exercise_5 = Exercise.create(
   challenge_id: challenge_2.id,
   content_type: "Writing",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Writing",
   description: "Writing"
-  )
+)
 puts "Exercise #{challenge_2_exercise_5.id} is created"
 
 puts "All 5 exercises created for challenge 2!"
@@ -255,46 +255,46 @@ puts "Creating 5 exercises for challenge 3"
 challenge_3_exercise_1 = Exercise.create(
   challenge_id: challenge_3.id,
   content_type: "video",
-  content_url: "www",
+  content_url: "https://www.youtube.com/embed/iWi-9LJ4dg4",
   name: "Video Lecture",
   description: "Introduction and Resources"
-  )
+)
 puts "Exercise #{challenge_3_exercise_1.id} is created"
 
 challenge_3_exercise_2 = Exercise.create(
   challenge_id: challenge_3.id,
   content_type: "vocabulary",
-  content_url: "www.sentencebuilders.com",
+  content_url: "https://quizlet.com/590946874/flashcards/embed?i=8jnqv&x=1jj1",
   name: "Vocabulary Building",
   description: "Vocabulary Building"
-  )
+)
 puts "Exercise #{challenge_3_exercise_2.id} is created"
 
 challenge_3_exercise_3 = Exercise.create(
   challenge_id: challenge_3.id,
   content_type: "Reading",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Reading",
   description: "Reading"
-  )
+)
 puts "Exercise #{challenge_3_exercise_3.id} is created"
 
 challenge_3_exercise_4 = Exercise.create(
   challenge_id: challenge_3.id,
   content_type: "Listening",
-  content_url: "www",
+  content_url: "https://edpuzzle.com/embed/media/62210fd7bf75bb42ca4e77aa",
   name: "Listening",
   description: "Listening"
-  )
+)
 puts "Exercise #{challenge_3_exercise_4.id} is created"
 
 challenge_3_exercise_5 = Exercise.create(
   challenge_id: challenge_3.id,
   content_type: "Writing",
-  content_url: "www",
+  content_url: "https://docs.google.com/forms/d/e/1FAIpQLSerPugJ2afuSxyblACZokweJa7PUfANNhGrxmsXE5M_8JVxLg/viewform?embedded=true",
   name: "Writing",
   description: "Writing"
-  )
+)
 puts "Exercise #{challenge_3_exercise_5.id} is created"
 
 puts "All 5 exercises created for challenge 3!"
@@ -306,10 +306,10 @@ puts "Creating 5 exercises for challenge 4"
 challenge_4_exercise_1 = Exercise.create(
   challenge_id: challenge_4.id,
   content_type: "video",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Video Lecture",
   description: "Introduction and Resources"
-  )
+)
 puts "Exercise #{challenge_4_exercise_1.id} is created"
 
 challenge_4_exercise_2 = Exercise.create(
@@ -318,34 +318,34 @@ challenge_4_exercise_2 = Exercise.create(
   content_url: "www.sentencebuilders.com",
   name: "Vocabulary Building",
   description: "Vocabulary Building"
-  )
+)
 puts "Exercise #{challenge_4_exercise_2.id} is created"
 
 challenge_4_exercise_3 = Exercise.create(
   challenge_id: challenge_4.id,
   content_type: "Reading",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Reading",
   description: "Reading"
-  )
+)
 puts "Exercise #{challenge_4_exercise_3.id} is created"
 
 challenge_4_exercise_4 = Exercise.create(
   challenge_id: challenge_4.id,
   content_type: "Listening",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Listening",
   description: "Listening"
-  )
+)
 puts "Exercise #{challenge_4_exercise_4.id} is created"
 
 challenge_4_exercise_5 = Exercise.create(
   challenge_id: challenge_4.id,
   content_type: "Writing",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Writing",
   description: "Writing"
-  )
+)
 puts "Exercise #{challenge_4_exercise_5.id} is created"
 
 puts "All 5 exercises created for challenge 4!"
@@ -357,10 +357,10 @@ puts "Creating 5 exercises for challenge 5"
 challenge_5_exercise_1 = Exercise.create(
   challenge_id: challenge_5.id,
   content_type: "video",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Video Lecture",
   description: "Introduction and Resources"
-  )
+)
 puts "Exercise #{challenge_5_exercise_1.id} is created"
 
 challenge_5_exercise_2 = Exercise.create(
@@ -369,34 +369,34 @@ challenge_5_exercise_2 = Exercise.create(
   content_url: "www.sentencebuilders.com",
   name: "Vocabulary Building",
   description: "Vocabulary Building"
-  )
+)
 puts "Exercise #{challenge_5_exercise_2.id} is created"
 
 challenge_5_exercise_3 = Exercise.create(
   challenge_id: challenge_5.id,
   content_type: "Reading",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Reading",
   description: "Reading"
-  )
+)
 puts "Exercise #{challenge_5_exercise_3.id} is created"
 
 challenge_5_exercise_4 = Exercise.create(
   challenge_id: challenge_5.id,
   content_type: "Listening",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Listening",
   description: "Listening"
-  )
+)
 puts "Exercise #{challenge_5_exercise_4.id} is created"
 
 challenge_5_exercise_5 = Exercise.create(
   challenge_id: challenge_5.id,
   content_type: "Writing",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Writing",
   description: "Writing"
-  )
+)
 puts "Exercise #{challenge_5_exercise_5.id} is created"
 
 puts "All 5 exercises created for challenge 5!"
@@ -408,10 +408,10 @@ puts "Creating 5 exercises for challenge 6"
 challenge_6_exercise_1 = Exercise.create(
   challenge_id: challenge_6.id,
   content_type: "video",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Video Lecture",
   description: "Introduction and Resources"
-  )
+)
 puts "Exercise #{challenge_6_exercise_1.id} is created"
 
 challenge_6_exercise_2 = Exercise.create(
@@ -420,34 +420,34 @@ challenge_6_exercise_2 = Exercise.create(
   content_url: "www.sentencebuilders.com",
   name: "Vocabulary Building",
   description: "Vocabulary Building"
-  )
+)
 puts "Exercise #{challenge_6_exercise_2.id} is created"
 
 challenge_6_exercise_3 = Exercise.create(
   challenge_id: challenge_6.id,
   content_type: "Reading",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Reading",
   description: "Reading"
-  )
+)
 puts "Exercise #{challenge_6_exercise_3.id} is created"
 
 challenge_6_exercise_4 = Exercise.create(
   challenge_id: challenge_6.id,
   content_type: "Listening",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Listening",
   description: "Listening"
-  )
+)
 puts "Exercise #{challenge_6_exercise_4.id} is created"
 
 challenge_6_exercise_5 = Exercise.create(
   challenge_id: challenge_6.id,
   content_type: "Writing",
-  content_url: "www",
+  content_url: "www.google.com",
   name: "Writing",
   description: "Writing"
-  )
+)
 puts "Exercise #{challenge_6_exercise_5.id} is created"
 
 puts "All 5 exercises created for challenge 6!"

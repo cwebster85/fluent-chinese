@@ -7,13 +7,13 @@
 
   <div class="video">
     <% if @exercise.content_type == "video" %>
-      <iframe width="1000" height="500" src="https://www.youtube.com/embed/iWi-9LJ4dg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="1000" height="500" src= <%= @exercise.content_url %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <% end %>
   </div>
 
   <div class="vocab">
     <% if @exercise.content_type == "vocabulary" %>
-      <iframe src="https://quizlet.com/590946874/flashcards/embed?i=8jnqv&x=1jj1" height="750" width="100%" style="border:0"></iframe>
+      <iframe src= <%= @exercise.content_url %> height="750" width="100%" style="border:0"></iframe>
     <% end %>
   </div>
 
@@ -44,13 +44,13 @@
 
   <div class="listening">
     <% if @exercise.content_type == "Listening" %>
-      <iframe width="1000" height="500" src="https://edpuzzle.com/embed/media/62210fd7bf75bb42ca4e77aa" frameborder="0" allowfullscreen></iframe>
+      <iframe width="1000" height="500" src=<%= @exercise.content_url %> frameborder="0" allowfullscreen></iframe>
     <% end %>
   </div>
 
   <div class="writing-form">
     <% if @exercise.content_type == "Writing" %>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPugJ2afuSxyblACZokweJa7PUfANNhGrxmsXE5M_8JVxLg/viewform?embedded=true" width="1000" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe src=<%= @exercise.content_url %> width="1000" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     <% end %>
   </div>
 
