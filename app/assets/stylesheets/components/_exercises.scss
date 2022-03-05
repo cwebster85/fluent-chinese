@@ -1,3 +1,7 @@
+.exercise-title {
+  font-family: "Raleway";
+}
+
 .writing-form {
   justify-content: center;
   align-items: center;
@@ -11,6 +15,13 @@
 }
 
 .reading {
+  p {
+  font-family: "Ma Shan Zheng";
+  font-size: 75px;
+  border: black;
+  }
+}
+
   h2 {
     margin-top: 3%;
     margin-bottom: 5%;
