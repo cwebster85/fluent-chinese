@@ -1,20 +1,29 @@
 <div class="container">
+
   <div class="challenges-title">
     <h1><%= @challenge.name %> </h1>
+    <p><%= @challenge.description %></p>
+  </div>
 
-    <h2>Exercises</h2>
- </div>
- <div class="exercises-cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+  <h2>Exercises</h2>
+
     <ul>
       <% @exercises.each do |exercise|%>
-        <li>
-          <%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %>
-          <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
-            <i class="fa fa-solid fa-check"></i>
+        <li class="exercises-cards">>
+          <% if @session %>
+            <%= exercise.name %>
+            <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
+              <i class="fa fa-solid fa-check"></i>
+            <% elsif @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: false) %>
+              <%= link_to "Continue", challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id), class: "btn btn-primary" %>
+            <% else %>
+              <%= link_to "Start", exercise_completed_exercises_path(exercise_id: exercise.id), method: :post, class: "btn btn-primary" %>
+            <% end %>
+          <% else %>
+            <%= exercise.name %>
           <% end %>
         </li>
       <% end %>
     </ul>
-  </div>
+
 </div>
