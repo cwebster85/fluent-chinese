@@ -44,12 +44,186 @@
 
     <div class="reading">
       <% if @exercise.content_type == "Reading" %>
+        <p>我叫Chris。我三十六岁。我是英国人。我有一个姐姐，她叫Emma。她三十八岁。</p>
+         <iframe allow="microphone" frameborder="0" style="width: 100%; height: 240px;" width="100%" height="240" src="https://www.speakpipe.com/msg/embed/260029/1/61a6zs5e8z1gz6gf"></iframe>
+      
+         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeeQKbYvKifsPSkhUHcdDHFGFVYuS5iDnEuNdQV9ZjsN_MTA/viewform?embedded=true" width="1100" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <h2>Now record yourself reading out the text from the reading exercise in Chinese and download the recording to your device.</h2>
 
-          <p>我叫Chris。我三十六岁。我是英国人。我有一个姐姐，她叫Emma。她三十八岁。</p>
-          <iframe allow="microphone" frameborder="0" style="width: 100%; height: 240px;" width="100%" height="240" src="https://www.speakpipe.com/msg/embed/260029/1/61a6zs5e8z1gz6gf"></iframe>          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeeQKbYvKifsPSkhUHcdDHFGFVYuS5iDnEuNdQV9ZjsN_MTA/viewform?embedded=true" width="1100" height="500" frameborder="5" marginheight="0" marginwidth="0">Loading…</iframe>
-          <h2>Now record yourself reading out the text from the reading exercise in Chinese and upload.</h2>
-          <input type="file" accept="audio/*" capture id="recorder">
-          <audio id="player" controls></audio>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style type="text/css">
+            .holder {
+                /* background-image: -webkit-gradient(linear, left bottom, left top, from(#4c474c), to(#141414));
+                background-image: -o-linear-gradient(bottom, #4c474c 0%, #141414 100%);
+                background-image: linear-gradient(0deg, #4c474c 0%, #141414 100%); */
+                border-radius: 10px;
+            }
+            [data-role="controls"] > button {
+                margin: 10px;
+                outline: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                /* background-image: -webkit-gradient(linear, left bottom, left top, from(#D9AFD9), to(#97D9E1));
+                background-image: -o-linear-gradient(bottom, #D9AFD9 0%, #97D9E1 100%);
+                background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); */
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                text-indent: -1000em;
+                cursor: pointer;
+                -webkit-box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.3) inset,
+                    0px 0px 0px 30px #fff, 0px 0px 0px 35px #333;
+                        box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.3) inset,
+                    0px 0px 0px 30px #fff, 0px 0px 0px 35px #333;
+            }
+            [data-role="controls"] > button:hover {
+                background-color: red;
+                background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(red));
+                /* background-image: -o-linear-gradient(bottom, #ee7bee 0%, #6fe1f5 100%);
+                background-image: linear-gradient(0deg, #ee7bee 0%, #6fe1f5 100%); */
+            }
+            [data-role="controls"] > button[data-recording="true"] {
+                background-color: red;
+                background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(red));
+                /* background-image: -o-linear-gradient(bottom, #ff2038 0%, #b30003 100%);
+                background-image: linear-gradient(0deg, #ff2038 0%, #b30003 100%); */
+            }
+            [data-role="recordings"] > .row {
+                width: auto;
+                height: auto;
+                padding: 20px;
+            }
+            [data-role="recordings"] > .row > audio {
+                outline: none;
+            }
+            [data-role="recordings"] > .row > a {
+                /* display: inline-block; */
+                text-align: center;
+                font-size: 20px;
+                line-height: 50px;
+                /* vertical-align: middle; */
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                color: black;
+                font-weight: bold;
+                text-decoration: underline;
+                background-color: gray;
+                background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(white));
+                float: right;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+            [data-role="recordings"] > .row > a:hover {
+                text-decoration: none;
+            }
+            [data-role="recordings"] > .row > a:active {
+                /* background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+                /* background-image: -o-linear-gradient(top, #0093E9 0%, #80D0C7 100%);
+                background-image: linear-gradient(180deg, #0093E9 0%, #80D0C7 100%); */ */
+            }
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://markjivko.com/dist/recorder.js"></script>
+        <script>
+            jQuery(document).ready(function () {
+                var $ = jQuery;
+                var myRecorder = {
+                    objects: {
+                        context: null,
+                        stream: null,
+                        recorder: null
+                    },
+                    init: function () {
+                        if (null === myRecorder.objects.context) {
+                            myRecorder.objects.context = new (
+                                    window.AudioContext || window.webkitAudioContext
+                                    );
+                        }
+                    },
+                    start: function () {
+                        var options = {audio: true, video: false};
+                        navigator.mediaDevices.getUserMedia(options).then(function (stream) {
+                            myRecorder.objects.stream = stream;
+                            myRecorder.objects.recorder = new Recorder(
+                                    myRecorder.objects.context.createMediaStreamSource(stream),
+                                    {numChannels: 1}
+                            );
+                            myRecorder.objects.recorder.record();
+                        }).catch(function (err) {});
+                    },
+                    stop: function (listObject) {
+                        if (null !== myRecorder.objects.stream) {
+                            myRecorder.objects.stream.getAudioTracks()[0].stop();
+                        }
+                        if (null !== myRecorder.objects.recorder) {
+                            myRecorder.objects.recorder.stop();
+
+                            // Validate object
+                            if (null !== listObject
+                                    && 'object' === typeof listObject
+                                    && listObject.length > 0) {
+                                // Export the WAV file
+                                myRecorder.objects.recorder.exportWAV(function (blob) {
+                                    var url = (window.URL || window.webkitURL)
+                                            .createObjectURL(blob);
+
+                                    // Prepare the playback
+                                    var audioObject = $('<audio controls></audio>')
+                                            .attr('src', url);
+
+                                    // Prepare the download link
+                                    var downloadObject = $('<a>&#9660;</a>')
+                                            .attr('href', url)
+                                            .attr('download', new Date().toUTCString() + '.wav');
+
+                                    // Wrap everything in a row
+                                    var holderObject = $('<div class="row"></div>')
+                                            .append(audioObject)
+                                            .append(downloadObject);
+
+                                    // Append to the list
+                                    listObject.append(holderObject);
+                                });
+                            }
+                        }
+                    }
+                };
+
+                // Prepare the recordings list
+                var listObject = $('[data-role="recordings"]');
+
+                // Prepare the record button
+                $('[data-role="controls"] > button').click(function () {
+                    // Initialize the recorder
+                    myRecorder.init();
+
+                    // Get the button state
+                    var buttonState = !!$(this).attr('data-recording');
+
+                    // Toggle
+                    if (!buttonState) {
+                        $(this).attr('data-recording', 'true');
+                        myRecorder.start();
+                    } else {
+                        $(this).attr('data-recording', '');
+                        myRecorder.stop(listObject);
+                    }
+                });
+            });
+        </script>
+        <div class="holder">
+            <div data-role="controls" class="controls-css">
+                <button>Record</button>
+            </div>
+            <div data-role="recordings" class="recordings-css"></div>
+        </div>
+
       <% end %>
         <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
         <script>mandarinspot.annotate();</script>
