@@ -9,9 +9,13 @@
       <% @exercises.each do |exercise|%>
         <li>
           <% if @session %>
-            <%= link_to exercise.name, challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id) %>
+            <%= exercise.name %>
             <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
               <i class="fa fa-solid fa-check"></i>
+            <% elsif @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: false) %>
+              <%= link_to "Continue", challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id), class: "btn btn-primary" %>
+            <% else %>
+              <%= link_to "Start", exercise_completed_exercises_path(exercise_id: exercise.id), method: :post, class: "btn btn-primary" %>
             <% end %>
           <% else %>
             <%= exercise.name %>
