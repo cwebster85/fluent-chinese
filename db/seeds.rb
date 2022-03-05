@@ -93,16 +93,16 @@ challenge_3 = Challenge.create(
 puts "Challenge #{challenge_3.id} is created"
 
 challenge_4 = Challenge.create(
-  name: "Unit 4",
+  name: "Unit 4: Talking about my family",
   description: "In this unit you will learn:
-  -
-  -
-  -
+  - To say how many people are in your family
+  - How well you get along with them
+  - Words for family members
+  - What their age is
 
   You will also revisit:
-
-  -
-  -
+  - Numbers up to 100
+  - Describing hair and eyes
 
   ",
   date: Date.today.advance(weeks: 1).beginning_of_week + 1
@@ -110,16 +110,15 @@ challenge_4 = Challenge.create(
 puts "Challenge #{challenge_4.id} is created"
 
 challenge_5 = Challenge.create(
-  name: "Unit 5",
+  name: "Unit 5: Saying where I live and am from",
   description: "In this unit you will learn:
-  -
-  -
-  -
+  - To say where you live and are from
+  - The names of renowned cities and places in the Chinese speaking world
+  - The use of the verb 是 to say 'I am'
 
   You will also revisit:
-
-  -
-  -
+  - How to introduce yourself
+  - Saying your age and birthday
 
   ",
   date: Date.today.advance(weeks: 1).beginning_of_week + 3
@@ -127,16 +126,16 @@ challenge_5 = Challenge.create(
 puts "Challenge #{challenge_5.id} is created"
 
 challenge_6 = Challenge.create(
-  name: "Unit 6",
+  name: "Unit 6: Describing myself and another family member",
   description: "In this unit you will learn:
-  -
-  -
-  -
+  - How to say what your immediate family members are like
+  - Useful adjectives to describe them
+  - The use of 'very' 很
+  - Use of 'because' 因为
 
   You will also revisit:
-
-  -
-  -
+  - Numbers up to 100
+  - Describing hair and eyes
 
   ",
   date: Date.today.advance(weeks: 1).beginning_of_week + 5
