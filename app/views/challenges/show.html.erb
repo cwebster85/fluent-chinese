@@ -9,7 +9,7 @@
 
     <ul>
       <% @exercises.each do |exercise|%>
-        <li class="exercises-cards">>
+        <li class="exercises-cards">
           <% if @session %>
             <%= exercise.name %>
             <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
