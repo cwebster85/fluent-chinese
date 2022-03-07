@@ -33,26 +33,30 @@
       <%= image_tag "logout.svg", class: "icon", size: "30" %>
     <% end %>
   </div>
-  
+
   <div class="dashboard-content">
-    
+
     <header class="welcome-banner">
         <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
-        <h2>Training for today: <%= @current_challenge.name %></h2>
-        <% if @number_of_current_challenge_completed_exercises %>
-          <p><%= @number_of_current_challenge_completed_exercises %>/5 exercises completed</p>
+        <% if @current_challenge %>
+          <h2>Training for today: <%= @current_challenge.name %></h2>
+          <% if @number_of_current_challenge_completed_exercises %>
+            <p><%= @number_of_current_challenge_completed_exercises %>/5 exercises completed</p>
+          <% else %>
+            <p>You haven't completed any exercise yet!</p>
+          <% end %>
+          <% if current_user.challenges.include?(@current_challenge) %>
+            <%= link_to "Back to Challenge", challenge_path(id: @current_challenge.id), class: "btn btn-primary" %>
+          <% else %>
+            <%= link_to "Start Challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
+          <% end %>
         <% else %>
-          <p>You haven't completed any exercise yet!</p>
-        <% end %>
-        <% if current_user.challenges.include?(@current_challenge) %>
-          <%= link_to "Back to Challenge", challenge_path(id: @current_challenge.id), class: "btn btn-primary" %>
-        <% else %>
-          <%= link_to "Start Challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
+          <h2>There is no challenge today, you can revise what you learnt!</h2>
         <% end %>
     </header>
-    
+
     <div class="section">
-      
+
       <div class="section-titles">
         <div class="section-title">
           <h3><%= Date.today.strftime("%B, %Y") %></h3>
@@ -72,7 +76,7 @@
          </button>
         </div>
       </div>
-      
+
       <ul class="time-list">
        <% @challenges.each do |challenge|%>
         <%= link_to challenge_path(id: challenge.id) do %>
@@ -83,8 +87,8 @@
         <% end %>
        <% end %>
       </ul>
-      
-      
+
+
 <!--       <ul class="time-list">
         <li class="time-list__time-item">
           <div class="day day-non-active">Mon</div>
@@ -115,11 +119,11 @@
           <div class="day-number">28</div>
         </li>
       </ul> -->
-      
-      
-      
+
+
+
     </div>
-    
+
     <div class="section">
       <div class="section-titles">
         <div class="section-title">Teaching Assistants</div>
