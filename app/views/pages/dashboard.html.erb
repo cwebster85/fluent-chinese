@@ -6,26 +6,26 @@
         <li class="nav-icon-list nav-item">
           <%= link_to dashboard_path, class: "d-flex" do %>
             <%= image_tag "dashboard.svg", class: "icon first", size: "30" %>
-            <%# <p class="px-1">Dashboard</p> %>
+            <p class="px-1">Dashboard</p>
             <%# <i class="fa-solid fa-display icon" width="20" height="20"></i> %>
           <% end %>
         </li>
         <li class="nav-icon-list nav-item">
           <%= link_to dashboard_path, class: "d-flex" do %>
             <%= image_tag "challenge.svg", class: "icon", size: "30" %>
-            <%# <p class="px-1">Challenges</p> %>
+            <p class="px-1">Challenges</p>
           <% end %>
         </li>
         <li class="nav-icon-list nav-item">
           <%= link_to dashboard_path, class: "d-flex" do %>
             <%= image_tag "student.svg", class: "icon", size: "30" %>
-            <%# <p class="px-1">Students</p> %>
+            <p class="px-1">Students</p>
           <% end %>
         </li>
         <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path do %>
+          <%= link_to dashboard_path, class: "d-flex" do %>
             <%= image_tag "game.svg", class: "icon", size: "30" %>
-            <%# <p class="px-1">Games</p> %>
+            <p class="px-1">Games</p>
           <% end %>
         </li>
     </ul>
@@ -33,9 +33,9 @@
       <%= image_tag "logout.svg", class: "icon", size: "30" %>
     <% end %>
   </div>
-  
+
   <div class="dashboard-content">
-    
+
     <header class="welcome-banner">
         <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
         <h2>Training for today: <%= @current_challenge.name %></h2>
@@ -50,9 +50,9 @@
           <%= link_to "Start Challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
         <% end %>
     </header>
-    
+
     <div class="section">
-      
+
       <div class="section-titles">
         <div class="section-title">
           <h3><%= Date.today.strftime("%B, %Y") %></h3>
@@ -72,7 +72,7 @@
          </button>
         </div>
       </div>
-      
+
       <ul class="time-list">
        <% @challenges.each do |challenge|%>
         <%= link_to challenge_path(id: challenge.id) do %>
@@ -83,43 +83,8 @@
         <% end %>
        <% end %>
       </ul>
-      
-      
-<!--       <ul class="time-list">
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Mon</div>
-          <div class="day-number">22</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Tue</div>
-          <div class="day-number">23</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Wed</div>
-          <div class="day-number">24</div>
-        </li>
-        <li class="time-list__time-item active">
-          <div class="day day-active">Thu</div>
-          <div class="day-number">25</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Fri</div>
-          <div class="day-number">26</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Sat</div>
-          <div class="day-number">27</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Sun</div>
-          <div class="day-number">28</div>
-        </li>
-      </ul> -->
-      
-      
-      
     </div>
-    
+
     <div class="section">
       <div class="section-titles">
         <div class="section-title">Teaching Assistants</div>
@@ -158,12 +123,14 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
-  </div>
+
   <div class="dashboard-others">
     <div class="section">
         <div class="section-titles">
             <div class="section-title"></div>
         </div>
   </div>
+
 </div>
