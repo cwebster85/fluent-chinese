@@ -214,8 +214,12 @@ body {
 }
 
 .exercise-image {
-  height: 130px;
+  height: cover;
+  width: 250px;
   margin: 0px 30px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 8px;
 }
 
 // Scroll
