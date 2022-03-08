@@ -172,6 +172,8 @@ challenge_1_exercise_3 = Exercise.create(
   challenge_id: challenge_1.id,
   content_type: "Reading",
   content_url: "www.google.com",
+  content_url_bis: "www.google.com",
+  content_url_ter: "www.google.com",
   name: "Reading",
   description: "Reading"
 )
@@ -223,6 +225,8 @@ challenge_2_exercise_3 = Exercise.create(
   challenge_id: challenge_2.id,
   content_type: "Reading",
   content_url: "www.google.com",
+  content_url_bis: "www.google.com",
+  content_url_ter: "www.google.com",
   name: "Reading",
   description: "Reading"
 )
@@ -273,7 +277,9 @@ puts "Exercise #{challenge_3_exercise_2.id} is created"
 challenge_3_exercise_3 = Exercise.create(
   challenge_id: challenge_3.id,
   content_type: "Reading",
-  content_url: "www.google.com",
+  content_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1226964223&color=%23f10808&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+  content_url_bis: "https://soundcloud.com/chris-webster-988440086/reading-text-one",
+  content_url_ter: "https://docs.google.com/forms/d/e/1FAIpQLSdeeQKbYvKifsPSkhUHcdDHFGFVYuS5iDnEuNdQV9ZjsN_MTA/viewform?embedded=true",
   name: "Reading",
   description: "Reading"
 )
@@ -325,6 +331,8 @@ challenge_4_exercise_3 = Exercise.create(
   challenge_id: challenge_4.id,
   content_type: "Reading",
   content_url: "www.google.com",
+  content_url_bis: "www.google.com",
+  content_url_ter: "www.google.com",
   name: "Reading",
   description: "Reading"
 )
@@ -376,6 +384,8 @@ challenge_5_exercise_3 = Exercise.create(
   challenge_id: challenge_5.id,
   content_type: "Reading",
   content_url: "www.google.com",
+  content_url_bis: "www.google.com",
+  content_url_ter: "www.google.com",
   name: "Reading",
   description: "Reading"
 )
@@ -427,6 +437,8 @@ challenge_6_exercise_3 = Exercise.create(
   challenge_id: challenge_6.id,
   content_type: "Reading",
   content_url: "www.google.com",
+  content_url_bis: "www.google.com",
+  content_url_ter: "www.google.com",
   name: "Reading",
   description: "Reading"
 )

@@ -21,8 +21,9 @@
     <% if @exercise.content_type == "Reading" %>
 
       <p>我叫Chris。我三十六岁。我是英国人。我有一个姐姐，她叫Emma。她三十八岁。</p>
-      <iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1226964223&color=%23f10808&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Raleway,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/chris-webster-988440086/reading-text-one" title="Reading Text 1" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeeQKbYvKifsPSkhUHcdDHFGFVYuS5iDnEuNdQV9ZjsN_MTA/viewform?embedded=true" width="1100" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe width="100%" height="100" scrolling="no" frameborder="no" src=<%= @exercise.content_url %> ></iframe>
+      <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Raleway,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href=<%= @exercise.content_url_bis %> title="Reading Text" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
+      <iframe src=<%= @exercise.content_url_ter %> width="1100" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
       <h2>Now record yourself reading out the text from the reading exercise in Chinese and download the recording to your device.</h2>
 
