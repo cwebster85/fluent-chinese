@@ -21,6 +21,7 @@
             <% end %>
           <% else %>
             <%= exercise.name %>
+            <% flash[:notice] = "Complete previous exercises to unlock this one!" %>
           <% end %>
         </li>
       <% end %>
