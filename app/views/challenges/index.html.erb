@@ -6,7 +6,7 @@
     <% @challenges.each do |challenge|%>
       <li>
         <p><%= link_to challenge.name, challenge_path(id: challenge.id) %></p>
-        <p><%= challenge.description %></p>
+        <p style="white-space: pre-line"><%= challenge.description %></p>
       </li>
     <% end %>
   </ul>
