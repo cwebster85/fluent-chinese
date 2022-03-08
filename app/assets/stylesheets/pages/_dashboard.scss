@@ -5,6 +5,10 @@ body {
   color: $dark-grey;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 // dashboard
 
 .dashboard {
@@ -192,7 +196,7 @@ header h1 {
     }
 
     .day-active {
-      color: $red;
+      color: black;
     }
 
     .day-non-active {
