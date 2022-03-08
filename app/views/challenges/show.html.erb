@@ -21,6 +21,7 @@
             <% end %>
           <% else %>
             <%= exercise.name %>
+            <% flash[:notice] = "These exercises are locked as they are not part of today's challenge. To work on the latter, go to the dashboard." %>
           <% end %>
         </li>
       <% end %>
