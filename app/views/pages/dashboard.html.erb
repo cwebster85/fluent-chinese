@@ -33,9 +33,9 @@
       <%= image_tag "logout.svg", class: "icon", size: "30" %>
     <% end %>
   </div>
-  
+
   <div class="dashboard-content">
-    
+
     <header class="welcome-banner">
         <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
         <h2>Training for today: <%= @current_challenge.name %></h2>
@@ -50,9 +50,9 @@
           <%= link_to "Start Challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
         <% end %>
     </header>
-    
+
     <div class="section">
-      
+
       <div class="section-titles">
         <div class="section-title">
           <h3><%= Date.today.strftime("%B, %Y") %></h3>
@@ -72,19 +72,19 @@
          </button>
         </div>
       </div>
-      
+
       <ul class="time-list">
        <% @challenges.each do |challenge|%>
         <%= link_to challenge_path(id: challenge.id) do %>
-         <li class="time-list__time-item #{challenge.date == Date.today ? 'active' : ''}" >
-          <div class="#{challenge.date == Date.today ? 'day day-active' : 'day day-non-active'}"><%= challenge.date.strftime("%a") %></div>
+         <li class="time-list__time-item <%challenge.date == Date.today ? 'active' : '' %>" >
+          <div class="<%challenge.date == Date.today ? 'day day-active' : 'day day-non-active'%>"><%= challenge.date.strftime("%a") %></div>
           <div class="day-number"><%= challenge.date.strftime("%d") %></div>
          </li>
         <% end %>
        <% end %>
       </ul>
-      
-      
+
+
 <!--       <ul class="time-list">
         <li class="time-list__time-item">
           <div class="day day-non-active">Mon</div>
@@ -115,11 +115,11 @@
           <div class="day-number">28</div>
         </li>
       </ul> -->
-      
-      
-      
+
+
+
     </div>
-    
+
     <div class="section">
       <div class="section-titles">
         <div class="section-title">Teaching Assistants</div>
