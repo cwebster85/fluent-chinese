@@ -44,7 +44,11 @@
 
       <div class="exercise-info">
         <p class="exercise-title">Unit 3: Describing hair and eyes</p>
-        <p class="start-time">10:00am</p>
+        <% if Date.today == "Saturday" %>
+          <p class="start-time">10:00am</p>
+        <% else %>
+          <p class="start-time">6:30pm</p>
+        <% end %>
       </div>
 
     </div>
