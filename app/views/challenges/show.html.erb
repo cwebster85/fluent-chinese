@@ -36,22 +36,27 @@
   </div>
 
   <div class="time-content">
+  <% @challenges.each do |challenge|%>
+    <%= link_to challenge_path(id: challenge.id) do %>
+
     <div class="d-flex time-list-column">
       <div class="date">
-        <p class="day"><%= @challenge.date.strftime("%a") %></p>
-        <h1 class="day-number"><%= @challenge.date.strftime("%d") %></h1>
+        <p class="day"><%= challenge.date.strftime("%a") %></p>
+        <h1 class="day-number"><%= challenge.date.strftime("%d") %></h1>
       </div>
 
       <div class="exercise-info">
-        <p class="exercise-title">Unit 3: Describing hair and eyes</p>
-        <% if Date.today == "Saturday" %>
+        <p class="exercise-title"><%= challenge.name %></p>
+        <% if challenge.date.strftime("%a") == "Saturday" %>
           <p class="start-time">10:00am</p>
         <% else %>
           <p class="start-time">6:30pm</p>
         <% end %>
       </div>
-
     </div>
+    <% end %>
+  <% end %>
+<!--
     <div class="d-flex time-list-column">
       <div class="date">
         <p class="day"><%= @challenge.date.strftime("%a") %></p>
@@ -112,7 +117,7 @@
       </div>
 
     </div>
-
+-->
   </div>
 
   <div class="exercise-content">
