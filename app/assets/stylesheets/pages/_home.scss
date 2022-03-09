@@ -1,7 +1,25 @@
 // Specific CSS for your home-page
 
+// Bootcamp advantages cards
+
+.bootcamp-advantages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0px;
+}
+
+.bootcamp-advantage {
+  height: 150px;
+  width: 200px;
+  padding: 16px;
+}
+
+
+// Alumni carousel
 h2 {
   font-family: $headers-font;
+
 }
 
 .slide-card {
