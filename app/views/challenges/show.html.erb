@@ -144,7 +144,7 @@
 
 
               <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
-                <i class="fa fa-solid fa-check"> <span>Completed</span> </i>
+                <i class="fa fa-solid fa-check"> <span class="px-1">Completed</span> </i>
               <% elsif @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: false) %>
               <%# Add styling - if 1 - user association %>
                 <%= link_to "Continue", challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id), class: "btn btn-primary btn-exercise" %>
