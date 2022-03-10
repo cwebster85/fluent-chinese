@@ -1,0 +1,63 @@
+.dashboard-sidenav {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  color: white;
+  background: $red;
+  // border-radius: 30px;
+  min-height: 100vh;
+}
+
+.logo {
+  padding-top: 36px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-icon-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  p {
+    color: white;
+    font-size: medium;
+    margin-bottom: 0px;
+  }
+
+  p .active {
+    font-weight: bold;
+  }
+
+  .icon {
+    font-size: 20px;
+    color: white;
+  }
+
+  .nav-item {
+    padding: 36px 18px;
+    color: white;
+    }
+  .first {
+    padding-top: 0;
+  }
+}
+
+.logout {
+  padding: 36px 18px;
+
+  .icon {
+    width: 30px;
+    height: auto;
+  }
+
+}
+
+.name {
+  font-weight: bold;
+  opacity: 75%;
+}
