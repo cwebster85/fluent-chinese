@@ -1,1 +1,39 @@
 // Specific CSS for your home-page
+
+h2 {
+  font-family: $headers-font;
+}
+
+.slide-card {
+  overflow: hidden;
+  height: 450px;
+  background: #EDF2F4;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.slide-card img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-card-text h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.slide-card-text p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.slide-card-text {
+  padding: 16px;
+}

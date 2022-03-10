@@ -1,82 +1,63 @@
 <div class="container">
 
+  <div class="exercise-title">
   <h1><%= @exercise.name %></h1>
   <%= link_to "Back to Challenge", challenge_path(id: @challenge.id), class: "btn btn-primary mb-3" %>
+  </div>
 
-    <p></p>
-      <%# <p>Now write your own text in the box below. You can use the following text as a model:</p>
-      <p>我叫Chris。我三十六岁。我是英国人。我姐姐叫Emma，她三十八岁。</p> %>
-    <p></p>
-
-    <div class="video">
-      <% if @exercise.content_type == "video" %>
-        <iframe width="1000" height="500" src="https://www.youtube.com/embed/iWi-9LJ4dg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <% end %>
-    </div>
-
-     <div class="vocab">
-      <% if @exercise.content_type == "vocabulary" %>
-        <iframe src="https://quizlet.com/590946874/flashcards/embed?i=8jnqv&x=1jj1" height="750" width="100%" style="border:0"></iframe>
-      <% end %>
-    </div>
-
-    <%# <div class="speaking-form">
-      <% if @exercise.content_type == "Speaking" %>
-      <%# <p>Record yourself reading out the text from the reading exercise in Chinese.</p>
-    <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px;">  %>
-
-    <%# <meta charset="UTF-8">
-    <title>Simple Recorder.js demo with record, stop and pause</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div id="controls">
-        <button id="recordButton">Record</button>
-        <button id="pauseButton" disabled>Pause</button>
-        <button id="stopButton" disabled>Stop</button>
-    </div>
-    <h3>Recordings</h3>
-    <ol id="recordingsList"></ol>
-    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
-    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
-    <script src="js/app.js"></script> %>
-
-    <%# <% end %>
-    <%# </div> %>
-
-    <div class="reading">
-      <% if @exercise.content_type == "Reading" %>
-
-          <embed src="https://hskreading.com/me-and-my-friend/" style="width: 1000px; height: 500px;">
-          <h2>Now record yourself reading out the text from the reading exercise in Chinese. Save the link to your recording on your profile page.</h2>
-          <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px">
-          <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
-          <script>mandarinspot.annotate();</script>
-
-        <embed src="https://hskreading.com/me-and-my-friend/" style="width: 1000px; height: 500px;">
-        <h2>Now record yourself reading out the text from the reading exercise in Chinese. Save the link to your recording on your profile page.</h2>
-        <embed src="https://www.speakpipe.com/voice-recorder" style="width:1000px; height: 500px">
-
-      <% end %>
-    </div>
-
-    <div class="listening">
-      <% if @exercise.content_type == "Listening" %>
-        <iframe width="1000" height="500" src="https://edpuzzle.com/embed/media/62210fd7bf75bb42ca4e77aa" frameborder="0" allowfullscreen></iframe>
-      <% end %>
-    </div>
-
-    <div class="writing-form">
-      <% if @exercise.content_type == "Writing" %>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPugJ2afuSxyblACZokweJa7PUfANNhGrxmsXE5M_8JVxLg/viewform?embedded=true" width="1000" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      <% end %>
-    </div>
-    <%# <div class="form-actions">
-      <%= f.button :submit %>
-    <%# </div> %>
-
-     <% if @completed_exercise %>
-      <div class="complete-exercise-button">
-        <%= link_to "Exercise Complete", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-primary #{@completed_exercise.completed ? 'disabled' : ''}" %>
-      </div>
+  <div class="video">
+    <% if @exercise.content_type == "video" %>
+      <iframe width="1000" height="500" src= <%= @exercise.content_url %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <% end %>
+  </div>
+
+  <div class="vocab">
+    <% if @exercise.content_type == "vocabulary" %>
+      <iframe src= <%= @exercise.content_url %> height="750" width="100%" style="border:0"></iframe>
+    <% end %>
+  </div>
+
+  <div class="reading">
+    <% if @exercise.content_type == "Reading" %>
+
+      <p> <%= @exercise.description %> </p>
+      <iframe width="100%" height="100" scrolling="no" frameborder="no" src= <%= @exercise.content_url %>></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/chris-webster-988440086" title="FluentChinese" target="_blank" style="color: #cccccc; text-decoration: none;">FluentChinese</a> · <a href="https://soundcloud.com/chris-webster-988440086/reading-text-one" title="Reading Text 1" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
+      <div data-tf-widget=<%= @exercise.content_url_bis %> data-tf-hide-headers data-tf-iframe-props="title=FluentChinese Reading Text 1" data-tf-medium="snippet" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+
+      <h2>Now record yourself reading out the text from the reading exercise.</h2>
+
+      <%= render "audio_recorder" %>
+
+      <div class="holder">
+          <div data-role="controls" class="controls-css">
+              <button>Record</button>
+          </div>
+          <div data-role="recordings" class="recordings-css"></div>
+      </div>
+
+    <% end %>
+
+      <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
+      <script>mandarinspot.annotate();</script>
+
+  </div>
+
+  <div class="listening">
+    <% if @exercise.content_type == "Listening" %>
+      <iframe width="1000" height="500" src=<%= @exercise.content_url %> frameborder="0" allowfullscreen></iframe>
+    <% end %>
+  </div>
+
+  <div class="writing-form">
+    <% if @exercise.content_type == "Writing" %>
+    <div data-tf-widget=<%=@exercise.content_url %> data-tf-hide-headers data-tf-iframe-props="title=FluentChinese Writing Text 1" data-tf-medium="snippet" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js" ></script>
+    <% end %>
+  </div>
+
+  <% if @completed_exercise %>
+    <div class="complete-exercise-button">
+      <%= link_to "Exercise Complete", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-primary #{@completed_exercise.completed ? 'disabled' : ''}" %>
+    </div>
+  <% end %>
 
 </div>

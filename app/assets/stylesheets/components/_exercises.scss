@@ -1,3 +1,7 @@
+.exercise-title {
+  font-family: "Raleway";
+}
+
 .writing-form {
   justify-content: center;
   align-items: center;
@@ -9,3 +13,38 @@
   margin-top: 1%;
   margin-bottom: 10%;
 }
+
+.reading {
+  p {
+  font-family: "Ma Shan Zheng";
+  font-size: 75px;
+  border: black;
+  }
+}
+
+  h2 {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: 30px;
+  }
+
+.holder {
+  .controls-css {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  size-adjust: 50px;
+  border: 0ch;
+  margin-bottom: 5%;
+  }
+ .recordings-css {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  size-adjust: 50px;
+  border: 0ch;
+  margin-top: -2%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+ }
+  }

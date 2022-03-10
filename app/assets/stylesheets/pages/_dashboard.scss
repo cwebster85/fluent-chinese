@@ -5,6 +5,10 @@ body {
   color: $dark-grey;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 // dashboard
 
 .dashboard {
@@ -12,6 +16,7 @@ body {
   grid-template-columns: repeat(3, auto);
   gap: 48px;
   margin: 0px;
+  // padding: 48px 0px;
 }
 
 // dashboard nav
@@ -192,7 +197,7 @@ header h1 {
     }
 
     .day-active {
-      color: $red;
+      color: black;
     }
 
     .day-non-active {

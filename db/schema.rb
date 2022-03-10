@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_26_155210) do
+ActiveRecord::Schema.define(version: 2022_03_05_165208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(version: 2022_02_26_155210) do
     t.string "content_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "content_url_bis"
+    t.string "content_url_ter"
     t.index ["challenge_id"], name: "index_exercises_on_challenge_id"
   end
 
