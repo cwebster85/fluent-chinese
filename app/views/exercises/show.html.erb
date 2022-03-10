@@ -20,12 +20,11 @@
   <div class="reading">
     <% if @exercise.content_type == "Reading" %>
 
-      <p>我叫Chris。我三十六岁。我是英国人。我有一个姐姐，她叫Emma。她三十八岁。</p>
-      <iframe width="100%" height="100" scrolling="no" frameborder="no" src=<%= @exercise.content_url %> ></iframe>
-      <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Raleway,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href=<%= @exercise.content_url_bis %> title="Reading Text" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
-      <iframe src=<%= @exercise.content_url_ter %> width="1100" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <p> <%= @exercise.description %> </p>
+      <iframe width="100%" height="100" scrolling="no" frameborder="no" src= <%= @exercise.content_url %>></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/chris-webster-988440086" title="FluentChinese" target="_blank" style="color: #cccccc; text-decoration: none;">FluentChinese</a> · <a href="https://soundcloud.com/chris-webster-988440086/reading-text-one" title="Reading Text 1" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
+      <div data-tf-widget=<%= @exercise.content_url_bis %> data-tf-hide-headers data-tf-iframe-props="title=FluentChinese Reading Text 1" data-tf-medium="snippet" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js"></script>
 
-      <h2>Now record yourself reading out the text from the reading exercise in Chinese and download the recording to your device.</h2>
+      <h2>Now record yourself reading out the text from the reading exercise.</h2>
 
       <%= render "audio_recorder" %>
 
@@ -51,7 +50,7 @@
 
   <div class="writing-form">
     <% if @exercise.content_type == "Writing" %>
-      <iframe src=<%= @exercise.content_url %> width="1000" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div data-tf-widget=<%=@exercise.content_url %> data-tf-hide-headers data-tf-iframe-props="title=FluentChinese Writing Text 1" data-tf-medium="snippet" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js" ></script>
     <% end %>
   </div>
 
