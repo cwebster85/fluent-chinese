@@ -1,38 +1,6 @@
 <div class="dashboard">
 
-  <div class="dashboard-sidenav">
-    <%= link_to "FluentChinese", dashboard_path, class: "logo" %>
-    <ul class="nav-icon-list">
-        <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path, class: "d-flex" do %>
-            <%= image_tag "dashboard.svg", class: "icon first", size: "30" %>
-            <p class="px-1">Dashboard</p>
-            <%# <i class="fa-solid fa-display icon" width="20" height="20"></i> %>
-          <% end %>
-        </li>
-        <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path, class: "d-flex" do %>
-            <%= image_tag "challenge.svg", class: "icon", size: "30" %>
-            <p class="px-1">Challenges</p>
-          <% end %>
-        </li>
-        <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path, class: "d-flex" do %>
-            <%= image_tag "student.svg", class: "icon", size: "30" %>
-            <p class="px-1">Students</p>
-          <% end %>
-        </li>
-        <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path, class: "d-flex" do %>
-            <%= image_tag "game.svg", class: "icon", size: "30" %>
-            <p class="px-1">Games</p>
-          <% end %>
-        </li>
-    </ul>
-    <%= link_to dashboard_path, class: "logout" do %>
-      <%= image_tag "logout.svg", class: "icon", size: "30" %>
-    <% end %>
-  </div>
+  <%= render 'shared/sidenavbar' %>
 
   <div class="dashboard-content">
 
@@ -87,7 +55,7 @@
         <% end %>
        <% end %>
       </ul>
-      
+
     </div>
 
     <div class="section">
