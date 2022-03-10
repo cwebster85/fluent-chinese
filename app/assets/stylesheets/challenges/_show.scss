@@ -96,9 +96,10 @@ body {
   border-radius: 20px;
   list-style-type: none;
   position: relative;
+}
 
-  &.active {
-    background: pink;
+.time-list-column.active {
+  background: pink;
 
     .date {
       border-right: 1px solid $red;
@@ -121,8 +122,6 @@ body {
     .start-time {
       color: $red;
     }
-
-  }
 
 }
 
@@ -152,11 +151,13 @@ body {
     padding-left: 30px;
     margin: 0;
     margin-right: 12px;
+    color: $grey;
   }
 
   .day-number {
     font-size: 38px;
     font-weight: bold;
+    color: $dark-grey;
   }
 }
 
@@ -164,8 +165,10 @@ body {
   margin-left: 12px;
 
   .exercise-title {
+    font-family: $body-font;
     font-weight: bold;
     margin: 0px;
+    color: $dark-grey;
   }
 
   .start-time {
@@ -175,9 +178,18 @@ body {
   }
 }
 
-
-
 // Exercises Column
+
+.fa-check {
+  color: white;
+  padding: 8px;
+  background-color: $success;
+  border-radius: 20px;
+
+  span {
+    font-family: $body-font;
+  }
+}
 
 .exercise-content {
   padding: 18px 48px;
@@ -198,14 +210,19 @@ body {
   list-style-type: none;
 }
 
-.exercise-name {
-  font-weight: bold;
+.exercise-block {
+  display: block;
+
+  .exercise-name {
+    font-weight: bold;
+  }
+
+  .exercise-description {
+    color: $grey;
+    // margin-bottom: 30px;
+  }
 }
 
-.exercise-description {
-  color: $grey;
-  // margin-bottom: 30px;
-}
 
 .btn-exercise {
   color: $dark-grey;
