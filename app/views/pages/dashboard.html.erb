@@ -80,8 +80,8 @@
       <ul class="time-list">
        <% @challenges.each do |challenge|%>
         <%= link_to challenge_path(id: challenge.id) do %>
-         <li class="time-list__time-item <%challenge.date == Date.today ? 'active' : '' %>" >
-          <div class="<%challenge.date == Date.today ? 'day day-active' : 'day day-non-active'%>"><%= challenge.date.strftime("%a") %></div>
+         <li class="time-list__time-item <%=challenge.date == Date.today ? 'active' : '' %>" >
+          <div class="<%= challenge.date == Date.today ? 'day day-active' : 'day day-non-active'%>"><%= challenge.date.strftime("%a") %></div>
           <div class="day-number"><%= challenge.date.strftime("%d") %></div>
          </li>
         <% end %>
