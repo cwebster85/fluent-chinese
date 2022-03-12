@@ -1,0 +1,13 @@
+<div class="box">
+  <div class="percent">
+    <svg>
+      <circle cx="70" cy="70" r="70"></circle>
+      <circle style="<%= "stroke-dashoffset: calc(-87 * #{@number_of_current_challenge_completed_exercises});" %>" cx="70" cy="70" r="70"></circle>
+    </svg>
+    <div class="num">
+      <h2> <%= (@number_of_current_challenge_completed_exercises.to_i * 20) %><span>%</span> </h2>
+      <%# <h2>20<span>%</span></h2> %>
+    </div>
+    <%# <p class="text">Complete</p> %>
+  </div>
+</div>

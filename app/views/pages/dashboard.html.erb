@@ -36,7 +36,9 @@
 
   <div class="dashboard-content">
 
-    <header class="welcome-banner">
+    <header class="welcome-banner d-flex">
+
+      <div>
         <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
         <% if @current_challenge %>
           <h2>Training for today: <%= @current_challenge.name %></h2>
@@ -53,6 +55,9 @@
         <% else %>
           <h2>There is no challenge today, you can revise what you learnt!</h2>
         <% end %>
+      </div>
+
+      <%= render "shared/progress_bar" %>
     </header>
 
     <div class="section">
@@ -87,7 +92,7 @@
         <% end %>
        <% end %>
       </ul>
-      
+
     </div>
 
     <div class="section">
