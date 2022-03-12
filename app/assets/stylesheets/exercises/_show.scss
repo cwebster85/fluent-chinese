@@ -1,6 +1,6 @@
 .vocab {
   margin-bottom: 5%;
-    border: 4px;
+  border: 4px;
   -moz-border-radius: 15px;
   border-radius: 15px;
   overflow: hidden;
@@ -15,28 +15,16 @@
 }
 
 .buttons {
-  // width: 50px;
-  // margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0px;
+  padding: 0px 80px;
+
   .btn {
     border-radius: 25px;
     text-decoration-color: black;
-    // font-family: "Raleway";
     background-color: white;
-  }
-  .back-button {
-    // width: calc(50% - 4px);
-    margin: 0 auto;
-    position: relative;
-    margin-bottom: 10%;
-    margin-left: 5%;
-    margin-top: 2%;
-  }
-  .complete-exercise-button {
-    // width: calc(50% - 4px);
-    // margin: 0 auto;
-    display: inline;
-    position: absolute;
-    margin-left: 65%;
   }
 }
 
@@ -71,21 +59,21 @@
   -moz-border-radius: 15px;
   border-radius: 15px;
   overflow: hidden;
+
   h2 {
   margin-top: 3%;
   margin-bottom: 5%;
   font-size: 30px;
 }
 
-h3 {
-  margin-top: 3%;
-  margin-bottom: 5%;
-  font-size: 30px;
-  color: white;
-  text-align: center;
+  h3 {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+  }
 }
-}
-
 
 .holder {
   .controls-css {
@@ -117,4 +105,20 @@ h3 {
   -moz-border-radius: 15px;
   border-radius: 15px;
   overflow: hidden;
+}
+
+body {
+  overflow: auto;
+  background: $fluent-chinese-red;
+  background: linear-gradient(0deg, $fluent-chinese-red 50%, rgba(255,255,255,1) 50%);
+}
+
+.exercise-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exercise-content-inner {
+  width: 100%;
 }
