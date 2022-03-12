@@ -1,6 +1,6 @@
 .vocab {
   margin-bottom: 5%;
-    border: 4px;
+  border: 4px;
   -moz-border-radius: 15px;
   border-radius: 15px;
   overflow: hidden;
@@ -24,23 +24,7 @@
   .btn {
     border-radius: 25px;
     text-decoration-color: black;
-    // font-family: "Raleway";
     background-color: white;
-  }
-  .back-button {
-    // width: calc(50% - 4px);
-    // margin: 0 auto;
-    // position: relative;
-    // margin-bottom: 10%;
-    // margin-left: 5%;
-    // margin-top: 2%;
-  }
-  .complete-exercise-button {
-    // width: calc(50% - 4px);
-    // margin: 0 auto;
-    // display: inline;
-    // position: absolute;
-    // margin-left: 65%;
   }
 }
 
@@ -75,19 +59,20 @@
   -moz-border-radius: 15px;
   border-radius: 15px;
   overflow: hidden;
+
   h2 {
   margin-top: 3%;
   margin-bottom: 5%;
   font-size: 30px;
 }
 
-h3 {
-  margin-top: 3%;
-  margin-bottom: 5%;
-  font-size: 30px;
-  color: white;
-  text-align: center;
-}
+  h3 {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+  }
 }
 
 
@@ -122,3 +107,21 @@ h3 {
   border-radius: 15px;
   overflow: hidden;
 }
+
+.exercise-body {
+    position: relative;
+    margin-left: 5%;
+    border-radius: 50px;
+    margin-top: 5%;
+    margin-right: 5%;
+    border: 4px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  body.video-page {
+    overflow: auto;
+    background: $fluent-chinese-red;
+    background: linear-gradient(0deg, $fluent-chinese-red 50%, rgba(255,255,255,1) 50%);
+  }
