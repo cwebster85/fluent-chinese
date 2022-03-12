@@ -1,5 +1,6 @@
 class ChallengesController < ApplicationController
   def show
+    @challenges = Challenge.all
     @challenge = Challenge.find(params[:id])
     @exercises = @challenge.exercises
     @completed_exercises = CompletedExercise.all

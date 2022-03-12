@@ -16,61 +16,7 @@ a:hover {
   grid-template-columns: repeat(3, auto);
   gap: 48px;
   margin: 0px;
-}
-
-// dashboard nav
-
-.dashboard-sidenav {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  justify-items: center;
-  color: white;
-  background: $red;
-  // border-radius: 30px;
-  min-height: 100vh;
-}
-
-.logo {
-  padding-top: 36px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-icon-list {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-
-  p {
-    color: white;
-    font-size: medium;
-    margin-bottom: 0px;
-  }
-
-  .icon {
-    width: 30px;
-    height: auto;
-  }
-  .nav-item {
-    padding: 36px 18px;
-    }
-  .first {
-    padding-top: 0;
-  }
-}
-
-.logout {
-  padding: 36px 18px;
-
-  .icon {
-    width: 30px;
-    height: auto;
-  }
-
+  // padding: 48px 0px;
 }
 
 // dashboard content
