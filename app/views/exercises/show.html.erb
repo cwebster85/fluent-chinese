@@ -12,7 +12,6 @@
   </div>
   <div class="reading">
     <% if @exercise.content_type == "Reading" %>
-<<<<<<< HEAD
       <p>我叫Chris。我三十六岁。我是英国人。我有一个姐姐，她叫Emma。她三十八岁。</p>
       <div class="soundcloud">
         <iframe width="100%" height="100" scrolling="no" frameborder="no" src=<%= @exercise.content_url %> ></iframe>
@@ -23,7 +22,6 @@
       </div>
       <div class="audio-recorder-task">
       <h3 style="color: white">Now record yourself reading out the text from the reading exercise in Chinese and download the recording to your device.</h2>
-=======
 
       <p> <%= @exercise.description %> </p>
       <iframe width="100%" height="100" scrolling="no" frameborder="no" src= <%= @exercise.content_url %>></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/chris-webster-988440086" title="FluentChinese" target="_blank" style="color: #cccccc; text-decoration: none;">FluentChinese</a> · <a href="https://soundcloud.com/chris-webster-988440086/reading-text-one" title="Reading Text 1" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
@@ -31,7 +29,6 @@
 
       <h2>Now record yourself reading out the text from the reading exercise.</h2>
 
->>>>>>> c48999d57935204400cf95a35dc5ef20bce1e6a6
       <%= render "audio_recorder" %>
       <div class="holder">
         <div data-role="controls" class="controls-css">
