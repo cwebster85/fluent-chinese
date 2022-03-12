@@ -1,38 +1,6 @@
 <div class="dashboard">
 
-  <div class="dashboard-sidenav">
-    <%= link_to "FluentChinese", dashboard_path, class: "logo" %>
-    <ul class="nav-icon-list">
-        <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path, class: "d-flex" do %>
-            <%= image_tag "dashboard.svg", class: "icon first", size: "30" %>
-            <%# <p class="px-1">Dashboard</p> %>
-            <%# <i class="fa-solid fa-display icon" width="20" height="20"></i> %>
-          <% end %>
-        </li>
-        <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path, class: "d-flex" do %>
-            <%= image_tag "challenge.svg", class: "icon", size: "30" %>
-            <%# <p class="px-1">Challenges</p> %>
-          <% end %>
-        </li>
-        <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path, class: "d-flex" do %>
-            <%= image_tag "student.svg", class: "icon", size: "30" %>
-            <%# <p class="px-1">Students</p> %>
-          <% end %>
-        </li>
-        <li class="nav-icon-list nav-item">
-          <%= link_to dashboard_path do %>
-            <%= image_tag "game.svg", class: "icon", size: "30" %>
-            <%# <p class="px-1">Games</p> %>
-          <% end %>
-        </li>
-    </ul>
-    <%= link_to dashboard_path, class: "logout" do %>
-      <%= image_tag "logout.svg", class: "icon", size: "30" %>
-    <% end %>
-  </div>
+  <%= render 'shared/sidenavbar' %>
 
   <div class="dashboard-content">
 
@@ -80,47 +48,13 @@
       <ul class="time-list">
        <% @challenges.each do |challenge|%>
         <%= link_to challenge_path(id: challenge.id) do %>
-         <li class="time-list__time-item <%challenge.date == Date.today ? 'active' : '' %>" >
-          <div class="<%challenge.date == Date.today ? 'day day-active' : 'day day-non-active'%>"><%= challenge.date.strftime("%a") %></div>
+         <li class="time-list__time-item <%=challenge.date == Date.today ? 'active' : '' %>" >
+          <div class="<%= challenge.date == Date.today ? 'day day-active' : 'day day-non-active'%>"><%= challenge.date.strftime("%a") %></div>
           <div class="day-number"><%= challenge.date.strftime("%d") %></div>
          </li>
         <% end %>
        <% end %>
       </ul>
-
-
-<!--       <ul class="time-list">
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Mon</div>
-          <div class="day-number">22</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Tue</div>
-          <div class="day-number">23</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Wed</div>
-          <div class="day-number">24</div>
-        </li>
-        <li class="time-list__time-item active">
-          <div class="day day-active">Thu</div>
-          <div class="day-number">25</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Fri</div>
-          <div class="day-number">26</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Sat</div>
-          <div class="day-number">27</div>
-        </li>
-        <li class="time-list__time-item">
-          <div class="day day-non-active">Sun</div>
-          <div class="day-number">28</div>
-        </li>
-      </ul> -->
-
-
 
     </div>
 
@@ -134,7 +68,7 @@
           class: "teacher-face", width: 150, crop: :thumb, gravity: :face %>
           <div class="teacher-list-info">
             <h3>Jane Doe</h3>
-            <span>Hi guys, lets do this!</span>
+            <span>Hi guys, let's do this!</span>
           </div>
         </div>
         <div class="d-flex align-items-center px-3 teacher-list-item">
@@ -162,12 +96,14 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
-  </div>
+
   <div class="dashboard-others">
     <div class="section">
         <div class="section-titles">
             <div class="section-title"></div>
         </div>
   </div>
+
 </div>

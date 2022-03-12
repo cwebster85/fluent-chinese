@@ -11,3 +11,67 @@
     <% end %>
   </div>
 </div>
+
+<div class="container">
+
+<div class="bootcamp-advantages">
+  <div class="bootcamp-advantage">
+    <i class="fas fa-laptop-house"></i>
+    <p>From the comfort of your own home,<br>all remote</p>
+  </div>
+  <div class="bootcamp-advantage">
+    <i class="fas fa-tasks"></i>
+    <p>Progress guaranted,<br>a reliable curriculum</p>
+  </div>
+  <div class="bootcamp-advantage">
+    <i class="fa fa-solid fa-users"></i>
+    <p>Join the community,<br>live group discussions</p>
+  </div>
+</div>
+
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="slide-card">
+        <%= image_tag "https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694944/istockphoto-1319763830-612x612_lkahjo.jpg", class:"d-block", alt:"First slide" %>
+        <div class="slide-card-text">
+          <h5>Cecilia</h5>
+          <p>"This bootcamp has transformed me into a confident Chinese speaker."</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="slide-card">
+        <%= image_tag "https://res.cloudinary.com/dbevdhp4h/image/upload/v1646693441/alumnus1_ullh3m.jpg", class:"d-block", alt:"Second slide"  %>
+        <div class="slide-card-text">
+          <h5>David</h5>
+          <p>"I enjoyed so much learning Chinese with FluentChinese that it did not feel like studying at all."</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="slide-card">
+        <%= image_tag "https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694940/istockphoto-1311655328-612x612_gl1cv6.jpg", class:"d-block", alt:"Third slide" %>
+        <div class="slide-card-text">
+          <h5>Alice</h5>
+          <p>"Learning Chinese with FluentChinese is what led me to fluency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</div>

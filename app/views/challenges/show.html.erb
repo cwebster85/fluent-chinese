@@ -1,30 +1,144 @@
-<div class="container">
+<main class="exercise-container">
 
-  <div class="challenges-title">
-    <h1><%= @challenge.name %> </h1>
-    <p style="white-space: pre-line"><%= @challenge.description %></p>
+  <%= render 'shared/sidenavbar' %>
+
+  <div class="time-content">
+
+    <% @challenges.each do |challenge| %>
+    <%= link_to challenge_path(id: challenge.id) do %>
+
+    <div class="d-flex time-list-column <%= challenge.date == Date.today ? 'time-list-column active' : '' %>">
+      <div class="date">
+        <p class="day"><%= challenge.date.strftime("%a") %></p>
+        <h1 class="day-number"><%= challenge.date.strftime("%d") %></h1>
+      </div>
+
+      <div class="exercise-info">
+        <p class="exercise-title"><%= challenge.name %></p>
+        <% if challenge.date.strftime("%a") == "Sat" %>
+          <p class="start-time">10:00am</p>
+        <% else %>
+          <p class="start-time">6:30pm</p>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+
+<!--
+    <div class="d-flex time-list-column">
+      <div class="date">
+        <p class="day"><%= @challenge.date.strftime("%a") %></p>
+        <h1 class="day-number"><%= @challenge.date.strftime("%d") %></h1>
+      </div>
+
+      <div class="exercise-info">
+        <p class="exercise-title">Unit 3: Describing hair and eyes</p>
+        <p class="start-time">10:00am</p>
+      </div>
+
+    </div>
+    <div class="d-flex time-list-column active">
+      <div class="date">
+        <p class="day"><%= @challenge.date.strftime("%a") %></p>
+        <h1 class="day-number"><%= @challenge.date.strftime("%d") %></h1>
+      </div>
+
+      <div class="exercise-info">
+        <p class="exercise-title">Unit 3: Describing hair and eyes</p>
+        <p class="start-time">10:00am</p>
+      </div>
+
+    </div>
+    <div class="d-flex time-list-column">
+      <div class="date">
+        <p class="day"><%= @challenge.date.strftime("%a") %></p>
+        <h1 class="day-number"><%= @challenge.date.strftime("%d") %></h1>
+      </div>
+
+      <div class="exercise-info">
+        <p class="exercise-title">Unit 3: Describing hair and eyes</p>
+        <p class="start-time">10:00am</p>
+      </div>
+
+    </div>
+    <div class="d-flex time-list-column">
+      <div class="date">
+        <p class="day"><%= @challenge.date.strftime("%a") %></p>
+        <h1 class="day-number"><%= @challenge.date.strftime("%d") %></h1>
+      </div>
+
+      <div class="exercise-info">
+        <p class="exercise-title">Unit 3: Describing hair and eyes</p>
+        <p class="start-time">10:00am</p>
+      </div>
+
+    </div>
+    <div class="d-flex time-list-column">
+      <div class="date">
+        <p class="day"><%= @challenge.date.strftime("%a") %></p>
+        <h1 class="day-number"><%= @challenge.date.strftime("%d") %></h1>
+      </div>
+
+      <div class="exercise-info">
+        <p class="exercise-title">Unit 3: Describing hair and eyes</p>
+        <p class="start-time">10:00am</p>
+      </div>
+
+    </div>
+-->
+
   </div>
 
-  <h2>Exercises</h2>
+  <div class="exercise-content">
+<!--
+    <header class="exercise-header">
+      <h1><%= @challenge.name %> </h1>
+      <p style="white-space: pre-line">><%= @challenge.description %></p>
+    </header>
+-->
+    <%# <h2>Exercises</h2> %>
 
-    <ul>
+    <ul class="exercises">
       <% @exercises.each do |exercise|%>
-        <li class="exercises-cards">
-          <% if @session %>
-            <%= exercise.name %>
-            <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
-              <i class="fa fa-solid fa-check"></i>
-            <% elsif @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: false) %>
-              <%= link_to "Continue", challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id), class: "btn btn-primary" %>
+        <li class="d-flex align-items-center exercise-indivdual">
+          <div class="exercise-block">
+              <h1 class="exercise-name"><%= exercise.name %></h1>
+              <p class="exercise-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consequatur voluptas deleniti?</p>
+
+            <% if @session %>
+
+
+
+              <% if @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: true) %>
+                <i class="fa fa-solid fa-check"> <span class="px-1">Completed</span> </i>
+              <% elsif @completed_exercises.find_by(exercise_id: exercise.id, session_id: @session.id, completed: false) %>
+              <%# Add styling - if 1 - user association %>
+                <%= link_to "Continue", challenge_exercise_path(challenge_id: @challenge.id, id: exercise.id), class: "btn btn-primary btn-exercise" %>
+              <% else %>
+                <%= link_to "Start", exercise_completed_exercises_path(exercise_id: exercise.id), method: :post, class: "btn btn-primary btn-exercise" %>
+              <% end %>
+
             <% else %>
-              <%= link_to "Start", exercise_completed_exercises_path(exercise_id: exercise.id), method: :post, class: "btn btn-primary" %>
+              <% flash[:notice] = "Complete previous exercises to unlock this one!" %>
             <% end %>
+          </div>
+
+          <% if exercise.content_type == "video" %>
+            <%= image_tag "video_image.svg", class: "exercise-image"%>
+          <% elsif exercise.content_type == "vocabulary" %>
+            <%= image_tag "flashcard_image.svg", class: "exercise-image"%>
+          <% elsif exercise.content_type == "Reading" %>
+            <%= image_tag "reading_image.svg", class: "exercise-image",  height: "160px"%>
+          <% elsif exercise.content_type == "Listening" %>
+            <%= image_tag "listening_image.svg", class: "exercise-image", height: "160px"%>
           <% else %>
-            <%= exercise.name %>
-            <% flash[:notice] = "Complete previous exercises to unlock this one!" %>
+            <%= image_tag "writing_image.svg", class: "exercise-image"%>
           <% end %>
         </li>
       <% end %>
     </ul>
 
-</div>
+  </div>
+
+</main>
