@@ -15,8 +15,12 @@
 }
 
 .buttons {
-  // width: 50px;
-  // margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0px;
+  padding: 0px 80px;
+
   .btn {
     border-radius: 25px;
     text-decoration-color: black;
@@ -25,18 +29,18 @@
   }
   .back-button {
     // width: calc(50% - 4px);
-    margin: 0 auto;
-    position: relative;
-    margin-bottom: 10%;
-    margin-left: 5%;
-    margin-top: 2%;
+    // margin: 0 auto;
+    // position: relative;
+    // margin-bottom: 10%;
+    // margin-left: 5%;
+    // margin-top: 2%;
   }
   .complete-exercise-button {
     // width: calc(50% - 4px);
     // margin: 0 auto;
-    display: inline;
-    position: absolute;
-    margin-left: 65%;
+    // display: inline;
+    // position: absolute;
+    // margin-left: 65%;
   }
 }
 

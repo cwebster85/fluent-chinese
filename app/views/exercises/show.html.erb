@@ -16,7 +16,7 @@
 
   <div class="buttons">
     <div class="back-button">
-      <%= link_to "Back to Challenge", challenge_path(id: @challenge.id), class: "btn btn-exercises mb-3" %>
+      <%= link_to "Back to Challenge", challenge_path(id: @challenge.id), class: "btn btn-exercises" %>
     </div>
     <div class="complete-exercise-button">
       <%= link_to "Exercise Complete", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-exercises #{@completed_exercise.completed ? 'disabled' : ''}" %>
