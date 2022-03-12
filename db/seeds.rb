@@ -59,7 +59,7 @@ challenge_1 = Challenge.create(
 puts "Challenge #{challenge_1.id} is created"
 
 challenge_2 = Challenge.create(
-  name: "Unit 2: Saying when your birthday is",
+  name: "Unit 2: Saying When Your Birthday Is",
   description: "In this unit you will learn:
   - How to say where you and another person (e.g. a friend) are from
   - When your birthday is
@@ -72,7 +72,7 @@ challenge_2 = Challenge.create(
 puts "Challenge #{challenge_2.id} is created"
 
 challenge_3 = Challenge.create(
-  name: "Unit 3: Saying where I live and am from",
+  name: "Unit 3: Saying Where I Live and Am From",
   description: "In this unit you will learn:
   - To say where you live and are from
   - The names of renowned cities and places in the Chinese speaking world
@@ -85,7 +85,7 @@ challenge_3 = Challenge.create(
 puts "Challenge #{challenge_3.id} is created"
 
 challenge_4 = Challenge.create(
-  name: "Unit 4: Talking about my family",
+  name: "Unit 4: Talking About My Family",
   description: "In this unit you will learn:
   - To say how many people are in your family
   - How well you get along with them
@@ -98,7 +98,7 @@ challenge_4 = Challenge.create(
 puts "Challenge #{challenge_4.id} is created"
 
 challenge_5 = Challenge.create(
-  name: "Unit 5: Describing hair and eyes",
+  name: "Unit 5: Describing Hair and Eyes",
   description: "In this unit you will learn:
   - To describe what a person's hair and eyes are like
   - Colours
@@ -111,7 +111,7 @@ challenge_5 = Challenge.create(
 puts "Challenge #{challenge_5.id} is created"
 
 challenge_6 = Challenge.create(
-  name: "Unit 6: Describing myself and another family member",
+  name: "Unit 6: Describing Myself and Another Family Member",
   description: "In this unit you will learn:
   - How to say what your immediate family members are like
   - Useful adjectives to describe them

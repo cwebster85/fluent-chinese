@@ -1,8 +1,16 @@
+
+
 <div class="container">
 
-  <h1>My Profile</h1>
 
-    <h2>My details</h2>
+        <h1 style="color: black">
+        <br>
+        <br>
+        My Profile
+        </h1>
+
+
+    <h2 style="color: black">My Details</h2>
       <div class="card-profile" >
         <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar-square-large" %>
@@ -17,7 +25,7 @@
         </div>
       </div>
 
-    <h2>Challenges completed</h2>
+    <h3>Challenges Completed</h3>
 
       <% @completed_challenges.each do |completed_challenge|%>
         <p><%= completed_challenge.name %></p>
@@ -25,3 +33,5 @@
       <% end %>
 
 </div>
+<body class="profile-page">
+</body>

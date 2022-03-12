@@ -35,7 +35,7 @@ h2 {
 .slide-card {
   overflow: hidden;
   height: 450px;
-  background: #EDF2F4;
+  background: #FFE4E3;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -64,4 +64,24 @@ h2 {
 
 .slide-card-text {
   padding: 16px;
+}
+
+.carousel-item {
+  margin-bottom: 5%;
+}
+
+.banner {
+  .btn {
+    font-family: "Raleway";
+    border-radius: 25px;
+    margin-top: -4%;
+    padding: 2%;
+  }
+  p {
+    color: white;
+    text-emphasis-color: white;
+  }
+  h1 {
+    font-family: "Raleway";
+  }
 }

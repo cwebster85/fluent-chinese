@@ -5,13 +5,14 @@
   <div class="dashboard-content">
 
     <header class="welcome-banner">
-        <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
+        <h1><span class="red-user"><%= current_user.first_name %></span>，你好！</h1>
         <% if @current_challenge %>
-          <h2>Training for today: <%= @current_challenge.name %></h2>
+          <h2 style="font-weight: bold">Today's Challenge is</h2>
+          <h2><%= @current_challenge.name %></h2>
           <% if @number_of_current_challenge_completed_exercises %>
             <p><%= @number_of_current_challenge_completed_exercises %>/5 exercises completed</p>
           <% else %>
-            <p>You haven't completed any exercise yet!</p>
+            <p>Go and complete some exercises 😉 </p>
           <% end %>
           <% if current_user.challenges.include?(@current_challenge) %>
             <%= link_to "Back to Challenge", challenge_path(id: @current_challenge.id), class: "btn btn-primary" %>
@@ -19,7 +20,7 @@
             <%= link_to "Start Challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
           <% end %>
         <% else %>
-          <h2>There is no challenge today, you can revise what you learnt!</h2>
+          <h2>Prepare for your next session by reviewing prior learning 📚 </h2>
         <% end %>
     </header>
 
@@ -60,7 +61,7 @@
 
     <div class="section">
       <div class="section-titles">
-        <div class="section-title">Teaching Assistants</div>
+        <div class="section-title" style="font-weight: bold">Teaching Assistants</div>
       </div>
       <div class="justify-content-around teacher-list">
         <div class="d-flex align-items-center px-3 teacher-list-item">
@@ -84,7 +85,7 @@
           class: "teacher-face", width: 150, crop: :thumb, gravity: :face %>
           <div class="teacher-list-info">
             <h3>Lisa Moon</h3>
-            <span>Time to learn!</span>
+            <span>Hey! Time to learn!</span>
           </div>
         </div>
         <div class="d-flex align-items-center px-3 teacher-list-item">
