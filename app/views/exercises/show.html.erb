@@ -1,64 +1,59 @@
 <div class="container">
-
   <div class="exercise-title">
-  <h1><%= @exercise.name %></h1>
-  <%= link_to "Back to Challenge", challenge_path(id: @challenge.id), class: "btn btn-primary mb-3" %>
+    <%# <h1><%= @exercise.name</h1> %>
   </div>
 
-  <div class="video">
-    <% if @exercise.content_type == "video" %>
-      <iframe width="1000" height="500" src= <%= @exercise.content_url %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <% end %>
-  </div>
+      <%= render "video-page" %>
 
   <div class="vocab">
     <% if @exercise.content_type == "vocabulary" %>
       <iframe src= <%= @exercise.content_url %> height="750" width="100%" style="border:0"></iframe>
     <% end %>
   </div>
-
   <div class="reading">
     <% if @exercise.content_type == "Reading" %>
-
       <p>我叫Chris。我三十六岁。我是英国人。我有一个姐姐，她叫Emma。她三十八岁。</p>
-      <iframe width="100%" height="100" scrolling="no" frameborder="no" src=<%= @exercise.content_url %> ></iframe>
-      <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Raleway,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href=<%= @exercise.content_url_bis %> title="Reading Text" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
-      <iframe src=<%= @exercise.content_url_ter %> width="1100" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-      <h2>Now record yourself reading out the text from the reading exercise in Chinese and download the recording to your device.</h2>
-
-      <%= render "audio_recorder" %>
-
-      <div class="holder">
-          <div data-role="controls" class="controls-css">
-              <button>Record</button>
-          </div>
-          <div data-role="recordings" class="recordings-css"></div>
+      <div class="soundcloud">
+        <iframe width="100%" height="100" scrolling="no" frameborder="no" src=<%= @exercise.content_url %> ></iframe>
+        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Raleway,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href=<%= @exercise.content_url_bis %> title="Reading Text" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
       </div>
-
+      <div class="typeform">
+      <iframe src=<%= @exercise.content_url_ter %> width="1110" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+      <div class="audio-recorder-task">
+      <h3 style="color: white">Now record yourself reading out the text from the reading exercise in Chinese and download the recording to your device.</h2>
+      <%= render "audio_recorder" %>
+      <div class="holder">
+        <div data-role="controls" class="controls-css">
+          <button>Record</button>
+        </div>
+        <div data-role="recordings" class="recordings-css"></div>
+      </div>
+      </div>
     <% end %>
-
-      <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
-      <script>mandarinspot.annotate();</script>
-
+    <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
+    <script>
+      mandarinspot.annotate();
+    </script>
   </div>
-
   <div class="listening">
     <% if @exercise.content_type == "Listening" %>
-      <iframe width="1000" height="500" src=<%= @exercise.content_url %> frameborder="0" allowfullscreen></iframe>
+      <iframe width="1100" height="680" src=<%= @exercise.content_url %> frameborder="1" allowfullscreen></iframe>
     <% end %>
   </div>
-
   <div class="writing-form">
     <% if @exercise.content_type == "Writing" %>
       <iframe src=<%= @exercise.content_url %> width="1000" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     <% end %>
   </div>
-
-  <% if @completed_exercise %>
-    <div class="complete-exercise-button">
-      <%= link_to "Exercise Complete", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-primary #{@completed_exercise.completed ? 'disabled' : ''}" %>
+  <div class="buttons">
+    <div class="back-button">
+      <%= link_to "Back to Challenge", challenge_path(id: @challenge.id), class: "btn btn-exercises mb-3" %>
+      <% if @completed_exercise %>
+        <div class="complete-exercise-button">
+          <%= link_to "Exercise Complete", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-exercises #{@completed_exercise.completed ? 'disabled' : ''}" %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
+  </div>
 </div>
