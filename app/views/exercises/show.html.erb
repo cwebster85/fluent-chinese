@@ -1,26 +1,35 @@
 <div class="container">
 
-  <div class="exercise-title">
-    <h1><%= @exercise.name %></h1>
-  </div>
+  <body>
 
-  <%= render "video-page" %>
-
-  <%= render "vocab" %>
-
-  <%= render "reading" %>
-
-  <%= render "listening" %>
-
-  <%= render "writing_form" %>
-
-  <div class="buttons">
-    <div class="back-button">
-      <%= link_to "Back to Challenge", challenge_path(id: @challenge.id), class: "btn btn-exercises" %>
+    <div class="exercise-title">
+      <h1><%= @exercise.name %></h1>
     </div>
-    <div class="complete-exercise-button">
-      <%= link_to "Exercise Complete", exercise_completed_exercise_path(exercise_id: @exercise.id, id: @completed_exercise.id), method: :patch, class: "btn btn-exercises #{@completed_exercise.completed ? 'disabled' : ''}" %>
+
+    <div class="exercise-content">
+
+      <div class="exercise-content-inner">
+
+        <% if @exercise.content_type.downcase == "video" %>
+          <%= render "video-page"%>
+        <% elsif @exercise.content_type.downcase == "vocabulary"%>
+          <%= render "vocab" %>
+        <% elsif @exercise.content_type.downcase == "reading"%>
+          <%= render "reading" %>
+        <% elsif @exercise.content_type.downcase == "listening"%>
+          <%= render "listening" %>
+        <% elsif @exercise.content_type.downcase == "writing" %>
+          <%= render "writing_form" %>
+        <% else %>
+          <%= @exercise.content_type  %>
+        <% end %>
+
+        <%= render "exercises_buttons"%>
+
+      </div>
+
     </div>
-  </div>
+
+  </body>
 
 </div>

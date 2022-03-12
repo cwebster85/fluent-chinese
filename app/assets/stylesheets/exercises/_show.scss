@@ -75,7 +75,6 @@
   }
 }
 
-
 .holder {
   .controls-css {
     justify-content: center;
@@ -108,20 +107,18 @@
   overflow: hidden;
 }
 
-.exercise-body {
-    position: relative;
-    margin-left: 5%;
-    border-radius: 50px;
-    margin-top: 5%;
-    margin-right: 5%;
-    border: 4px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    overflow: hidden;
-  }
+body {
+  overflow: auto;
+  background: $fluent-chinese-red;
+  background: linear-gradient(0deg, $fluent-chinese-red 50%, rgba(255,255,255,1) 50%);
+}
 
-  body.video-page {
-    overflow: auto;
-    background: $fluent-chinese-red;
-    background: linear-gradient(0deg, $fluent-chinese-red 50%, rgba(255,255,255,1) 50%);
-  }
+.exercise-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exercise-content-inner {
+  width: 100%;
+}
