@@ -13,7 +13,7 @@ p {
   color: $grey;
 }
 
-.challenge-index-cards{
+.challenge-index-cards {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 32px;
@@ -21,13 +21,7 @@ p {
   margin-bottom: 24px;
 }
 
-@media(max-width: 960px) {
-  .challenge-index-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media(max-width: 540px) {
+@media(max-width: 1000px) {
   .challenge-index-cards {
     grid-template-columns: 1fr;
   }
