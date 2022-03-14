@@ -1,14 +1,30 @@
-<div class="container">
+<div class="challenge-index-container">
 
-  <h1>Challenges</h1>
+  <%= render 'shared/sidenavbar' %>
 
-  <ul>
-    <% @challenges.each do |challenge|%>
-      <li>
-        <p><%= link_to challenge.name, challenge_path(id: challenge.id) %></p>
-        <p style="white-space: pre-line"><%= challenge.description %></p>
-      </li>
-    <% end %>
-  </ul>
+  <div class="challenge-index-content">
+
+    <h1>Challenges</h1>
+
+    <p>A list of all challenges for this week and next week.</p>
+
+    <ul>
+      <% @challenges.each do |challenge|%>
+        <%= link_to challenge_path(id: challenge.id)  do %>
+          <li class="<%= challenge.date == Date.today ? 'challenge-active' : '' %>">
+            <h3><%= challenge.name %></h3>
+            <p style="white-space: pre-line"><%= challenge.description %></p>
+            <% if challenge.date == Date.today %>
+              <div>
+                <i class="fas fa-star"></i>
+                <p>Today's challenge</p>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+
+  </div>
 
 </div>
