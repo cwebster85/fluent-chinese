@@ -54,7 +54,7 @@ challenge_1 = Challenge.create(
   - How to count from 0-99
   - A range of common Chinese names
   - Words for siblings",
-  date: Date.today.beginning_of_week + 1
+  date: Date.today.beginning_of_week
 )
 puts "Challenge #{challenge_1.id} is created"
 

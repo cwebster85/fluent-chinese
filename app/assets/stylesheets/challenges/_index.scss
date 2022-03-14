@@ -4,3 +4,57 @@
   gap: 48px;
   margin: 0;
 }
+
+a {
+  color: black;
+}
+
+.challenge-index-cards{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 32px;
+  padding: 32px 0px;
+}
+
+@media(max-width: 960px) {
+  .challenge-index-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 540px) {
+  .challenge-index-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.challenge-index-card {
+  background: white;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  // position: relative;
+  // top: 0;
+  transition: all .1s ease-in;
+  padding: 24px;
+
+}
+
+.challenge-index-card:hover {
+  text-decoration: none;
+  color: #161616;
+  top: -2px;
+  box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.challenge-index-card-active {
+  background-color: $fluent-chinese-pink;
+
+  .h3{
+    font-weight: bold;
+  }
+}
+
+.today-challenge {
+  background-color: $fluent-chinese-red;
+  color: white;
+}

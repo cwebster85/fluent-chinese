@@ -5,25 +5,26 @@
   <div class="challenge-index-content">
 
     <h1>Challenges</h1>
-
+    <br>
     <p>A list of all challenges for this week and next week.</p>
 
-    <ul>
-      <% @challenges.each do |challenge|%>
-        <%= link_to challenge_path(id: challenge.id)  do %>
-          <li class="<%= challenge.date == Date.today ? 'challenge-active' : '' %>">
+    <div class="challenge-index-cards">
+
+        <% @challenges.each do |challenge|%>
+          <%= link_to challenge_path(id: challenge.id), class:"challenge-index-card #{challenge.date == Date.today ? 'challenge-index-card-active' : ''}"  do %>
             <h3><%= challenge.name %></h3>
+            <br>
             <p style="white-space: pre-line"><%= challenge.description %></p>
             <% if challenge.date == Date.today %>
-              <div>
+              <div class="today-challenge">
                 <i class="fas fa-star"></i>
                 <p>Today's challenge</p>
               </div>
             <% end %>
-          </li>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
+
+    </div>
 
   </div>
 
