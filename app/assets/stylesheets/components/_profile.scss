@@ -1,0 +1,78 @@
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0x;
+  margin: 0;
+  overflow: auto;
+  background-image: linear-gradient(to bottom, transparent 50%, white 50%),
+    url("https://res.cloudinary.com/drirexwsz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1647098498/photo-1614130020598-093435d7f1a2_ndhbdg.jpg");
+  // background-color: white;
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  overflow: auto;
+  width: 100%;
+  // background-position: top;
+  // .background:after {
+  //   background-color: white;
+  // }
+}
+
+.profile-css {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 125px;
+  img {
+    position:relative;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+  }
+  .user-name-profile {
+    margin-top: 2%;
+    // margin-left: 18%;
+    display: block;
+    font-weight: bold;
+    // text-align: left;
+  }
+  .completed-challenges {
+    font-size: 26px;
+    // margin-left: 12%;
+    // margin-bottom: 5%;
+    font-weight: bold;
+    height: 5%;
+  }
+
+  .completed-challenge-name {
+    justify-content: space-around;
+    height: 10px;
+    width: 30%;
+    font-size: 20px;
+    margin-top: 5%;
+       line-height: 0%;
+  }
+
+  .challenge-description {
+    text-align: center;
+    color: grey;
+    font-size: 18px;
+    white-space: pre-line;
+    width: 60%;
+  }
+  .social-media-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    .btn {
+      padding-top: 15px;
+      font-size: 30px;
+      width: 100px;
+     justify-content: center;
+      border-radius: 10%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+  }
+}
