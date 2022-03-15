@@ -3,7 +3,7 @@
 }
 
 .footer {
-  background: #FFE4E3;
+  background: $fluent-chinese-pink;
   color: rgba(0,0,0,0.3);
   border-color: rgba(0,0,0,0.3);
   /* Footer Position */
@@ -76,13 +76,14 @@
 
 .footer-copyright {
   text-align: center;
-  background: #E53935;
+  background: $fluent-chinese-red;
   padding: 10px 0px;
   bottom: 0;
   position: fixed;
   width: 100%;
   height: 30px;
   font-size: 10px;
+  color: white;
 }
 
 .footer-copyright .fa-copyright {
