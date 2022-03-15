@@ -5,19 +5,8 @@
   margin: 0;
 }
 
-// scroll attempt to solve layout issue
-.tab-pane:hover {
-  .tab-pane::-webkit-scrollbar {
-    width: 8px;
-  }
-  .tab-pane::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 2px $grey;
-    border-radius: 10px;
-  }
-  .tab-pane::-webkit-scrollbar-thumb {
-    background: $grey;
-    border-radius: 10px;
-  }
+.about-content {
+  margin-left: 350px;
 }
 
 .procrastination {

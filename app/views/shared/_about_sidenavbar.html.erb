@@ -1,0 +1,54 @@
+<div class="about-dashboard-sidenav">
+    <%= link_to "FluentChinese", dashboard_path, class: "logo" %>
+
+    <ul class="nav-icon-list">
+        <li class="nav-icon-list nav-item">
+          <div class= "d-flex">
+            <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% elsif current_user.photo_url.present? %>
+              <%= image_tag current_user.photo_url, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag "https://www.kindpng.com/picc/m/114-1140943_computer-icons-person-login-transparent-silhouette-icon-png.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
+            <p class="px-3 mt-2 name"><%= current_user.first_name %> <%= current_user.last_name %></p>
+          </div>
+        </li>
+        <li class="nav-icon-list nav-item">
+          <%= link_to dashboard_path, class: "d-flex #{controller.controller_name == 'pages' && controller.action_name == 'dashboard' ? 'active' : ''}" do %>
+            <i class="fas fa-tv icon"></i>
+            <p class="px-3">Dashboard</p>
+          <% end %>
+        </li>
+        <li class="nav-icon-list nav-item">
+          <%= link_to challenges_path, class: "d-flex #{controller.controller_name == 'challenges' && controller.action_name == 'index' ? 'active' : ''}" do %>
+            <i class="fas fa-thumbtack icon"></i>
+            <p class="px-3">Challenges</p>
+          <% end %>
+        </li>
+        <li class="nav-icon-list nav-item">
+          <%= link_to profile_path, class: "d-flex #{controller.controller_name == 'pages' && controller.action_name == 'profile' ? 'active' : ''}" do %>
+            <i class="fas fa-user-alt icon"></i>
+            <p class="px-3">Profile</p>
+          <% end %>
+        </li>
+        <%# <li class="nav-icon-list nav-item">
+          <%= link_to dashboard_path, class: "d-flex" do %>
+            <%# <%= image_tag "game.svg", class: "icon", size: "30" %>
+            <%# <p class="px-1">Games</p> %>
+          <%# <% end %>
+        <%# </li> %>
+        <li class="nav-icon-list nav-item">
+          <%= link_to about_path, class: "d-flex #{controller.controller_name == 'pages' && controller.action_name == 'about' ? 'active' : ''}" do %>
+            <i class="fas fa-info icon"></i>
+            <p class="px-3">About Us</p>
+          <% end %>
+        </li>
+
+    </ul>
+
+    <%= link_to destroy_user_session_path, method: :delete, class: "logout" do %>
+      <%= image_tag "logout.svg", class: "icon", size: "30" %>
+    <% end %>
+
+  </div>
