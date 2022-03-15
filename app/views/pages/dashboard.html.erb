@@ -7,13 +7,13 @@
     <header class="welcome-banner d-flex">
 
       <div>
-        <h1>Welcome, <span class="red-user"><%= current_user.first_name %></span>!</h1>
+        <h1><%= current_user.first_name %>，<span class="red-user">你好！</span>!</h1>
         <% if @current_challenge %>
-          <h2>Training for today: <%= @current_challenge.name %></h2>
+          <h2>Today's Challenge: <%= @current_challenge.name %></h2>
           <% if @number_of_current_challenge_completed_exercises %>
             <p><%= @number_of_current_challenge_completed_exercises %>/5 exercises completed</p>
           <% else %>
-            <p>You haven't completed any exercise yet!</p>
+            <p>Click the button below to get started!</p>
           <% end %>
           <% if current_user.challenges.include?(@current_challenge) %>
             <%= link_to "Back to Challenge", challenge_path(id: @current_challenge.id), class: "btn btn-primary" %>
@@ -21,7 +21,7 @@
             <%= link_to "Start Challenge", sessions_path(id: @current_challenge.id), method: :post, class: "btn btn-primary" %>
           <% end %>
         <% else %>
-          <h2>There is no challenge today, you can revise what you learnt!</h2>
+          <h2>Review what you've learned or take a break ☕️ </h2>
         <% end %>
       </div>
 
