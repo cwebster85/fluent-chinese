@@ -1,4 +1,4 @@
-<div class="profile-container">
+<div class="profile-container" style="position: relative">
     <%= render 'shared/sidenavbar' %>
 
     <div class="profile-css">
@@ -17,11 +17,13 @@
       <h2 class="completed-challenges">Completed Challenges:</h2>
       <br>
       <% @completed_challenges.each do |completed_challenge|%>
-        <div class=”completed-challenge-name“>
+        <div class=”challenge-complete-card“ style="background: white;box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);border-radius: 16px;transition: all .1s ease-in;padding: 24px;">
           <h3><%= completed_challenge.name %></h3>
+          <br>
+        <p style="white-space: pre-line"><%= completed_challenge.description %></p>
+          <div class="challenge-complete">
+             <i class="fas fa-check"></i>
         </div>
-        <div class="challenge-description">
-        <%= completed_challenge.description %>
         </div>
       <% end %>
 
