@@ -23,12 +23,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 125px;
+  margin-top: 310px;
   img {
-    position:relative;
+    position:absolute;
     border-radius: 50%;
     width: 220px;
     height: 220px;
+    top: 102px;
   }
   .user-name-profile {
     margin-top: 2%;
@@ -45,32 +46,44 @@
     height: 5%;
   }
 
-  .completed-challenge-name {
-    justify-content: space-around;
-    height: 10px;
-    width: 30%;
-    font-size: 20px;
-    margin-top: 5%;
-       line-height: 0%;
-  }
-
-  .challenge-description {
+  .challenge-complete-card {
+    // justify-content: space-around;
+    // height: 10px;
+    // width: 30%;
+    // font-size: 20px;
+    // margin-top: 5%;
+    //    line-height: 0%;
+    background: white;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    transition: all .1s ease-in;
+    padding: 24px;
+    .challenge-description {
     text-align: center;
     color: grey;
     font-size: 18px;
     white-space: pre-line;
     width: 60%;
+    margin-top: -14px
   }
+  }
+
+    .challenge-complete {
+   text-align: right;
+  }
+
+
   .social-media-buttons {
     display: flex;
     justify-content: space-between;
     width: 50%;
     .btn {
       padding-top: 15px;
+      padding-bottom: 15px;
       font-size: 30px;
       width: 100px;
      justify-content: center;
-      border-radius: 10%;
+      border-radius: 5%;
       margin-top: 10%;
       margin-bottom: 10%;
     }
