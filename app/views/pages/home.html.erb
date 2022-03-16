@@ -76,7 +76,7 @@
 
 </div>
 -->
-
+<!--
 <div class="container">
   <div class="container-one">
     <div class="d-flex hero">
@@ -167,3 +167,310 @@
       <iframe width="1000" height="500" src="https://www.youtube.com/embed/9Eth2OctZ9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
+-->
+
+<body>
+<header class="header">
+</header>
+<div class="container">
+  <div class="container-one">
+    <div class="d-flex hero">
+      <div class="hero-body">
+        <%# <h1 class="header-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit!</h1> %>
+        <h1 class="header-text">FluentChinese</h1>
+        <h2 class="site__subtitle">Climb The Great Wall In No Time At All</h2>
+        <% if user_signed_in? %>
+          <%= link_to "Go to Challenges", dashboard_path, class: "btn-lg hero-button"  %>
+        <% else %>
+          <%= link_to "Sign Up Today!", new_user_registration_path, class: "btn-lg hero-button"  %>
+        <% end %>
+      </div>
+      <%= image_tag "hero_image.svg", class: "hero-image" %>
+    </div>
+    <div class="d-flex features">
+      <h2 class="feature-num" style="opacity: 1; transform: translate(0px, 0px);"><span class="number">24</span> <span class="feature-text label">weeks part-time</span></h2>
+      <hr style="opacity: 1;">
+      <h2 class="feature-num" style="opacity: 1; transform: translate(0px, 0px);"><span class="number">271</span> <span class="feature-text label">alumni students</span></h2>
+      <hr style="opacity: 1;">
+      <h2 class="feature-num" style="opacity: 1; transform: translate(0px, 0px);"><span class="number">3</span> <span class="feature-text label">cities</span></h2>
+    </div>
+  </div>
+</div>
+<!--
+<div class="sect sect--padding-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="site">
+          <h1 class="site__title">FluentChinese</h1>
+          <h2 class="site__subtitle">Climb The Great Wall In No Time At All</h2>
+
+          <div class="site__box-link">
+            <% if user_signed_in? %>
+              <%= link_to "Go to Challenges", dashboard_path, class: "btn btn--revert btn--width"  %>
+            <% else %>
+              <%= link_to "Sign Up Today", new_user_registration_path, class: "btn btn--widthy"  %>
+            <% end %>
+          </div>
+          <%= image_tag "hero_image.svg", class: "site__img" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<div class="sect sect--padding-bottom">
+  <div class="container">
+    <div class="row row--center">
+      <h1 class="row__title">Perks</h1>
+    </div>
+    <div class="row row--center row--margin">
+      <div class="col-md-4 col-sm-4 info-box">
+        <div class="info-box__wrap">
+          <div class="info-box__img">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <h1 class="info-box__title">Home life</h1>
+          <p class="info-box__feat">Features</p>
+          <p>Join the community,<br>live group discussions</p>
+        </div>
+      </div>
+      <!-- second -->
+      <div class="col-md-4 col-sm-4 info-box">
+        <div class="info-box__wrap">
+          <div class="info-box__img">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h1 class="info-box__title">Reliable</h1>
+          <p class="info-box__feat">Features</p>
+          <p>Progress guaranted,<br>a reliable curriculum</p>
+        </div>
+      </div>
+
+      <!-- terzo -->
+      <div class="col-md-4 col-sm-4 info-box">
+        <div class="info-box__wrap">
+          <div class="info-box__img">
+             <i class="fa fa-solid fa-users"></i>
+          </div>
+          <h1 class="info-box__title">Community</h1>
+          <p class="info-box__feat">Features</p>
+          <p>Join the community,<br>live group discussions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="sect sect--white">
+  <div class="container">
+    <div class="row">
+      <h1 class="row__title">Success Stories</h1>
+    </div>
+    <div class="row row--margin row--text-center">
+      <div class="col-md-8 col-sm-10 col-xs-12 row__carousel">
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="slide-card">
+                <%= image_tag "https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694944/istockphoto-1319763830-612x612_lkahjo.jpg", class:"d-block", alt:"First slide" %>
+                <div class="slide-card-text">
+                  <h5>Cecilia</h5>
+                  <p>"This bootcamp has transformed me into a confident Chinese speaker."</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-card">
+                <%= image_tag "https://res.cloudinary.com/dbevdhp4h/image/upload/v1646693441/alumnus1_ullh3m.jpg", class:"d-block", alt:"Second slide"  %>
+                <div class="slide-card-text">
+                  <h5>David</h5>
+                  <p>"I enjoyed so much learning Chinese with FluentChinese that it did not feel like studying at all."</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-card">
+                <%= image_tag "https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694940/istockphoto-1311655328-612x612_gl1cv6.jpg", class:"d-block", alt:"Third slide" %>
+                <div class="slide-card-text">
+                  <h5>Alice</h5>
+                  <p>"Learning Chinese with FluentChinese is what led me to fluency.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sect sect--white sect--no-padding">
+  <div class="container">
+    <div class="row row--center">
+      <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+          <img class="partner_img" src="https://image.ibb.co/mOtHRw/fblogo.png">
+        </a>
+      </div>
+
+      <div class="col-md-3  col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+          <img class="partner_img" src="https://image.ibb.co/nfpXRw/twitterlogo.png">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+          <img class="partner_img linkedin" src="https://res.cloudinary.com/dab0abars/image/upload/v1647451394/linkedinlogo_grey_dos8em.png">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+          <img class="partner_img" src="https://image.ibb.co/ij03zG/inlogo.png">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sect sect--white">
+  <div class="container">
+    <div class="row">
+      <h1 class="row__title">Our blog</h1>
+    </div>
+
+    <div class="row row--margin">
+      <div class="col-md-6 article-pre__col">
+        <a href="#" class="article-pre ">
+          <div class="article-pre__img article-pre__img--first"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Protips • </span><span class="article-pre__aut"> by Harry Jones</span> <span class="article-pre__date"> - 5 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">How to improve speech using few tools of the trade<br><span class="article-pre__arrow--red"> →</span></h1>
+        </a>
+      </div>
+
+      <div class="col-md-6 article-pre__col">
+        <a href="#" class="article-pre ">
+          <div class="article-pre__img article-pre__img--second"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">My Story • </span><span class="article-pre__aut"> by Jane Doe</span> <span class="article-pre__date"> - 5 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">About Jane Doe's experience with FluentChinese<br><span class="article-pre__arrow--red">→</span></h1>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 article-pre__col">
+        <a href="#" class="article-pre ">
+          <div class="article-pre__img article-pre__img--fourth"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Success Stories • </span><span class="article-pre__aut"> by Lisa Moon</span> <span class="article-pre__date"> - 5 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">Lisa Moon tells us all about her startup business<br><span class="article-pre__arrow--red"> →</span></h1>
+        </a>
+      </div>
+
+      <div class="col-md-6 article-pre__col">
+        <a href="#" class="article-pre ">
+          <div class="article-pre__img article-pre__img--third"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Protips • </span><span class="article-pre__aut"> by Scott Wayne</span> <span class="article-pre__date"> - 5 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">How to improve speech using few tools of the trade<br><span class="article-pre__arrow--red"> →</span></h1>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sect sect--padding-bottom">
+  <div class="container">
+    <div class="row">
+      <h1 class="row__title">Contact Us </h1>
+    </div>
+    <div class="row row--margin">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <div class="contacts">
+          <%= image_tag "https://res.cloudinary.com/dab0abars/image/upload/v1647365725/FluentChinese_Logo_Red_kilm7y.svg", class: "contacts_title-ag" %>
+          <p class="contacts__address">
+            Shoreditch Stables, North<br>
+            138 Kingsland Road<br>
+            London E2 8DY
+          </p>
+          <p class="contacts__info">tel. <a href="#" class="contacts__info-link">020 7729 0146</a></p>
+          <p class="contacts__info">m. <a href="#"class="contacts__info-link">info@fluentchinese.com</a></p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <form id="contact" class="form">
+          <div class="form-group">
+            <select class="form__field form__select">
+              <option selected value>Choose topic*</option>
+              <option value=1>Mandarin</option>
+              <option value=2>Hakka</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="form__field--half">
+              <input type="text" placeholder="Name*" class="form__field form__text"></input>
+            </div>
+            <div class="form__field--half">
+              <input type="text" placeholder="Surname" class="form__field form__text"></input>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form__field--half">
+              <input type="text" placeholder="Email address*" class="form__field form__text"></input>
+            </div>
+            <div class="form__field--half">
+              <input type="text" placeholder="Phone number" class="form__field form__text"></input>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea type="text" placeholder="Your messsage*" class="form__field form__textarea"></textarea>
+            <button class="btn btn--up btn--width" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</div>
+
+<div class="sect sect--red ">
+  <img src="https://res.cloudinary.com/dab0abars/image/upload/v1647453105/sitting_red_yb31ri.png" class="extra-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="extra_title">Give us a try today!</h1>
+        <h1 class="extra_sub">We will pleased to have you onboard!</h1>
+        <a href="#" class="btn btn--white">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
