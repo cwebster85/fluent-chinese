@@ -11,6 +11,8 @@
 // display: flex;
 // }
 
+
+
 .box {
   // background: #fff;
   width: 300px;
@@ -56,6 +58,8 @@
   stroke: white;
 }
 .box .percent svg circle:nth-child(2) {
+  transform: rotate(-90deg);
+  transform-origin: 50% 46.7%;
   stroke: lightcoral;
 }
 .box .percent .num {
