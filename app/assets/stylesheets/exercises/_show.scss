@@ -1,17 +1,22 @@
-.vocab {
-  margin-bottom: 5%;
-  border: 4px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  overflow: hidden;
-  margin-right: 1%;
+// Format for all exercises
+
+#exercises {
+  overflow: auto;
+  background: $fluent-chinese-red;
+  background: linear-gradient(0deg, $fluent-chinese-red 50%, rgba(255,255,255,1) 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.writing-form {
-  justify-content: center;
+.exercise-content {
+  display: flex;
   align-items: center;
-  justify-items: center;
-  box-shadow: aliceblue;
+  justify-content: center;
+}
+
+.exercise-content-inner {
+  width: 100%;
 }
 
 .buttons {
@@ -27,6 +32,16 @@
     background-color: white;
   }
 }
+
+// Tailored formating for video exercise
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Tailored formating for reading exercise
 
 .reading {
   p {
@@ -94,31 +109,4 @@
     margin-bottom: 5%;
     margin-left: 5%;
   }
-}
-
-.listening {
-  margin-top: -5%;
-  position: relative;
-  align-items: center;
-  margin-left: 0%;
-  border: 4px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-#exercises {
-  overflow: auto;
-  background: $fluent-chinese-red;
-  background: linear-gradient(0deg, $fluent-chinese-red 50%, rgba(255,255,255,1) 50%);
-}
-
-.exercise-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.exercise-content-inner {
-  width: 100%;
 }
