@@ -1,13 +1,9 @@
 <div class="dashboard">
-
   <%= render 'shared/sidenavbar' %>
-
   <div class="dashboard-content">
-
     <header class="welcome-banner d-flex">
-
       <div>
-        <h1><%= current_user.first_name %>，<span class="red-user">你好！</span>!</h1>
+        <h1><%= current_user.first_name %>，<span class="red-user">你好！</span></h1>
         <% if @current_challenge %>
           <h2>Today's Challenge: <%= @current_challenge.name %></h2>
           <% if @number_of_current_challenge_completed_exercises %>
@@ -24,12 +20,9 @@
           <h2>Review what you've learned or take a break ☕️ </h2>
         <% end %>
       </div>
-
       <%= render "shared/progress_bar" %>
     </header>
-
     <div class="section">
-
       <div class="section-titles">
         <div class="section-title">
           <h3><%= Date.today.strftime("%B, %Y") %></h3>
@@ -43,26 +36,23 @@
           </div>
         </div>
         <div class="section-subtitle">
-         <button class="btn btn-pink btn-round month">
-          <%= image_tag "calendar.svg", class: "calendar-icon", size: "14" %>
-          <%= link_to "View all", challenges_path %>
-         </button>
+          <button class="btn btn-pink btn-round month">
+            <%= image_tag "calendar.svg", class: "calendar-icon", size: "14" %>
+            <%= link_to "View all", challenges_path %>
+          </button>
         </div>
       </div>
-
       <ul class="time-list">
-       <% @challenges.each do |challenge|%>
-        <%= link_to challenge_path(id: challenge.id) do %>
-         <li class="time-list__time-item <%=challenge.date == Date.today ? 'active' : '' %>" >
-          <div class="<%= challenge.date == Date.today ? 'day day-active' : 'day day-non-active'%>"><%= challenge.date.strftime("%a") %></div>
-          <div class="day-number"><%= challenge.date.strftime("%d") %></div>
-         </li>
+        <% @challenges.each do |challenge|%>
+          <%= link_to challenge_path(id: challenge.id) do %>
+            <li class="time-list__time-item <%=challenge.date == Date.today ? 'active' : '' %>" >
+              <div class="<%= challenge.date == Date.today ? 'day day-active' : 'day day-non-active'%>"><%= challenge.date.strftime("%a") %></div>
+              <div class="day-number"><%= challenge.date.strftime("%d") %></div>
+            </li>
+          <% end %>
         <% end %>
-       <% end %>
       </ul>
-
     </div>
-
     <div class="section">
       <div class="section-titles">
         <div class="section-title">Teaching Assistants</div>
@@ -103,12 +93,10 @@
       </div>
     </div>
   </div>
-
   <div class="dashboard-others">
     <div class="section">
-        <div class="section-titles">
-            <div class="section-title"></div>
-        </div>
+      <div class="section-titles">
+        <div class="section-title"></div>
+      </div>
+    </div>
   </div>
-
-</div>
