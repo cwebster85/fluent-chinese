@@ -25,7 +25,7 @@
     <div class="section">
       <div class="section-titles">
         <div class="section-title">
-          <h3><%= Date.today.strftime("%B, %Y") %></h3>
+          <h3 style="display: contents"><%= Date.today.strftime("%B, %Y") %></h3>
           <div class="btn-group nav-btns">
             <button class="btn btn-red btn-round-left">
               <%= image_tag "left_arrow.svg", class: "arrow-left-icon first-box", size: "30" %>
@@ -55,7 +55,11 @@
     </div>
     <div class="section">
       <div class="section-titles">
-        <div class="section-title">Teaching Assistants</div>
+        <div class="section-title" style="
+            font-weight: bold;
+            padding-bottom: -2%;
+            margin-bottom: -2%;
+        ">Teaching Assistants</div>
       </div>
       <div class="justify-content-around teacher-list">
         <div class="d-flex align-items-center px-3 teacher-list-item">
