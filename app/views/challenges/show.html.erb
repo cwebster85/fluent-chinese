@@ -90,21 +90,32 @@
 
   </div>
 
-  <div class="exercise-content">
-<!--
-    <header class="exercise-header">
-      <h1><%= @challenge.name %> </h1>
-      <p style="white-space: pre-line">><%= @challenge.description %></p>
-    </header>
--->
-    <%# <h2>Exercises</h2> %>
 
     <ul class="exercises">
       <% @exercises.each do |exercise|%>
         <li class="d-flex align-items-center exercise-indivdual">
           <div class="exercise-block">
               <h1 class="exercise-name"><%= exercise.name %></h1>
-              <p class="exercise-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consequatur voluptas deleniti?</p>
+                   <div class="exercise-content">
+                      <% if exercise.name == "Video Lecture" %>
+                      <p>Watch a short video to learn the content for today's challenge. Remember to take notes!</p>
+                      <% elsif exercise.name == "Vocabulary Building"%>
+                        <p>Learn the vocabulary and sentences for today's challenge by first learning them through the flashcards and then playing the games after like match or spell.</p>
+                      <% elsif exercise.name == "Reading"%>
+                        <p>Complete a reading comprehension quiz for today's challenge along with a reading aloud task to develop your speaking and pronunciation.</p>
+                      <% elsif exercise.name == "Listening"%>
+                        <p>Complete a listening quiz to self-assess your listening skills based on the content learned in today's challenge.</p>
+                      <% elsif exercise.name == "Writing" %>
+                        <p>Type up your own version of the reading text about yourself using the language learned from today's challenge.</p>
+                      <% else %>
+                        <%= exercise.name  %>
+                      <% end %>
+                  </div>
+              <%# <p style="white-space: pre-line">><%= @challenge.description %>
+
+    <%# <h2>Exercises</h2> %>
+              <%# <p class="exercise-description"> <%= @challenge.description %>
+              <%# </p>  %>
 
             <% if @session %>
 

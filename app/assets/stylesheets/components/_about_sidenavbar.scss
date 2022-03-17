@@ -1,4 +1,4 @@
-.dashboard-sidenav {
+.about-dashboard-sidenav {
   display: grid;
   grid-template-rows: repeat(3, auto);
   justify-items: center;
@@ -6,6 +6,7 @@
   background: $red;
   // border-radius: 30px;
   min-height: 100vh;
+  position: fixed;
 }
 
 .logo {
@@ -29,6 +30,7 @@
     color: $white;
     font-size: medium;
     margin-bottom: 0px;
+    font-family: $body-font;
   }
 
   p .active {
@@ -66,7 +68,7 @@
 
 @media screen and(max-width: 900px) and(min-width: 600px),
 (min-width: 1100px) {
-  .dashboard-sidenav {
+  .about-dashboard-sidenav {
     width: 300px;
   }
 }
