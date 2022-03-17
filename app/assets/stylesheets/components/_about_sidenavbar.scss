@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   justify-items: center;
-  color: white;
+  color: $white;
   background: $red;
   // border-radius: 30px;
   min-height: 100vh;
@@ -10,6 +10,11 @@
 }
 
 .logo {
+  padding-top: 36px;
+  font-size: 18px;
+  font-weight: bold;
+  color: $white;
+  text-decoration: none;
   width: 200px;
   padding-top: 100px;
 }
@@ -22,7 +27,7 @@
   list-style-type: none;
 
   p {
-    color: white;
+    color: $white;
     font-size: medium;
     margin-bottom: 0px;
     font-family: $body-font;
@@ -34,12 +39,12 @@
 
   .icon {
     font-size: 20px;
-    color: white;
+    color: $white;
   }
 
   .nav-item {
     padding: 36px 18px;
-    color: white;
+    color: $white;
     }
   .first {
     padding-top: 0;

@@ -4,17 +4,12 @@
   gap: 0x;
   margin: 0;
   overflow: auto;
-  background-image: linear-gradient(to bottom, transparent 50%, white 50%),
+  background-image: linear-gradient(to bottom, transparent 50%, $white 50%),
     url("https://res.cloudinary.com/drirexwsz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1647098498/photo-1614130020598-093435d7f1a2_ndhbdg.jpg");
-  // background-color: white;
   background-size: 100% 60%;
   background-repeat: no-repeat;
   overflow: auto;
   width: 100%;
-  // background-position: top;
-  // .background:after {
-  //   background-color: white;
-  // }
 }
 
 .profile-css {
@@ -53,14 +48,15 @@
     // font-size: 20px;
     // margin-top: 5%;
     //    line-height: 0%;
-    background: white;
+    background: $white;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
     border-radius: 16px;
     transition: all .1s ease-in;
     padding: 24px;
+
     .challenge-description {
     text-align: center;
-    color: grey;
+    color: $grey;
     font-size: 18px;
     white-space: pre-line;
     width: 60%;
@@ -68,8 +64,9 @@
   }
   }
 
-    .challenge-complete {
-      text-align: right;
+
+  .challenge-complete {
+    text-align: right;
   }
 
 

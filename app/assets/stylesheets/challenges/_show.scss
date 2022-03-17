@@ -165,7 +165,7 @@ body {
 
 .btn-exercise {
   color: $dark-grey;
-  background-color: white;
+  background-color: $white;
   border: none;
   border-radius: 20px;
 }
@@ -174,7 +174,7 @@ body {
   height: cover;
   width: 250px;
   margin: 0px 7px;
-  background-color: white;
+  background-color: $white;
   border-radius: 20px;
   padding: 8px;
 }

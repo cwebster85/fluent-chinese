@@ -1,7 +1,7 @@
 .navbar-fluent-chinese {
   justify-content: space-between;
-  background: white;
-  color: $fluent-chinese-red;
+  background: $white;
+  color: $red;
 }
 
 .navbar-fluent-chinese .navbar-collapse {
@@ -18,14 +18,14 @@
   background: transparent;
   box-shadow: none;
   .nav-link {
-    color: white;
+    color: $white;
     font-weight: bold;
-    text-emphasis-color: white;
+    text-emphasis-color: $white;
   }
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: white;
+    color: $white;
 }
 
 #not-on-homepage {

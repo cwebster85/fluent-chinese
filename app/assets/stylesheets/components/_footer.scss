@@ -3,7 +3,7 @@
 }
 
 .footer {
-  background: $fluent-chinese-pink;
+  background: $pink;
   color: rgba(0,0,0,0.3);
   border-color: rgba(0,0,0,0.3);
   /* Footer Position */
@@ -41,12 +41,13 @@
 }
 
 .footer-social-media a {
-  color: black;
+  color: $dark-grey;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
+
 .footer-social-media a:hover {
   opacity: 1;
 }
@@ -62,7 +63,7 @@
 }
 
 .footer-right-1 a p {
-  color: black;
+  color: $dark-grey;
   margin: 0;
 }
 
@@ -76,14 +77,14 @@
 
 .footer-copyright {
   text-align: center;
-  background: $fluent-chinese-red;
+  background: $red;
   padding: 10px 0px;
   bottom: 0;
   // position: fixed;
   width: 100%;
   height: 30px;
   font-size: 10px;
-  color: white;
+  color: $white;
 }
 
 .footer-copyright .fa-copyright {
