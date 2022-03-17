@@ -338,7 +338,7 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  height: 70vh;
+  height: 60vh;
 }
 
 .hero-image {
@@ -421,6 +421,7 @@ body {
   font: normal 700 0.75rem / 1.5 Roboto, sans-serif;
   letter-spacing: 0.167em;
   text-transform: uppercase;
+  color: $dark-grey;
 }
 
 .label {
@@ -502,6 +503,49 @@ body {
   box-shadow: 0 30px 18px -8px rgba(0, 0, 0, 0.1);
 }
 }
+// Intro Section
+
+.bootcamp-intro-cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+.bootcamp-intro-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  width: 800px;
+  padding: 24px;
+  text-align: center;
+}
+.left {
+  padding-right: 120px;
+  font-size: 18px;
+}
+.right {
+  padding-left: 120px;
+  font-size: 18px;
+}
+
+.bootcamp-text {
+  color: $dark-grey;
+  line-height: 1.5;
+  letter-spacing: 0.167em;
+  margin: 0px;
+}
+
+.bootcamp-img {
+  width: 500px;
+  transition: width 1s;
+
+  &:hover {
+    width: 550px;
+  }
+}
+
+
 // New Perks Section
 
 .card {
@@ -781,10 +825,10 @@ h2 {
 }
 
 .avatar__one {
-  background-image: url("https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694944/istockphoto-1319763830-612x612_lkahjo.jpg");
+  background-image: url("https://res.cloudinary.com/dbevdhp4h/image/upload/v1646693441/alumnus1_ullh3m.jpg");
 }
 .avatar__two {
-  background-image: url("https://res.cloudinary.com/dbevdhp4h/image/upload/v1646693441/alumnus1_ullh3m.jpg");
+  background-image: url("https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694944/istockphoto-1319763830-612x612_lkahjo.jpg");
 }
 .avatar__three {
   background-image: url("https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694940/istockphoto-1311655328-612x612_gl1cv6.jpg");
