@@ -69,7 +69,7 @@
   }
 
     .challenge-complete {
-   text-align: right;
+      text-align: right;
   }
 
 
@@ -77,15 +77,17 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
+
     .btn {
       padding-top: 15px;
       padding-bottom: 15px;
       font-size: 30px;
       width: 100px;
-     justify-content: center;
+      justify-content: center;
       border-radius: 5%;
       margin-top: 10%;
       margin-bottom: 10%;
     }
+
   }
 }

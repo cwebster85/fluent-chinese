@@ -25,7 +25,11 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: white;
+  color: white;
+}
+
+#not-on-homepage {
+  color: $dark-grey;
 }
 
 .active {
