@@ -3,8 +3,11 @@
     <div class="col-18 col-sm-6">
 
   <div class="form-signup">
-  <h2>FluentChinese</h2>
-  <%# <h3>Sign up</h3> %>
+
+  <div style="text-align: center;">
+    <%= image_tag "https://res.cloudinary.com/drirexwsz/image/upload/v1647425064/FluentChinese_Logo_Red_f8zrbd.svg", class: "logo" %>
+  </div>
+
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -35,9 +38,10 @@
     </div>
     <div class="form-actions">
       <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
+      <p class="have-an-account" style="font-size: 14px">Already have an account?</p>
+      <%= render "devise/shared/links" %>
     </div>
   <% end %>
-  <%= render "devise/shared/links" %>
         </div>
     </div>
   </div>

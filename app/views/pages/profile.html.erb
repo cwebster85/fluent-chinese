@@ -1,27 +1,39 @@
-<div class="container">
+<div class="profile-container" style="position: relative">
+    <%= render 'shared/sidenavbar' %>
 
-  <h1>My Profile</h1>
-
-    <h2>My details</h2>
-      <div class="card-profile" >
-        <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, class: "avatar-square-large" %>
-        <% elsif current_user.photo_url.present? %>
-            <%= image_tag current_user.photo_url, class: "avatar-square-large" %>
-        <% else %>
-          <%= image_tag "https://www.kindpng.com/picc/m/114-1140943_computer-icons-person-login-transparent-silhouette-icon-png.png", class: "avatar-square-large" %>
-        <% end %>
-        <div class="card-profile-details">
-          <p>First name: <%= current_user.first_name %></p>
-          <p>Last name: <%= current_user.last_name %></p>
-        </div>
-      </div>
-
-    <h2>Challenges completed</h2>
-
-      <% @completed_challenges.each do |completed_challenge|%>
-        <p><%= completed_challenge.name %></p>
-        <p><%= completed_challenge.description %></p>
+    <div class="profile-css">
+    <% if current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, class: "avatar-circle-large" %>
+      <% elsif current_user.photo_url.present? %>
+        <%= image_tag current_user.photo_url, class: "avatar-circle-large"%>
+      <% else %>
+        <%= image_tag "https://www.kindpng.com/picc/m/114-1140943_computer-icons-person-login-transparent-silhouette-icon-png.png", class: "avatar-square-large" %>
       <% end %>
 
+      <div class="user-name-profile">
+      <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+      </div>
+      <br>
+      <h2 class="completed-challenges">Completed Challenges:</h2>
+      <br>
+      <% @completed_challenges.each do |completed_challenge|%>
+        <div class=”challenge-complete-card“ style="background: white;box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);border-radius: 16px;transition: all .1s ease-in;padding: 24px;">
+          <h3><%= completed_challenge.name %></h3>
+          <br>
+        <p style="white-space: pre-line"><%= completed_challenge.description %></p>
+          <div class="challenge-complete">
+             <i class="fas fa-check"></i>
+        </div>
+        </div>
+      <% end %>
+
+      <div class="social-media-buttons" style="padding-top: 15px">
+        <%= link_to "#" do %>
+          <i class="fab fa-twitter btn btn-primary"></i>
+        <% end %>
+        <%= link_to "#" do %>
+          <i class="fab fa-linkedin btn btn-primary"></i>
+        <% end %>
+      </div>
+    </div>
 </div>

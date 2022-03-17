@@ -1,0 +1,90 @@
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0x;
+  margin: 0;
+  overflow: auto;
+  background-image: linear-gradient(to bottom, transparent 50%, $white 50%),
+    url("https://res.cloudinary.com/drirexwsz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1647098498/photo-1614130020598-093435d7f1a2_ndhbdg.jpg");
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  overflow: auto;
+  width: 100%;
+}
+
+.profile-css {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 310px;
+  img {
+    position:absolute;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    top: 102px;
+  }
+  .user-name-profile {
+    margin-top: 2%;
+    // margin-left: 18%;
+    display: block;
+    font-weight: bold;
+    // text-align: left;
+  }
+  .completed-challenges {
+    font-size: 26px;
+    // margin-left: 12%;
+    // margin-bottom: 5%;
+    font-weight: bold;
+    height: 5%;
+  }
+
+  .challenge-complete-card {
+    // justify-content: space-around;
+    // height: 10px;
+    // width: 30%;
+    // font-size: 20px;
+    // margin-top: 5%;
+    //    line-height: 0%;
+    background: $white;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    transition: all .1s ease-in;
+    padding: 24px;
+
+    .challenge-description {
+    text-align: center;
+    color: $grey;
+    font-size: 18px;
+    white-space: pre-line;
+    width: 60%;
+    margin-top: -14px
+  }
+  }
+
+
+  .challenge-complete {
+    text-align: right;
+  }
+
+
+  .social-media-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+
+    .btn {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 30px;
+      width: 100px;
+      justify-content: center;
+      border-radius: 5%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+
+  }
+}

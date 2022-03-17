@@ -1,6 +1,51 @@
 // Specific CSS for your home-page
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand &display=swap');
 
+// Banner (for backup-homepage)
+
+.banner {
+  p {
+    font-weight: bold;
+    margin-bottom: 2%;
+  }
+  .btn {
+    border-radius: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+  }
+}
+
+// Bootcamp intro cards
+
+.bootcamp-intro-cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 48px 0px;
+}
+
+.bootcamp-intro-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  width: 550px;
+  padding: 24px;
+  text-align: center;
+}
+
+.left {
+  padding-right: 16px;
+  font-size: 16px;
+}
+
+.right {
+  padding-left: 16px;
+  font-size: 16px;
+}
+
 // Bootcamp advantages cards
 // Old design 1
 .random {
@@ -12,11 +57,10 @@
 }
 
 .bootcamp-advantage {
-  height: 150px;
+  height: 200px;
   width: 300px;
-  padding: 16px;
+  padding: 24px 16px;
   text-align: center;
-  padding: 16px;
 }
 
 .bootcamp-advantage i{
@@ -30,8 +74,10 @@
 }
 
 // Alumni carousel
-h2 {
-  font-family: $headers-font;
+
+#carousel {
+  margin: 48px 0px;
+  padding: 24px 0px;
 }
 
 .slide-card {
