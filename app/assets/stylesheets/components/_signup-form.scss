@@ -1,8 +1,12 @@
 .form-signup {
-  background: fluent;
   padding: 10px 20px;
   margin-top: 0px;
   border-radius: 3px;
+
+
+  .logo {
+    width: 350px;
+    padding: 0px 0px 16px 0px;
 
 
   h2 {
@@ -11,7 +15,7 @@
     margin-bottom: 20px;
     text-align: center;
     font-family: $headers-font;
-    color: $fluent-chinese-red
+    color: $red
   }
 
   h3 {
@@ -27,10 +31,11 @@
     font-weight: lighter;
     text-align: center;
     margin-bottom: 10px;
+
   }
 
   .form-inputs {
-    background-color: white;
+    background-color: $white;
   }
 
   .btn {
