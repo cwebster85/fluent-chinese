@@ -261,7 +261,7 @@ h2 {
   padding: 30px 25px;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: $body-font;
@@ -294,6 +294,40 @@ body {
   padding-top: 90px;
 }
 
+.collapse {
+  display: block;
+}
+
+.row--center {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.row--margin {
+  margin-top: 45px;
+}
+
+.row__title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.row__sub {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  color: $grey;
+}
+
+.sect--grey {
+  /*background-color: #ebeff9;*/
+}
+
+.sect--white {
+  /* background-color:#fff;*/
+}
 
 // Header
 
@@ -395,6 +429,7 @@ body {
   top: -0.625rem;
 }
 
+.random {
 // Perks Section
 
 .row--center {
@@ -466,12 +501,66 @@ body {
   transform: scale(1.05, 1.05);
   box-shadow: 0 30px 18px -8px rgba(0, 0, 0, 0.1);
 }
+}
+// New Perks Section
+
+.card {
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+  transition: 0.3s transform cubic-bezier(0.155,1.105,0.295,1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155,1.105,0.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+.card h3 {
+  font-weight: 600;
+}
+
+.card img {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
+
+.card-1 {
+  background-image: url('https://res.cloudinary.com/dab0abars/image/upload/v1647517121/homelife_o0jsvr.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80px;
+}
+
+.card-2 {
+  background-image: url('https://res.cloudinary.com/dab0abars/image/upload/v1647517138/reliable_och3km.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80px;
+}
+
+.card-3 {
+  background-image: url('https://res.cloudinary.com/dab0abars/image/upload/v1647517146/community_w4xxgi.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80px;
+}
+
+@media(max-width: 990px) {
+  .card {
+    margin: 20px;
+  }
+}
 
 // Buttons
 
 .btn {
   background-color: $red;
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 10px 25px;
   color: #fff;
   box-shadow: 0 18px 13px -6px rgba(0, 0, 0, 0.2);
@@ -541,7 +630,7 @@ body {
   width: 25px;
   margin-right: 10px;
 }
-
+.random {
 //  Carousel
 
 h2 {
@@ -576,6 +665,165 @@ h2 {
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+}
+}
+
+// New Carousel
+
+.row__sub--light {
+  color: #aec0d2;
+}
+.item__img {
+  width: 145px;
+  margin-right: 0px;
+  // margin-right: 10px;
+}
+
+.carousel {}
+
+.row__carousel {
+  display: inline-block;
+  float: none;
+  border-radius: 6px;
+}
+.row--text-center {
+  text-align: center;
+
+}
+.carousel-control {
+  opacity: 1;
+  background-image: none !important;
+}
+
+.carousel-control.left {
+  left: -100px;
+}
+
+.carousel-control.right {
+  right: -100px;
+}
+
+.carousel-inner {
+  margin-top: -25px;
+  padding: 25px 15px 0px 25px;
+}
+.carousel-control__img {
+  position: absolute;
+  top: 50%;
+  margin-top: -90px;
+  width: 40px;
+}
+
+.carousel-control.left .carousel-control__img {
+  left: -50px;
+}
+
+.carousel-control.right .carousel-control__img {
+  right: -50px;
+}
+
+.carousel-indicators {
+  align-items: center;
+}
+
+.carousel-indicators li {
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border: 2px solid $grey;
+  margin-right: 8px;
+  border-radius: 50px;
+}
+
+.carousel-indicators li.active {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border: 3px solid $red;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+.item {
+  text-align: left;
+  position: relative;
+  padding: 25px 15px 0 25px;
+}
+
+.item__content {
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  position: relative;
+  height: 305px;
+}
+.item__img {
+  display: inline-block;
+}
+.item__name {
+  display: inline-block;
+  font-size: 22px;
+  vertical-align: middle;
+  font-weight: 700;
+}
+.item__description {
+  margin-top: 35px;
+  color: #8198ae;
+  line-height: 23px;
+}
+.item__avatar {
+  height: 45px;
+  width: 45px;
+  // background-image: url("https://static.pexels.com/photos/428333/pexels-photo-428333.jpeg");
+  background-size: cover;
+  border-radius: 50%;
+  margin: 50px auto 15px;
+}
+
+.avatar__one {
+  background-image: url("https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694944/istockphoto-1319763830-612x612_lkahjo.jpg");
+}
+.avatar__two {
+  background-image: url("https://res.cloudinary.com/dbevdhp4h/image/upload/v1646693441/alumnus1_ullh3m.jpg");
+}
+.avatar__three {
+  background-image: url("https://res.cloudinary.com/dbevdhp4h/image/upload/v1646694940/istockphoto-1311655328-612x612_gl1cv6.jpg");
+}
+
+.carousel-indicators {
+  width: auto;
+  margin: 0;
+  right: 68px;
+  text-align: right;
+  top: 72px;
+  left: auto;
+  bottom: auto;
+}
+.item__content:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
+  bottom: -20px;
+  position: absolute;
+  left: 50%;
+  margin-left: -23px;
+  filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
+}
+
+.item__people {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.item__occupation {
+  font-size: 14px;
+  color: #8198ae;
+  text-align: center;
 }
 
 // Logo Section
