@@ -1,11 +1,11 @@
 .challenges-title {
  h1 {
-   font-family: "Raleway";
+   font-family: $headers-font;
    font-weight: bold;
    margin-bottom: 2%;
  }
  h2 {
-   font-family: "Raleway";
+   font-family: $headers-font;
    font-weight: bold;
    margin-bottom: 2%;
  }
@@ -14,7 +14,11 @@
 .exercises-cards {
 
   ul {
-    font-family: "Raleway";
+    font-family: $body-font;
     font-size: medium;
+
+    .h1 {
+      font-family: $headers-font;
+    }
   }
 }
