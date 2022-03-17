@@ -9,7 +9,7 @@
           <% if @number_of_current_challenge_completed_exercises %>
             <p style="color:white"><%= @number_of_current_challenge_completed_exercises %>/5 exercises completed</p>
           <% else %>
-            <p>Click the button below to get started!</p>
+            <p style="color:white">Click the button below to get started!</p>
           <% end %>
           <% if current_user.challenges.include?(@current_challenge) %>
             <%= link_to "Back to Challenge", challenge_path(id: @current_challenge.id), class: "btn btn-primary" %>

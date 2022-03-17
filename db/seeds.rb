@@ -54,7 +54,7 @@ challenge_1 = Challenge.create(
   - How to count from 0-99
   - A range of common Chinese names
   - Words for siblings",
-  date: Date.today.beginning_of_week + 5
+  date: Date.today.beginning_of_week + 1
 )
 puts "Challenge #{challenge_1.id} is created"
 
@@ -67,7 +67,7 @@ challenge_2 = Challenge.create(
   - I am/he is/she is
   - Names of Chinese speaking locations
   - Two nationalities",
-  date: Date.today.advance(weeks: 1).beginning_of_week + 1
+  date: Date.today.beginning_of_week + 3
 )
 puts "Challenge #{challenge_2.id} is created"
 
@@ -80,7 +80,7 @@ challenge_3 = Challenge.create(
   You will also revisit:
   - How to introduce yourself
   - Saying your age and birthday",
-  date: Date.today.advance(weeks: 1).beginning_of_week + 3
+  date: Date.today.beginning_of_week + 5
 )
 puts "Challenge #{challenge_3.id} is created"
 
@@ -93,7 +93,7 @@ challenge_4 = Challenge.create(
   - What their age is
   You will also revisit:
   - Numbers up to 100",
-  date: Date.today.advance(weeks: 2).beginning_of_week + 1
+  date: Date.today.advance(weeks: 1).beginning_of_week + 1
 )
 puts "Challenge #{challenge_4.id} is created"
 
@@ -106,7 +106,7 @@ challenge_5 = Challenge.create(
   You will also revisit:
   - Pronouns
   - Numbers 0-100",
-  date: Date.today.advance(weeks: 2).beginning_of_week + 3
+  date: Date.today.advance(weeks: 1).beginning_of_week + 3
 )
 puts "Challenge #{challenge_5.id} is created"
 
@@ -120,7 +120,7 @@ challenge_6 = Challenge.create(
   You will also revisit:
   - Numbers up to 100
   - Describing hair and eyes",
-  date: Date.today.advance(weeks: 2).beginning_of_week + 5
+  date: Date.today.advance(weeks: 1).beginning_of_week + 5
 )
 puts "Challenge #{challenge_6.id} is created"
 
