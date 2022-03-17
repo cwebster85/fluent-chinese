@@ -6,7 +6,7 @@
 }
 
 a {
-  color: black;
+  color: $dark-grey;
 }
 
 p {
@@ -28,7 +28,7 @@ p {
 }
 
 .challenge-index-card {
-  background: white;
+  background: $white;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   transition: all .1s ease-in;
@@ -48,7 +48,7 @@ p {
 }
 
 .challenge-index-card-active {
-  background-color: $fluent-chinese-pink;
+  background-color: $pink;
   position: relative;
 
   h3 {
@@ -57,8 +57,8 @@ p {
 }
 
 .today-challenge {
-  background-color: $fluent-chinese-red;
-  color: white;
+  background-color: $red;
+  color: $white;
   display: flex;
   justify-content: space-evenly ;
   align-items: center;
@@ -73,6 +73,6 @@ p {
   p {
     margin-bottom: 0px;
     padding-left: 8px;
-    color: white;
+    color: $white;
   }
 }

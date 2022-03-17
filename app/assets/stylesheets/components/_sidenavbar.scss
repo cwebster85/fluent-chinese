@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   justify-items: center;
-  color: white;
+  color: $white;
   background: $red;
   // border-radius: 30px;
   min-height: 100vh;
@@ -12,7 +12,7 @@
   padding-top: 36px;
   font-size: 18px;
   font-weight: bold;
-  color: white;
+  color: $white;
   text-decoration: none;
 }
 
@@ -35,12 +35,12 @@
 
   .icon {
     font-size: 20px;
-    color: white;
+    color: $white;
   }
 
   .nav-item {
     padding: 36px 18px;
-    color: white;
+    color: $white;
     }
   .first {
     padding-top: 0;

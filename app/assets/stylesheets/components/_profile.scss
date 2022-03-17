@@ -53,14 +53,15 @@
     // font-size: 20px;
     // margin-top: 5%;
     //    line-height: 0%;
-    background: white;
+    background: $white;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
     border-radius: 16px;
     transition: all .1s ease-in;
     padding: 24px;
+
     .challenge-description {
     text-align: center;
-    color: grey;
+    color: $grey;
     font-size: 18px;
     white-space: pre-line;
     width: 60%;
@@ -68,8 +69,8 @@
   }
   }
 
-    .challenge-complete {
-   text-align: right;
+  .challenge-complete {
+    text-align: right;
   }
 
 
@@ -77,6 +78,7 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
+
     .btn {
       padding-top: 15px;
       padding-bottom: 15px;
@@ -87,5 +89,6 @@
       margin-top: 10%;
       margin-bottom: 10%;
     }
+
   }
 }

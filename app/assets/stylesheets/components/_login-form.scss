@@ -1,5 +1,4 @@
 .form-login {
-  background: fluent;
   padding: 10px 20px;
   margin-top: 80px;
   border-radius: 3px;
@@ -11,7 +10,7 @@
     margin-bottom: 20px;
     text-align: center;
     font-family:'Raleway';
-    color: $fluent-chinese-red
+    color: $red;
   }
 
   h3 {
@@ -30,11 +29,11 @@
   }
 
   .form-inputs {
-    background-color: white;
+    background-color: $white;
   }
 
   .btn {
     width: 100%;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 }

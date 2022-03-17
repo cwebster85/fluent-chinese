@@ -55,7 +55,7 @@
 }
 .box .percent svg circle:nth-child(1) {
   stroke-dashoffset: 0;
-  stroke: white;
+  stroke: $white;
 }
 .box .percent svg circle:nth-child(2) {
   transform: rotate(-90deg);
@@ -76,7 +76,7 @@
 .box .percent .num h2 {
   font-size: 32px;
   font-weight: 700;
-  color: white;
+  color: $white;
 }
 .box .percent .num h2 span {
   font-size: 18px;
