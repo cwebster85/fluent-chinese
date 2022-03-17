@@ -5,7 +5,11 @@
     <% end %>
   <% else %>
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://res.cloudinary.com/drirexwsz/image/upload/v1647425042/FluentChinese_Logo_White_je6yib.svg" %>
+      <% if controller.controller_name == 'pages' && controller.action_name == 'home' %>
+        <%= image_tag "https://res.cloudinary.com/drirexwsz/image/upload/v1647425042/FluentChinese_Logo_White_je6yib.svg" %>
+      <% else %>
+        <%= image_tag "https://res.cloudinary.com/dab0abars/image/upload/v1647365725/FluentChinese_Logo_Red_kilm7y.svg" %>
+      <% end %>
     <% end %>
   <% end %>
 
