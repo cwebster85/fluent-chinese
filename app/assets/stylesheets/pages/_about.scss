@@ -5,12 +5,13 @@
   margin: 0;
 }
 
-.about-content {
+.about-margin {
   margin-left: 350px;
 }
 
 .procrastination {
-     text-align: center;
+  text-align: center;
+
   img {
     // justify-content: flex-end;
     margin-top: 3%;
@@ -19,6 +20,7 @@
     width: 50%;
     height: 30%;
   }
+
   p {
     text-align: center;
     font-size: 30px;
@@ -27,13 +29,14 @@
     justify-content: center;
     margin-bottom: 3%;
   }
+
 }
 
 .faq-css {
   margin-bottom: 2%;
   h1 {
   font-size: 28px;
-  font-family: "Raleway";
+  font-family: $headers-font;
   // align-items:  center;
   font-weight: bold;
   margin-top: 2%;
@@ -50,7 +53,7 @@
   p {
   // margin-top: 2%;
   font-size: 18px;
-  font-family: "Raleway";
+  font-family: $body-font;
   margin-bottom: 2%;
   // align-items:  center;
   }
@@ -58,7 +61,7 @@
   // margin-left: 14%;
   text-align: justify;
   font-size: 18px;
-  font-family: "Raleway";
+  font-family: $body-font;
   }
   // ol {
   // font-size: 28px;
@@ -72,14 +75,14 @@
      text-align: center;
   h1 {
   font-size: 28px;
-  font-family: "Raleway";
+  font-family: $headers-font;
   align-items:  center;
   font-weight: bold;
   margin-bottom: 2%;
   }
   h2 {
   font-size: 28px;
-  font-family: "Raleway";
+  font-family: $headers-font;
   align-items:  center;
   font-weight: bold;
   margin-top: 4%;
@@ -87,14 +90,14 @@
   }
   p {
   font-size: 18px;
-  font-family: "Raleway";
+  font-family: $body-font;
   align-items:  center;
   }
   li {
   margin-left: 14%;
   text-align: justify;
   font-size: 18px;
-  font-family: "Raleway";
+  font-family: $body-font;
   }
 }
 

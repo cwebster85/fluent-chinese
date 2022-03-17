@@ -14,6 +14,8 @@
   font-weight: bold;
   color: $white;
   text-decoration: none;
+  width: 200px;
+  padding-top: 16px;
 }
 
 .nav-icon-list {
@@ -24,7 +26,7 @@
   list-style-type: none;
 
   p {
-    color: white;
+    color: $white;
     font-size: medium;
     margin-bottom: 0px;
   }
