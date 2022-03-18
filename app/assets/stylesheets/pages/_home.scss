@@ -1,306 +1,3 @@
-// Specific CSS for your home-page
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand &display=swap');
-
-// Banner (for backup-homepage)
-
-.banner {
-  p {
-    font-weight: bold;
-    margin-bottom: 2%;
-  }
-  .btn {
-    border-radius: 4%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
-  }
-}
-
-// Bootcamp intro cards
-
-.bootcamp-intro-cards {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 48px 0px;
-}
-
-.bootcamp-intro-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 250px;
-  width: 550px;
-  padding: 24px;
-  text-align: center;
-}
-
-.left {
-  padding-right: 16px;
-  font-size: 16px;
-}
-
-.right {
-  padding-left: 16px;
-  font-size: 16px;
-}
-
-// Bootcamp advantages cards
-// Old design 1
-.random {
-.bootcamp-advantages {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 48px 0px;
-}
-
-.bootcamp-advantage {
-  height: 200px;
-  width: 300px;
-  padding: 24px 16px;
-  text-align: center;
-}
-
-.bootcamp-advantage i{
-  font-size: 60px;
-  padding-bottom: 8px;
-}
-
-.bootcamp-advantage p{
-  font-size: 16px;
-  font-weight: bold;
-}
-
-// Alumni carousel
-
-#carousel {
-  margin: 48px 0px;
-  padding: 24px 0px;
-}
-
-.slide-card {
-  overflow: hidden;
-  height: 450px;
-  background: #EDF2F4;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  width: 1000px;
-  margin: 0 auto;
-}
-
-.slide-card img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide-card-text h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.slide-card-text p {
-  font-size: 14px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.slide-card-text {
-  padding: 16px;
-}
-}
-
-// Old design 2
-.random {
-// Hero Section
-
-.container-one {
-  height: 100vh;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  height: 70vh;
-}
-
-.hero-image {
-  width: 500px;
-}
-
-.hero-button {
-  background: rgb(217,4,41);
-  background: linear-gradient(90deg, rgba(217,4,41,1) 0%, rgba(244,43,3,1) 100%);
-  color: white;
-  padding: 20px 30px;
-  border-radius: 60px;
-  font: normal 700 0.75rem / 1.5 Roboto, sans-serif;
-  letter-spacing: 0.167em;
-  text-transform: uppercase;
-  transition: padding 1s;
-  margin-top: 30px;
-
-  &:hover {
-    opacity: 75%;
-    color: white;
-    padding: 20px 40px;
-  }
-}
-
-.header-text {
-  font: normal 900 3.375rem / 1.09 Roboto, sans-serif;
-  // font-family: 'Shrikhand', cursive;
-  color: $dark-grey;
-  font-size: 54px;
-  width: 600px;
-  margin-right: 50px;
-}
-
-.features {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  align-items: stretch;
-  margin: 4.063rem 0 0;
-  height: 3.75rem;
-}
-
-.feature-num {
-  padding: 0.188rem 0 0;
-  white-space: nowrap;
-
-  .number {
-    font-family: 'Shrikhand', cursive;
-    font-size: 36px;
-    background: linear-gradient(90deg, rgba(217,4,41,1) 0%, rgba(244,43,3,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-}
-
-.features hr {
-  width: 1px;
-  height: 100%;
-  background: $grey;
-  margin: 0 5rem;
-}
-
-.feature-text {
-  font: normal 700 0.75rem / 1.5 Roboto, sans-serif;
-  letter-spacing: 0.167em;
-  text-transform: uppercase;
-}
-
-.label {
-  margin: 0 0 0 0.688rem;
-  position: relative;
-  top: -0.625rem;
-}
-
-// Second Section
-
-.perk-image {
-  margin-left: 20px;
-}
-
-.perks {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 64px 0;
-}
-
-.perk-individual {
-  height: 150px;
-  width: 300px;
-  padding: 16px;
-  text-align: center;
-}
-
-.perk-individual i {
-  font-size: 80px;
-  padding-bottom: 8px;
-}
-
-.perk-individual p {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-// Third Section - Carousel
-
-h2 {
-  font-family: $headers-font;
-}
-
-.slide-card {
-  overflow: hidden;
-  height: 450px;
-  background: #EDF2F4;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  width: 1000px;
-  margin: 0 auto;
-  margin-top: 100px;
-}
-
-.slide-card img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide-card-text h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-// Fourth Section - Video
-
-.video {
-  position: relative;
-  margin-left: 5%;
-  border-radius: 50px;
-  margin-top: 5%;
-
-  margin-right: 5%;
-  border: 4px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.container-four {
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-  background: $red;
-  background: linear-gradient(0deg, $red 50%, rgba(255,255,255,1) 50%);
-  height: 100vh;
-  margin-top: 100px;
-}
-.slide-card-text p {
-  font-size: 14px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-}
-// DO NOT DELETE NEW
-
 // Reset
 
 .header {
@@ -400,11 +97,11 @@ h2 {
   font: normal 700 0.75rem / 1.5 Roboto, sans-serif;
   letter-spacing: 0.167em;
   text-transform: uppercase;
-  transition: padding 1s;
+  transition: all 0.4s;
   margin-top: 30px;
 
   &:hover {
-    opacity: 75%;
+    opacity: 85%;
     color: white;
     padding: 20px 40px;
   }
@@ -442,8 +139,9 @@ h2 {
   white-space: nowrap;
 
   .number {
-    font-family: 'Shrikhand', cursive;
-    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: bolder;
     background: linear-gradient(90deg, rgba(217,4,41,1) 0%, rgba(244,43,3,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -519,7 +217,7 @@ h2 {
 }
 
 
-// New Perks Section
+// Perks Section
 
 .card {
   border-radius: 4px;
@@ -575,26 +273,6 @@ h2 {
 
 // Buttons
 
-.btn {
-  background-color: $red;
-  border-radius: 50px;
-  padding: 10px 25px;
-  color: #fff;
-  // box-shadow: 0 18px 13px -6px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  -o-transition: all 0.4s;
-}
-
-
-.btn:hover {
-  box-shadow: 0 25px 18px -6px rgba(0, 0, 0, 0.2);
-  background-color: $light-red;
-  color: #fff;
-}
-
 .info-box__wrap:hover .btn {
   box-shadow: 0 25px 18px -6px rgba(0, 0, 0, 0.2);
 }
@@ -612,25 +290,32 @@ h2 {
   box-shadow: none;
   border: 1px solid $grey;
 }
+.btn--red  {
+  background: $red;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 60px;
+  transition: all 0.4s;
 
-
-.btn--red {
-  background-color: $red;
+  &:hover {
+    background-color: $light-red;
+    color: white;
+    padding: 10px 35px;
+  }
 }
 
-.btn--red:hover {
-  background-color: $light-red;
-}
-
-.btn--white {
-  background-color: #fff;
-  // border: 1px solid #ededed;
+.btn--white  {
+  background: white;
   color: $grey;
-}
+  padding: 10px 25px;
+  border-radius: 60px;
+  transition: all 0.4s;
 
-.btn--white:hover {
-  background-color: #fff;
-  color: $grey;
+  &:hover {
+    background-color: whitesmoke;
+    color: $grey;
+    padding: 10px 35px;
+  }
 }
 
 .info-box__btn {
@@ -648,7 +333,7 @@ h2 {
   margin-right: 10px;
 }
 
-// New Carousel
+// Carousel
 
 .row__sub--light {
   color: #aec0d2;
@@ -723,6 +408,7 @@ h2 {
   margin-right: 10px;
   border-radius: 50px;
 }
+
 .item {
   text-align: left;
   position: relative;
@@ -798,6 +484,7 @@ h2 {
   text-align: center;
   font-weight: 700;
   font-size: 16px;
+  color: $dark-grey;
 }
 
 .item__occupation {
@@ -1033,55 +720,6 @@ h2 {
 }
 
 
-@media screen and(max-width:1024px) {
-  .collapse {
-    display: none;
-  }
-  .navbar-toggle {
-    margin: 10px 10px 0 0;
-    display: inline-block;
-  }
-  .header__container {
-    width: 100%;
-    padding: 0;
-  }
-  .header__menu {
-    width: 100%;
-  }
-  .header {
-    background-color: #fff;
-    padding: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 4;
-  }
-  .header__logo {
-    padding: 12px 20px;
-  }
-  .header__el {
-    display: block;
-    padding: 10px 20px;
-    border-top: 1px solid #ededed;
-  }
-
-  .header .btn--white,
-  .header .btn--white:hover {
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    color: #fff;
-    background-color: transparent;
-  }
-  .header__el--blue {
-    background-color: #3a9fff;
-  }
-
-}
-
-
 @media screen and(max-width:991px) {
   .info-box {
     padding: 0 10px;
@@ -1197,15 +835,9 @@ h2 {
     font-size: 12px;
     margin-bottom: 5px;
   }
-  .site__title {
-    font-size: 24px;
-  }
   .site__subtitle {
     font-size: 18px;
     margin: 10px 0 20px;
-  }
-  .site__img {
-    margin-top: 30px;
   }
   .row--margin {
     margin-top: 30px;
@@ -1217,11 +849,11 @@ h2 {
   .btn--width {
     width: 100px;
   }
-  .career_title {
+  .extra_title {
     font-size: 18px;
     margin-top: 0;
   }
-  .career_sub {
+  .extra_sub {
     font-size: 14px;
     margin-bottom: 20px;
   }
