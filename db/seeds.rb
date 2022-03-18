@@ -448,9 +448,111 @@ puts "All 5 exercises created for challenge 6!"
 
 puts "All exercises for all challenges created"
 
+# Completed challenges and exercises for John
+
+## Sessions
+
+puts "Creating two sessions for John so he has done challenges 1 and 2"
+
+john_session_1 = Session.create(
+  user_id: john.id,
+  challenge_id: challenge_1.id
+)
+puts "Session #{john_session_1.id} is created"
+
+john_session_2 = Session.create(
+  user_id: john.id,
+  challenge_id: challenge_2.id
+)
+puts "Session #{john_session_2.id} is created"
+
+## Completed exercises
+
+puts "Creating 5 completed exercises for John so he has finished challenge 1"
+
+completed_challenge_1_exercise_1 = CompletedExercise.create(
+  session_id: john_session_1.id,
+  exercise_id: challenge_1_exercise_1.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_1_exercise_1.id} is created"
+
+completed_challenge_1_exercise_2 = CompletedExercise.create(
+  session_id: john_session_1.id,
+  exercise_id: challenge_1_exercise_2.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_1_exercise_2.id} is created"
+
+completed_challenge_1_exercise_3 = CompletedExercise.create(
+  session_id: john_session_1.id,
+  exercise_id: challenge_1_exercise_3.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_1_exercise_3.id} is created"
+
+completed_challenge_1_exercise_4 = CompletedExercise.create(
+  session_id: john_session_1.id,
+  exercise_id: challenge_1_exercise_4.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_1_exercise_4.id} is created"
+
+completed_challenge_1_exercise_5 = CompletedExercise.create(
+  session_id: john_session_1.id,
+  exercise_id: challenge_1_exercise_5.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_1_exercise_5.id} is created"
+
+puts "All 5 completed exercises for challenge 1 for John are created"
+
+puts "Creating 5 completed exercises for John so he has finished challenge 2"
+
+completed_challenge_2_exercise_1 = CompletedExercise.create(
+  session_id: john_session_2.id,
+  exercise_id: challenge_2_exercise_1.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_2_exercise_1.id} is created"
+
+completed_challenge_2_exercise_2 = CompletedExercise.create(
+  session_id: john_session_2.id,
+  exercise_id: challenge_2_exercise_2.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_2_exercise_2.id} is created"
+
+completed_challenge_2_exercise_3 = CompletedExercise.create(
+  session_id: john_session_2.id,
+  exercise_id: challenge_2_exercise_3.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_2_exercise_3.id} is created"
+
+completed_challenge_2_exercise_4 = CompletedExercise.create(
+  session_id: john_session_2.id,
+  exercise_id: challenge_2_exercise_4.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_2_exercise_4.id} is created"
+
+completed_challenge_2_exercise_5 = CompletedExercise.create(
+  session_id: john_session_2.id,
+  exercise_id: challenge_2_exercise_5.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_2_exercise_5.id} is created"
+
+puts "All 5 completed exercises for challenge 2 for John are created"
+
+puts "All 2 sessions and 10 completed exercises created for John"
+
 puts "#{User.count} users have been created"
 puts "#{Challenge.count} challenges have been created"
 puts "#{Exercise.count} exercises have been created"
+puts "John has completed #{Session.count} sessions"
+puts "John has completed #{CompletedExercise.count} exercises"
 
 puts "All done!"
 

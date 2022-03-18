@@ -17,7 +17,7 @@
       <h2 class="completed-challenges">Completed Challenges:</h2>
       <br>
       <% @completed_challenges.each do |completed_challenge|%>
-        <div class=”challenge-complete-card“ style="background: white;box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);border-radius: 16px;transition: all .1s ease-in;padding: 24px;">
+        <div class=”challenge-complete-card“ style="background: white;box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);border-radius: 16px;transition: all .1s ease-in; padding: 24px; margin-top: 24px;">
           <h3><%= completed_challenge.name %></h3>
           <br>
         <p style="white-space: pre-line"><%= completed_challenge.description %></p>
