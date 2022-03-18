@@ -80,7 +80,7 @@ challenge_3 = Challenge.create(
   You will also revisit:
   - How to introduce yourself
   - Saying your age and birthday",
-  date: Date.today
+  date: Date.beginning_of_week + 5
 )
 puts "Challenge #{challenge_3.id} is created"
 
