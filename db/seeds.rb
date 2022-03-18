@@ -80,7 +80,7 @@ challenge_3 = Challenge.create(
   You will also revisit:
   - How to introduce yourself
   - Saying your age and birthday",
-  date: Date.beginning_of_week + 5
+  date: Date.today.beginning_of_week + 5
 )
 puts "Challenge #{challenge_3.id} is created"
 
@@ -591,7 +591,7 @@ puts "4 completed exercises for challenge 3 for John are created"
 puts "#{User.count} users have been created"
 puts "#{Challenge.count} challenges have been created"
 puts "#{Exercise.count} exercises have been created"
-puts "John has completed #{Session.count} sessions"
+puts "John has started #{Session.count} sessions"
 puts "John has completed #{CompletedExercise.count} exercises"
 
 puts "All done!"
