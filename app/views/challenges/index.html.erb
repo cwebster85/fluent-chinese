@@ -6,7 +6,7 @@
 
     <h1 class="page-title">Challenges</h1>
     <br>
-    <p>A list of all challenges for this week and next week.</p>
+    <p class="challenge-index-desc">A list of all challenges for this week and next week.</p>
 
     <div class="challenge-index-cards">
 
@@ -14,7 +14,7 @@
           <%= link_to challenge_path(id: challenge.id), class:"challenge-index-card #{challenge.date == Date.today ? 'challenge-index-card-active' : ''}"  do %>
             <h3><%= challenge.name %></h3>
             <br>
-            <p style="white-space: pre-line"><%= challenge.description %></p>
+            <p class="challenge-index-desc"style="white-space: pre-line"><%= challenge.description %></p>
             <% if challenge.date == Date.today %>
               <div class="today-challenge">
                 <i class="fas fa-star"></i>
