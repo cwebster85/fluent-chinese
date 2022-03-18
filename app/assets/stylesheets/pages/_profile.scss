@@ -19,22 +19,24 @@
   justify-content: center;
   width: 100%;
   margin-top: 310px;
+
+
   img {
-    position:absolute;
+    position: absolute;
     border-radius: 50%;
     width: 220px;
     height: 220px;
-    top: 102px;
+    top: -114px;
   }
   .user-name-profile {
-    margin-top: 2%;
+    margin-top: 150px;
     // margin-left: 18%;
     display: block;
     font-weight: bold;
     // text-align: left;
   }
   .completed-challenges {
-    font-size: 26px;
+    font-size: 20px;
     // margin-left: 12%;
     // margin-bottom: 5%;
     font-weight: bold;
@@ -54,19 +56,10 @@
     transition: all .1s ease-in;
     padding: 24px;
 
-    .challenge-description {
-    text-align: center;
-    color: $grey;
-    font-size: 18px;
-    white-space: pre-line;
-    width: 60%;
-    margin-top: -14px
-  }
-  }
-
-
-  .challenge-complete {
+    .challenge-complete {
     text-align: right;
+  }
+
   }
 
 
@@ -74,6 +67,7 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
+    margin-bottom: 32px;
 
     .btn {
       padding-top: 15px;
@@ -87,4 +81,17 @@
     }
 
   }
+}
+
+.complete-challenge-cards {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 32px;
+  padding: 32px 0px;
+  margin-bottom: 24px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 600px);
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
 }
