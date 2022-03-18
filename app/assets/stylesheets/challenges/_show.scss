@@ -28,6 +28,12 @@ body {
 
 // Time List
 
+.time-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .time-list-column {
   display: flex;
   align-items: center;
@@ -35,6 +41,7 @@ body {
   border-radius: 20px;
   list-style-type: none;
   position: relative;
+  margin-top: 12px;
 }
 
 .time-list-column.active {
@@ -137,7 +144,7 @@ body {
 // }
 
 .exercises {
-  height: 750px;
+  height: 100vh;
   overflow: scroll;
 }
 
