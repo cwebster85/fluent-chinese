@@ -80,7 +80,7 @@ challenge_3 = Challenge.create(
   You will also revisit:
   - How to introduce yourself
   - Saying your age and birthday",
-  date: Date.today.beginning_of_week + 5
+  date: Date.today
 )
 puts "Challenge #{challenge_3.id} is created"
 
@@ -466,6 +466,12 @@ john_session_2 = Session.create(
 )
 puts "Session #{john_session_2.id} is created"
 
+john_session_3 = Session.create(
+  user_id: john.id,
+  challenge_id: challenge_3.id
+)
+puts "Session #{john_session_3.id} is created"
+
 ## Completed exercises
 
 puts "Creating 5 completed exercises for John so he has finished challenge 1"
@@ -547,6 +553,40 @@ puts "Completed exercise #{completed_challenge_2_exercise_5.id} is created"
 puts "All 5 completed exercises for challenge 2 for John are created"
 
 puts "All 2 sessions and 10 completed exercises created for John"
+
+# Completed exercises for challenge 3 for John
+
+puts "Creating 4 completed exercises for John in challenge 3"
+
+completed_challenge_3_exercise_1 = CompletedExercise.create(
+  session_id: john_session_3.id,
+  exercise_id: challenge_3_exercise_1.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_3_exercise_1.id} is created"
+
+completed_challenge_3_exercise_2 = CompletedExercise.create(
+  session_id: john_session_3.id,
+  exercise_id: challenge_3_exercise_2.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_3_exercise_2.id} is created"
+
+completed_challenge_3_exercise_4 = CompletedExercise.create(
+  session_id: john_session_3.id,
+  exercise_id: challenge_3_exercise_4.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_3_exercise_4.id} is created"
+
+completed_challenge_3_exercise_5 = CompletedExercise.create(
+  session_id: john_session_3.id,
+  exercise_id: challenge_3_exercise_5.id,
+  completed: true
+)
+puts "Completed exercise #{completed_challenge_3_exercise_5.id} is created"
+
+puts "4 completed exercises for challenge 3 for John are created"
 
 puts "#{User.count} users have been created"
 puts "#{Challenge.count} challenges have been created"
